@@ -13,7 +13,7 @@ const Footer = () => {
               <img 
                 src="/logo.jpeg" 
                 alt="Perfect'Car Logo" 
-                className="w-12 h-12 rounded-full object-cover"
+                className="w-16 h-16 rounded-full object-cover"
               />
               <h3 className="text-xl font-racing font-bold gradient-text">MULTIPLEX AUTO</h3>
             </div>

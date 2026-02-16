@@ -23,7 +23,7 @@ const Navbar = ({ scrolled }) => {
             <img 
               src="/logo.jpeg" 
               alt="Perfect'Car Logo" 
-              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover"
+              className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover"
             />
             <div>
               <h1 className="text-xl sm:text-2xl font-racing font-bold gradient-text">
