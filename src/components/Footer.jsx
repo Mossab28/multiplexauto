@@ -9,10 +9,12 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-racing-red rounded-lg flex items-center justify-center">
-                <span className="text-white font-racing font-bold text-xl">M</span>
-              </div>
+            <div className="flex items-center space-x-3 mb-4">
+              <img 
+                src="/logo.jpeg" 
+                alt="Perfect'Car Logo" 
+                className="w-12 h-12 rounded-full object-cover"
+              />
               <h3 className="text-xl font-racing font-bold gradient-text">MULTIPLEX AUTO</h3>
             </div>
             <p className="text-gray-400 mb-4">
