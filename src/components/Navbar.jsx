@@ -21,7 +21,7 @@ const Navbar = ({ scrolled }) => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <img 
-              src="/logo.jpeg" 
+              src="/multiplexauto/logo.jpeg" 
               alt="Perfect'Car Logo" 
               className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover"
             />
