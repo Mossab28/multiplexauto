@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        'racing-red': '#DC0000',
+        'racing-red': '#3B82F6',
         'dark-gray': '#1a1a1a',
         'carbon': '#2a2a2a',
         'light-gray': '#f5f5f5',
@@ -37,8 +37,8 @@ export default {
           '100%': { transform: 'translateX(0)', opacity: '1' },
         },
         glow: {
-          '0%': { boxShadow: '0 0 3px #DC0000' },
-          '100%': { boxShadow: '0 0 8px #DC0000, 0 0 15px #DC0000' },
+          '0%': { boxShadow: '0 0 3px #3B82F6' },
+          '100%': { boxShadow: '0 0 8px #3B82F6, 0 0 15px #3B82F6' },
         },
       },
     },
