@@ -11,27 +11,7 @@ const Gallery = () => {
       title: 'Audi S5 Sportback',
     },
     {
-      url: '/multiplexauto/images/gallery/gallery-2.jpg',
-      category: 'Sportive',
-      title: 'Audi S5 Sportback',
-    },
-    {
-      url: '/multiplexauto/images/gallery/gallery-3.jpg',
-      category: 'Sportive',
-      title: 'Audi S5 Sportback',
-    },
-    {
       url: '/multiplexauto/images/gallery/gallery-4.jpg',
-      category: 'Berline',
-      title: 'Audi S7',
-    },
-    {
-      url: '/multiplexauto/images/gallery/gallery-5.jpg',
-      category: 'Berline',
-      title: 'Audi S7',
-    },
-    {
-      url: '/multiplexauto/images/gallery/gallery-6.jpg',
       category: 'Berline',
       title: 'Audi S7',
     },
@@ -41,14 +21,34 @@ const Gallery = () => {
       title: 'Golf 7',
     },
     {
+      url: '/multiplexauto/images/gallery/gallery-10.jpg',
+      category: 'Citadine',
+      title: 'Peugeot 208',
+    },
+    {
+      url: '/multiplexauto/images/gallery/gallery-13.jpg',
+      category: 'Sportive',
+      title: 'Audi R8 Spyder',
+    },
+    {
+      url: '/multiplexauto/images/gallery/gallery-2.jpg',
+      category: 'Sportive',
+      title: 'Audi S5 Sportback',
+    },
+    {
+      url: '/multiplexauto/images/gallery/gallery-5.jpg',
+      category: 'Berline',
+      title: 'Audi S7',
+    },
+    {
       url: '/multiplexauto/images/gallery/gallery-8.jpg',
       category: 'Berline',
       title: 'Golf 7',
     },
     {
-      url: '/multiplexauto/images/gallery/gallery-9.jpg',
-      category: 'Berline',
-      title: 'Golf 7',
+      url: '/multiplexauto/images/gallery/gallery-11.jpg',
+      category: 'Citadine',
+      title: 'Peugeot 208',
     },
   ]
 
