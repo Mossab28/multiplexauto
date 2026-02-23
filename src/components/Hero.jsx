@@ -4,7 +4,7 @@ import { ChevronDown, Sparkles, Shield, Award } from 'lucide-react'
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1920')] bg-cover bg-center opacity-20" />
+      <div className="absolute inset-0 bg-[url('/multiplexauto/images/hero/hero-bg.jpg')] bg-cover bg-center opacity-20" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-carbon/40 to-carbon" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

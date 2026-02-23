@@ -6,34 +6,49 @@ const Gallery = () => {
 
   const images = [
     {
-      url: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=800',
-      category: 'Citadine',
-      title: 'Renault Clio',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?q=80&w=800',
-      category: 'Berline',
-      title: 'BMW Série 5',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?q=80&w=800',
+      url: '/multiplexauto/images/gallery/gallery-1.jpg',
       category: 'Sportive',
-      title: 'Porsche 911',
+      title: 'Audi S5 Sportback',
     },
     {
-      url: 'https://images.unsplash.com/photo-1583267746897-c27b23d6e14a?q=80&w=800',
-      category: 'Citadine',
-      title: 'Peugeot 208',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1617531653332-bd46c24f2068?q=80&w=800',
-      category: 'Berline',
-      title: 'Mercedes Classe E',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=800',
+      url: '/multiplexauto/images/gallery/gallery-2.jpg',
       category: 'Sportive',
-      title: 'Audi R8',
+      title: 'Audi S5 Sportback',
+    },
+    {
+      url: '/multiplexauto/images/gallery/gallery-3.jpg',
+      category: 'Sportive',
+      title: 'Audi S5 Sportback',
+    },
+    {
+      url: '/multiplexauto/images/gallery/gallery-4.jpg',
+      category: 'Berline',
+      title: 'Audi S7',
+    },
+    {
+      url: '/multiplexauto/images/gallery/gallery-5.jpg',
+      category: 'Berline',
+      title: 'Audi S7',
+    },
+    {
+      url: '/multiplexauto/images/gallery/gallery-6.jpg',
+      category: 'Berline',
+      title: 'Audi S7',
+    },
+    {
+      url: '/multiplexauto/images/gallery/gallery-7.jpg',
+      category: 'Berline',
+      title: 'Golf 7',
+    },
+    {
+      url: '/multiplexauto/images/gallery/gallery-8.jpg',
+      category: 'Berline',
+      title: 'Golf 7',
+    },
+    {
+      url: '/multiplexauto/images/gallery/gallery-9.jpg',
+      category: 'Berline',
+      title: 'Golf 7',
     },
   ]
 

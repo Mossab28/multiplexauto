@@ -8,8 +8,8 @@ export default {
     extend: {
       colors: {
         'racing-red': '#3B82F6',
-        'dark-gray': '#000000',
-        'carbon': '#0a0a0a',
+        'dark-gray': '#0a0a0a',
+        'carbon': '#121212',
         'light-gray': '#f5f5f5',
         'medium-gray': '#1a1a1a',
       },

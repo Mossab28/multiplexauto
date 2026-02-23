@@ -17,7 +17,7 @@ const Services = () => {
         'Garantie 5 ans',
       ],
       price: 'À partir de 150€',
-      image: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=800',
+      image: '/multiplexauto/images/services/citadine.jpg',
     },
     {
       id: 'berline',
@@ -31,7 +31,7 @@ const Services = () => {
         'Garantie 7 ans',
       ],
       price: 'À partir de 250€',
-      image: 'https://images.unsplash.com/photo-1617531653332-bd46c24f2068?q=80&w=800',
+      image: '/multiplexauto/images/services/berline.jpg',
     },
     {
       id: 'sportive',
@@ -45,7 +45,7 @@ const Services = () => {
         'Garantie 10 ans',
       ],
       price: 'À partir de 350€',
-      image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=800',
+      image: '/multiplexauto/images/services/sportive.jpg',
     },
   ]
 
