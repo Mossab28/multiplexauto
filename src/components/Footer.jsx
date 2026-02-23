@@ -15,7 +15,7 @@ const Footer = () => {
                 alt="Perfect'Car Logo" 
                 className="w-16 h-16 rounded-full object-cover"
               />
-              <h3 className="text-xl font-racing font-bold gradient-text">MULTIPLEX AUTO</h3>
+              <h3 className="text-xl font-racing font-bold gradient-text">PERFECT CAR</h3>
             </div>
             <p className="text-gray-400 mb-4">
               Votre spécialiste en vitres teintées à Troyes. Qualité professionnelle et service personnalisé.
@@ -108,7 +108,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm text-center md:text-left">
-              © {currentYear} Multiplex Auto - Perfect' Car. Tous droits réservés.
+              © {currentYear} Perfect Car. Tous droits réservés.
             </p>
             <p className="text-gray-400 text-sm flex items-center space-x-1">
               <span>Créé avec</span>

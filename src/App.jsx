@@ -21,8 +21,8 @@ function App() {
 
   return (
     <div className="relative">
-      <div className="fixed inset-0 bg-gradient-to-br from-carbon via-medium-gray to-carbon -z-10" />
-      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-racing-red/5 via-transparent to-transparent -z-10" />
+      <div className="fixed inset-0 bg-black -z-10" />
+      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-racing-red/3 via-transparent to-transparent -z-10" />
       
       <Navbar scrolled={scrolled} />
       <Hero />

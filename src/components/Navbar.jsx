@@ -27,7 +27,7 @@ const Navbar = ({ scrolled }) => {
             />
             <div>
               <h1 className="text-xl sm:text-2xl font-racing font-bold gradient-text">
-                MULTIPLEX AUTO
+                PERFECT CAR
               </h1>
               <p className="text-xs text-gray-400 hidden sm:block">Vitres Teintées Premium</p>
             </div>

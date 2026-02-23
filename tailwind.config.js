@@ -8,13 +8,13 @@ export default {
     extend: {
       colors: {
         'racing-red': '#3B82F6',
-        'dark-gray': '#1a1a1a',
-        'carbon': '#2a2a2a',
+        'dark-gray': '#000000',
+        'carbon': '#0a0a0a',
         'light-gray': '#f5f5f5',
-        'medium-gray': '#404040',
+        'medium-gray': '#1a1a1a',
       },
       fontFamily: {
-        'racing': ['Orbitron', 'sans-serif'],
+        'racing': ['Poppins', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.8s ease-in-out',

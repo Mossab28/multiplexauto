@@ -16,7 +16,7 @@ const Testimonials = () => {
       name: 'Sophie L.',
       vehicle: 'Peugeot 208',
       rating: 5,
-      text: "Très satisfaite de la prestation. Le travail est soigné, les délais respectés et le prix très correct. Je recommande vivement Multiplex Auto !",
+      text: "Très satisfaite de la prestation. Le travail est soigné, les délais respectés et le prix très correct. Je recommande vivement Perfect Car !",
       date: 'Il y a 1 mois',
     },
     {
