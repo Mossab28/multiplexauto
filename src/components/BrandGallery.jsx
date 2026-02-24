@@ -94,22 +94,17 @@ const BrandGallery = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative">
-                {/* Bordure style Instagram Stories */}
-                <div className="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-silver-accent via-white to-silver-accent opacity-75 group-hover:opacity-100 blur-sm group-hover:blur transition-all duration-300" />
+                {/* Bordure subtile */}
+                <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-tr from-silver-accent/20 to-silver-accent/10 group-hover:from-silver-accent/30 group-hover:to-silver-accent/20 transition-all duration-300" />
                 
                 {/* Image de prévisualisation */}
-                <div className="relative aspect-square rounded-2xl overflow-hidden border-2 border-silver-accent/30 group-hover:border-silver-accent/50 transition-all duration-300">
+                <div className="relative aspect-square rounded-2xl overflow-hidden border border-silver-accent/20 group-hover:border-silver-accent/40 transition-all duration-300">
                   <img 
                     src={brand.images[0]} 
                     alt={brand.name}
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-                </div>
-
-                {/* Badge nombre de photos */}
-                <div className="absolute top-3 right-3 bg-silver-accent/90 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-lg">
-                  <span className="text-xs font-bold text-black">{brand.images.length}</span>
                 </div>
               </div>
               
