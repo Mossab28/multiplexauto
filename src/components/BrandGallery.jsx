@@ -162,13 +162,13 @@ const BrandGallery = () => {
                 <>
                   <button
                     onClick={prevImage}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-silver-accent/20 hover:bg-silver-accent/30 text-white w-12 h-12 rounded-full flex items-center justify-center transition-colors"
+                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black w-12 h-12 rounded-full flex items-center justify-center transition-all shadow-lg"
                   >
                     <ChevronLeft className="w-6 h-6" />
                   </button>
                   <button
                     onClick={nextImage}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-silver-accent/20 hover:bg-silver-accent/30 text-white w-12 h-12 rounded-full flex items-center justify-center transition-colors"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-black w-12 h-12 rounded-full flex items-center justify-center transition-all shadow-lg"
                   >
                     <ChevronRight className="w-6 h-6" />
                   </button>
