@@ -38,15 +38,15 @@ const Navbar = ({ scrolled }) => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-300 hover:text-racing-red transition-colors duration-300 font-medium relative group"
+                className="text-gray-300 hover:text-silver-accent transition-colors duration-300 font-medium relative group"
               >
                 {link.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-racing-red group-hover:w-full transition-all duration-300" />
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-silver-accent group-hover:w-full transition-all duration-300" />
               </a>
             ))}
             <a
               href="tel:0663207808"
-              className="bg-racing-red hover:bg-red-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover-lift flex items-center space-x-2"
+              className="bg-call-green hover:bg-green-600 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover-lift flex items-center space-x-2"
             >
               <Phone size={18} />
               <span>06 63 20 78 08</span>
@@ -55,7 +55,7 @@ const Navbar = ({ scrolled }) => {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-white p-2 hover:bg-racing-red/20 rounded-lg transition-colors"
+            className="lg:hidden text-white p-2 hover:bg-silver-accent/20 rounded-lg transition-colors"
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
@@ -69,14 +69,14 @@ const Navbar = ({ scrolled }) => {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-gray-300 hover:text-racing-red transition-colors duration-300 font-medium py-2 border-b border-gray-800"
+                  className="text-gray-300 hover:text-silver-accent transition-colors duration-300 font-medium py-2 border-b border-gray-800"
                 >
                   {link.name}
                 </a>
               ))}
               <a
                 href="tel:0663207808"
-                className="bg-racing-red hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
+                className="bg-call-green hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <Phone size={18} />
                 <span>06 63 20 78 08</span>

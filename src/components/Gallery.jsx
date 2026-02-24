@@ -56,7 +56,7 @@ const Gallery = () => {
     <section id="gallery" className="py-20 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
-          <span className="text-racing-red font-racing font-bold text-sm tracking-wider">NOTRE GALERIE</span>
+          <span className="text-silver-accent font-racing font-bold text-sm tracking-wider">NOTRE GALERIE</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-racing font-bold mt-4 mb-6">
             <span className="gradient-text">NOS RÉALISATIONS</span>
             <br />
@@ -82,7 +82,7 @@ const Gallery = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-dark-gray via-dark-gray/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <span className="inline-block bg-racing-red px-3 py-1 rounded-full text-sm font-semibold mb-2">
+                <span className="inline-block bg-silver-accent px-3 py-1 rounded-full text-sm font-semibold mb-2">
                   {image.category}
                 </span>
                 <h3 className="font-racing font-bold text-lg">{image.title}</h3>
@@ -119,12 +119,12 @@ const Gallery = () => {
             />
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 right-4 bg-racing-red hover:bg-red-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors"
+              className="absolute top-4 right-4 bg-silver-accent hover:bg-red-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors"
             >
               ✕
             </button>
             <div className="absolute bottom-4 left-4 right-4 glass-effect p-4 rounded-lg">
-              <span className="inline-block bg-racing-red px-3 py-1 rounded-full text-sm font-semibold mb-2">
+              <span className="inline-block bg-silver-accent px-3 py-1 rounded-full text-sm font-semibold mb-2">
                 {selectedImage.category}
               </span>
               <h3 className="font-racing font-bold text-xl">{selectedImage.title}</h3>

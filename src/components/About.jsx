@@ -14,7 +14,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-right">
             <div className="inline-block mb-4">
-              <span className="text-racing-red font-racing font-bold text-sm tracking-wider">QUI SOMMES-NOUS</span>
+              <span className="text-silver-accent font-racing font-bold text-sm tracking-wider">QUI SOMMES-NOUS</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-racing font-bold mb-6">
               <span className="gradient-text">PERFECT' CAR</span>
@@ -22,14 +22,14 @@ const About = () => {
               <span className="text-white">Votre Expert en Vitrage</span>
             </h2>
             <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-              Basé à <span className="text-racing-red font-semibold">Troyes</span>, nous sommes spécialisés dans la pose de vitres teintées pour tous types de véhicules. Notre atelier de personnalisation automobile offre des services de haute qualité avec une attention particulière aux détails.
+              Basé à <span className="text-silver-accent font-semibold">Troyes</span>, nous sommes spécialisés dans la pose de vitres teintées pour tous types de véhicules. Notre atelier de personnalisation automobile offre des services de haute qualité avec une attention particulière aux détails.
             </p>
             <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              Avec plus de <span className="text-racing-red font-semibold">5000 followers</span> sur Instagram et des centaines de clients satisfaits, nous sommes reconnus pour notre expertise et notre professionnalisme dans le domaine du vitrage automobile.
+              Avec plus de <span className="text-silver-accent font-semibold">5000 followers</span> sur Instagram et des centaines de clients satisfaits, nous sommes reconnus pour notre expertise et notre professionnalisme dans le domaine du vitrage automobile.
             </p>
 
             <div className="flex items-start space-x-3 mb-6 glass-effect p-4 rounded-lg">
-              <MapPin className="w-6 h-6 text-racing-red flex-shrink-0 mt-1" />
+              <MapPin className="w-6 h-6 text-silver-accent flex-shrink-0 mt-1" />
               <div>
                 <p className="font-semibold text-white">Notre Atelier</p>
                 <p className="text-gray-400">2 rue Archimède</p>
@@ -50,29 +50,29 @@ const About = () => {
           <div className="relative animate-slide-up">
             <div className="grid grid-cols-2 gap-4">
               <div className="glass-effect p-6 rounded-xl hover-lift text-center">
-                <div className="w-16 h-16 bg-racing-red/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-racing-red" />
+                <div className="w-16 h-16 bg-silver-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-silver-accent" />
                 </div>
                 <h3 className="text-3xl font-racing font-bold text-white mb-2">5000+</h3>
                 <p className="text-gray-400">Clients Satisfaits</p>
               </div>
               <div className="glass-effect p-6 rounded-xl hover-lift text-center mt-8">
-                <div className="w-16 h-16 bg-racing-red/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="w-8 h-8 text-racing-red" />
+                <div className="w-16 h-16 bg-silver-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-8 h-8 text-silver-accent" />
                 </div>
                 <h3 className="text-3xl font-racing font-bold text-white mb-2">10+</h3>
                 <p className="text-gray-400">Années d'Expérience</p>
               </div>
               <div className="glass-effect p-6 rounded-xl hover-lift text-center">
-                <div className="w-16 h-16 bg-racing-red/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-racing-red" />
+                <div className="w-16 h-16 bg-silver-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-8 h-8 text-silver-accent" />
                 </div>
                 <h3 className="text-3xl font-racing font-bold text-white mb-2">103</h3>
                 <p className="text-gray-400">Publications</p>
               </div>
               <div className="glass-effect p-6 rounded-xl hover-lift text-center mt-8">
-                <div className="w-16 h-16 bg-racing-red/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-8 h-8 text-racing-red" />
+                <div className="w-16 h-16 bg-silver-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-8 h-8 text-silver-accent" />
                 </div>
                 <h3 className="text-3xl font-racing font-bold text-white mb-2">1</h3>
                 <p className="text-gray-400">Atelier à Troyes</p>

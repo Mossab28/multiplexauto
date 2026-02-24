@@ -54,7 +54,7 @@ const Testimonials = () => {
     <section id="testimonials" className="py-20 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-slide-up">
-          <span className="text-racing-red font-racing font-bold text-sm tracking-wider">TÉMOIGNAGES</span>
+          <span className="text-silver-accent font-racing font-bold text-sm tracking-wider">TÉMOIGNAGES</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-racing font-bold mt-4 mb-6">
             <span className="gradient-text">ILS NOUS FONT</span>
             <br />
@@ -67,7 +67,7 @@ const Testimonials = () => {
 
         <div className="max-w-4xl mx-auto">
           <div className="relative glass-effect p-8 sm:p-12 rounded-2xl animate-fade-in">
-            <Quote className="absolute top-8 left-8 w-12 h-12 text-racing-red/20" />
+            <Quote className="absolute top-8 left-8 w-12 h-12 text-silver-accent/20" />
             
             <div className="relative z-10">
               <div className="flex items-center justify-center mb-6">
@@ -84,7 +84,7 @@ const Testimonials = () => {
                 <h4 className="font-racing font-bold text-xl mb-1">
                   {testimonials[currentIndex].name}
                 </h4>
-                <p className="text-racing-red font-semibold mb-1">
+                <p className="text-silver-accent font-semibold mb-1">
                   {testimonials[currentIndex].vehicle}
                 </p>
                 <p className="text-gray-500 text-sm">
@@ -96,7 +96,7 @@ const Testimonials = () => {
             <div className="flex items-center justify-center space-x-4 mt-8">
               <button
                 onClick={prevTestimonial}
-                className="bg-racing-red/20 hover:bg-racing-red text-white w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover-lift"
+                className="bg-silver-accent/20 hover:bg-silver-accent text-white w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover-lift"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
@@ -107,7 +107,7 @@ const Testimonials = () => {
                     key={index}
                     onClick={() => setCurrentIndex(index)}
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === currentIndex ? 'bg-racing-red w-8' : 'bg-gray-600'
+                      index === currentIndex ? 'bg-silver-accent w-8' : 'bg-gray-600'
                     }`}
                   />
                 ))}
@@ -115,7 +115,7 @@ const Testimonials = () => {
 
               <button
                 onClick={nextTestimonial}
-                className="bg-racing-red/20 hover:bg-racing-red text-white w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover-lift"
+                className="bg-silver-accent/20 hover:bg-silver-accent text-white w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover-lift"
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
@@ -142,7 +142,7 @@ const Testimonials = () => {
               href="https://www.google.com/search?q=perfect+car+troyes"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-racing-red hover:text-red-600 font-semibold transition-colors"
+              className="inline-block text-silver-accent hover:text-red-600 font-semibold transition-colors"
             >
               Voir tous les avis Google →
             </a>

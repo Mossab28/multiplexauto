@@ -8,10 +8,13 @@ export default {
     extend: {
       colors: {
         'racing-red': '#3B82F6',
+        'silver-accent': '#E5E7EB',
         'dark-gray': '#0a0a0a',
+        'matte-black': '#1a1a1a',
         'carbon': '#121212',
         'light-gray': '#f5f5f5',
         'medium-gray': '#1a1a1a',
+        'call-green': '#10B981',
       },
       fontFamily: {
         'racing': ['Poppins', 'sans-serif'],
@@ -37,8 +40,8 @@ export default {
           '100%': { transform: 'translateX(0)', opacity: '1' },
         },
         glow: {
-          '0%': { boxShadow: '0 0 3px #3B82F6' },
-          '100%': { boxShadow: '0 0 8px #3B82F6, 0 0 15px #3B82F6' },
+          '0%': { boxShadow: '0 0 3px #E5E7EB' },
+          '100%': { boxShadow: '0 0 8px #E5E7EB, 0 0 15px #E5E7EB' },
         },
       },
     },

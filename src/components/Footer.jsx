@@ -24,7 +24,7 @@ const Footer = () => {
               href="https://www.instagram.com/perfect_car_troyes/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 text-racing-red hover:text-red-600 transition-colors"
+              className="inline-flex items-center space-x-2 text-silver-accent hover:text-red-600 transition-colors"
             >
               <Instagram className="w-5 h-5" />
               <span className="font-semibold">@perfect_car_troyes</span>
@@ -35,32 +35,32 @@ const Footer = () => {
             <h4 className="font-racing font-bold text-lg mb-4">Navigation</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-gray-400 hover:text-racing-red transition-colors">
+                <a href="#home" className="text-gray-400 hover:text-silver-accent transition-colors">
                   Accueil
                 </a>
               </li>
               <li>
-                <a href="#about" className="text-gray-400 hover:text-racing-red transition-colors">
+                <a href="#about" className="text-gray-400 hover:text-silver-accent transition-colors">
                   À Propos
                 </a>
               </li>
               <li>
-                <a href="#services" className="text-gray-400 hover:text-racing-red transition-colors">
+                <a href="#services" className="text-gray-400 hover:text-silver-accent transition-colors">
                   Services
                 </a>
               </li>
               <li>
-                <a href="#gallery" className="text-gray-400 hover:text-racing-red transition-colors">
+                <a href="#gallery" className="text-gray-400 hover:text-silver-accent transition-colors">
                   Galerie
                 </a>
               </li>
               <li>
-                <a href="#testimonials" className="text-gray-400 hover:text-racing-red transition-colors">
+                <a href="#testimonials" className="text-gray-400 hover:text-silver-accent transition-colors">
                   Avis
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-400 hover:text-racing-red transition-colors">
+                <a href="#contact" className="text-gray-400 hover:text-silver-accent transition-colors">
                   Contact
                 </a>
               </li>
@@ -83,21 +83,21 @@ const Footer = () => {
             <h4 className="font-racing font-bold text-lg mb-4">Contact</h4>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-racing-red flex-shrink-0 mt-1" />
-                <a href="tel:0663207808" className="text-gray-400 hover:text-racing-red transition-colors">
+                <Phone className="w-5 h-5 text-silver-accent flex-shrink-0 mt-1" />
+                <a href="tel:0663207808" className="text-gray-400 hover:text-silver-accent transition-colors">
                   06 63 20 78 08
                 </a>
               </li>
               <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-racing-red flex-shrink-0 mt-1" />
+                <MapPin className="w-5 h-5 text-silver-accent flex-shrink-0 mt-1" />
                 <span className="text-gray-400">
                   2 rue Archimède<br />
                   10600 La Chapelle Saint-Luc
                 </span>
               </li>
               <li className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-racing-red flex-shrink-0 mt-1" />
-                <a href="https://multiplexeauto.fr" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-racing-red transition-colors">
+                <Mail className="w-5 h-5 text-silver-accent flex-shrink-0 mt-1" />
+                <a href="https://multiplexeauto.fr" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-silver-accent transition-colors">
                   multiplexeauto.fr
                 </a>
               </li>
@@ -112,7 +112,7 @@ const Footer = () => {
             </p>
             <p className="text-gray-400 text-sm flex items-center space-x-1">
               <span>Créé avec</span>
-              <Heart className="w-4 h-4 text-racing-red fill-racing-red" />
+              <Heart className="w-4 h-4 text-silver-accent fill-silver-accent" />
               <span>à Troyes</span>
             </p>
           </div>
