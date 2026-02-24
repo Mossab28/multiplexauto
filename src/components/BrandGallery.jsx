@@ -85,42 +85,38 @@ const BrandGallery = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
           {brands.map((brand, index) => (
             <button
               key={index}
               onClick={() => openBrandGallery(brand)}
-              className="group relative cursor-pointer animate-slide-up"
+              className="group cursor-pointer animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative">
                 {/* Bordure style Instagram Stories */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-silver-accent via-white to-silver-accent p-1 group-hover:p-[5px] transition-all duration-300">
-                  <div className="w-full h-full rounded-full bg-matte-black" />
-                </div>
+                <div className="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-silver-accent via-white to-silver-accent opacity-75 group-hover:opacity-100 blur-sm group-hover:blur transition-all duration-300" />
                 
                 {/* Image de prévisualisation */}
-                <div className="relative aspect-square rounded-full overflow-hidden border-4 border-matte-black">
+                <div className="relative aspect-square rounded-2xl overflow-hidden border-2 border-silver-accent/30 group-hover:border-silver-accent/50 transition-all duration-300">
                   <img 
                     src={brand.images[0]} 
                     alt={brand.name}
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  
-                  {/* Nom de la marque en overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 p-3 text-center">
-                    <h3 className="text-lg font-racing font-bold text-white drop-shadow-lg">
-                      {brand.name}
-                    </h3>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                 </div>
 
                 {/* Badge nombre de photos */}
-                <div className="absolute top-2 right-2 bg-silver-accent/90 backdrop-blur-sm px-2 py-1 rounded-full">
+                <div className="absolute top-3 right-3 bg-silver-accent/90 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-lg">
                   <span className="text-xs font-bold text-black">{brand.images.length}</span>
                 </div>
               </div>
+              
+              {/* Nom de la marque en dessous */}
+              <h3 className="text-xl font-racing font-bold text-white group-hover:text-silver-accent transition-colors duration-300 mt-4 text-center">
+                {brand.name}
+              </h3>
             </button>
           ))}
         </div>
