@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-16 h-16 rounded-full bg-black flex items-center justify-center overflow-hidden">
                 <img 
-                  src="/logo.png" 
+                  src="/multiplexauto/logo.png" 
                   alt="Perfect'Car Logo" 
                   className="w-full h-full object-contain"
                 />
