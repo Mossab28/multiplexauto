@@ -75,7 +75,7 @@ const Simulator = () => {
   }
 
   return (
-    <div className="min-h-screen bg-matte-black pt-32 sm:pt-36 pb-12">
+    <div className="min-h-screen bg-matte-black pt-36 sm:pt-40 pb-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
@@ -307,7 +307,7 @@ const Simulator = () => {
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
-                    href="#contact"
+                    href="/#/contact"
                     className="flex-1 bg-silver-accent hover:bg-white text-black px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-center"
                   >
                     Demander un devis personnalisé
