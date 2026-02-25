@@ -70,7 +70,7 @@ const Hero = () => {
           </div>
 
           {/* Animation d'images à droite - visible uniquement sur desktop */}
-          <div className="hidden lg:flex gap-4 h-[600px] relative">
+          <div className="hidden lg:flex gap-4 h-[600px] relative overflow-hidden">
             {/* Colonne 1 - défile vers le bas */}
             <div className="flex-1 flex flex-col gap-4 animate-scroll-down">
               {[...galleryImages, ...galleryImages].map((img, idx) => (
