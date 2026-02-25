@@ -1,44 +1,49 @@
 import React, { useState } from 'react'
-import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react'
+import { Star, ChevronLeft, ChevronRight, Quote, CheckCircle } from 'lucide-react'
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const testimonials = [
     {
-      name: 'Jean-Pierre M.',
-      vehicle: 'BMW Série 3',
+      name: 'Alexandre D.',
+      vehicle: 'Audi RS6',
       rating: 5,
-      text: "Service impeccable ! L'équipe est professionnelle et le résultat est parfait. Mes vitres teintées donnent un look incroyable à ma voiture tout en protégeant de la chaleur.",
-      date: 'Il y a 2 semaines',
-    },
-    {
-      name: 'Sophie L.',
-      vehicle: 'Peugeot 208',
-      rating: 5,
-      text: "Très satisfaite de la prestation. Le travail est soigné, les délais respectés et le prix très correct. Je recommande vivement Perfect Car !",
-      date: 'Il y a 1 mois',
-    },
-    {
-      name: 'Marc D.',
-      vehicle: 'Audi A4',
-      rating: 5,
-      text: "Excellent rapport qualité-prix. L'installation a été rapide et le rendu est top. La différence de température dans l'habitacle est vraiment notable.",
+      text: "Travail impeccable sur mon RS6. La pose est parfaite, aucune bulle, aucun défaut. Le résultat est exactement ce que je voulais. Professionnel, rapide et de qualité. Je recommande à 100%.",
       date: 'Il y a 3 semaines',
+      verified: true,
     },
     {
-      name: 'Amélie R.',
-      vehicle: 'Mercedes Classe C',
+      name: 'Julien M.',
+      vehicle: 'BMW M4',
       rating: 5,
-      text: "Je suis ravie du résultat ! L'équipe a pris le temps de bien m'expliquer les différentes options. Le film est de très bonne qualité et l'installation est parfaite.",
+      text: "Excellent service ! Pose soignée, finitions parfaites. L'équipe est à l'écoute et de bon conseil. Ma M4 a gagné en esthétique et en confort thermique. Très satisfait du résultat.",
+      date: 'Il y a 1 mois',
+      verified: true,
+    },
+    {
+      name: 'Sarah B.',
+      vehicle: 'Mercedes GLC',
+      rating: 5,
+      text: "Je recommande vivement ! Travail très professionnel, délais respectés et tarifs corrects. Les vitres teintées changent vraiment l'aspect du véhicule. Équipe sympathique et compétente.",
+      date: 'Il y a 2 semaines',
+      verified: true,
+    },
+    {
+      name: 'Kevin L.',
+      vehicle: 'Golf 7 GTI',
+      rating: 5,
+      text: "Super prestation ! La pose est nickel, pas de défaut. Le rendu est top et la différence de chaleur dans l'habitacle est impressionnante. Rapport qualité-prix imbattable.",
       date: 'Il y a 1 semaine',
+      verified: true,
     },
     {
-      name: 'Thomas B.',
-      vehicle: 'Porsche Cayenne',
+      name: 'Nicolas P.',
+      vehicle: 'Range Rover Sport',
       rating: 5,
-      text: "Professionnel et efficace. J'ai fait teinter toutes les vitres de mon SUV et le résultat dépasse mes attentes. Très bon accueil et conseils avisés.",
-      date: 'Il y a 2 mois',
+      text: "Travail de qualité professionnelle. L'installation a été rapide et soignée. Le film est de très bonne qualité et le résultat est impeccable. Je reviendrai sans hésiter.",
+      date: 'Il y a 3 mois',
+      verified: true,
     },
   ]
 
@@ -60,9 +65,13 @@ const Testimonials = () => {
             <br />
             <span className="text-white">Confiance</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-3">
             Découvrez les avis de nos clients satisfaits
           </p>
+          <div className="flex items-center justify-center gap-2 text-sm text-gray-500">
+            <CheckCircle className="w-4 h-4 text-blue-500" />
+            <span>Avis Google vérifiés</span>
+          </div>
         </div>
 
         <div className="max-w-4xl mx-auto">
@@ -81,9 +90,14 @@ const Testimonials = () => {
               </p>
 
               <div className="text-center">
-                <h4 className="font-racing font-bold text-xl mb-1">
-                  {testimonials[currentIndex].name}
-                </h4>
+                <div className="flex items-center justify-center gap-2 mb-1">
+                  <h4 className="font-racing font-bold text-xl">
+                    {testimonials[currentIndex].name}
+                  </h4>
+                  {testimonials[currentIndex].verified && (
+                    <CheckCircle className="w-5 h-5 text-blue-500 fill-blue-500" title="Avis vérifié Google" />
+                  )}
+                </div>
                 <p className="text-silver-accent font-semibold mb-1">
                   {testimonials[currentIndex].vehicle}
                 </p>
