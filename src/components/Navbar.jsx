@@ -11,12 +11,19 @@ const Navbar = ({ scrolled }) => {
     { name: 'À Propos', href: '/', type: 'route', scrollTo: 'about' },
     { name: 'Services', href: '/', type: 'route', scrollTo: 'services' },
     { name: 'Galerie', href: '/', type: 'route', scrollTo: 'gallery' },
-    { name: 'Simulateur', href: '/simulateur', type: 'route', icon: Calculator },
+    { name: 'Simulateur', href: '/simulateur', type: 'route', icon: Calculator, scrollToTop: true },
     { name: 'Contact', href: '/', type: 'route', scrollTo: 'contact' },
   ]
 
-  const handleNavClick = (scrollTo) => {
-    if (scrollTo) {
+  const handleNavClick = (scrollTo, scrollToTop) => {
+    if (scrollToTop) {
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        })
+      }, 100)
+    } else if (scrollTo) {
       setTimeout(() => {
         const element = document.getElementById(scrollTo)
         if (element) {
@@ -62,7 +69,7 @@ const Navbar = ({ scrolled }) => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  onClick={() => handleNavClick(link.scrollTo)}
+                  onClick={() => handleNavClick(link.scrollTo, link.scrollToTop)}
                   className="text-gray-300 hover:text-silver-accent transition-colors duration-300 font-medium relative group flex items-center space-x-1"
                 >
                   {LinkIcon && <LinkIcon className="w-4 h-4" />}
@@ -107,7 +114,7 @@ const Navbar = ({ scrolled }) => {
                     to={link.href}
                     onClick={() => {
                       setIsOpen(false)
-                      handleNavClick(link.scrollTo)
+                      handleNavClick(link.scrollTo, link.scrollToTop)
                     }}
                     className="text-gray-300 hover:text-silver-accent transition-colors duration-300 font-medium py-2 border-b border-gray-800 flex items-center space-x-2"
                   >

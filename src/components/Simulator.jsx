@@ -380,7 +380,7 @@ const Simulator = () => {
                       placeholder="Précisions sur votre projet..."
                     />
                   </div>
-                  <div className="flex gap-4">
+                  <div className="flex flex-col sm:flex-row gap-4">
                     <button
                       type="button"
                       onClick={() => {
