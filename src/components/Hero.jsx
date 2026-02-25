@@ -2,22 +2,37 @@ import React from 'react'
 import { ChevronDown, Sparkles, Shield, Award } from 'lucide-react'
 
 const Hero = () => {
-  const galleryImages = [
+  // Colonne 1 - Ordre 1
+  const column1Images = [
     '/multiplexauto/images/gallery/gallery-1.jpg',
-    '/multiplexauto/images/gallery/gallery-2.jpg',
     '/multiplexauto/images/gallery/gallery-4.jpg',
-    '/multiplexauto/images/gallery/gallery-5.jpg',
     '/multiplexauto/images/gallery/gallery-7.jpg',
-    '/multiplexauto/images/gallery/gallery-8.jpg',
     '/multiplexauto/images/gallery/gallery-13.jpg',
-    '/multiplexauto/images/gallery/gallery-15.jpg',
     '/multiplexauto/images/gallery/gallery-16.jpg',
-    '/multiplexauto/images/gallery/gallery-17.jpg',
-    '/multiplexauto/images/gallery/gallery-18.jpg',
     '/multiplexauto/images/gallery/gallery-19.jpg',
-    '/multiplexauto/images/gallery/gallery-20.jpg',
-    '/multiplexauto/images/gallery/gallery-21.jpg',
     '/multiplexauto/images/gallery/gallery-22.jpg',
+  ]
+
+  // Colonne 2 - Ordre 2 (différent)
+  const column2Images = [
+    '/multiplexauto/images/gallery/gallery-2.jpg',
+    '/multiplexauto/images/gallery/gallery-5.jpg',
+    '/multiplexauto/images/gallery/gallery-8.jpg',
+    '/multiplexauto/images/gallery/gallery-15.jpg',
+    '/multiplexauto/images/gallery/gallery-17.jpg',
+    '/multiplexauto/images/gallery/gallery-20.jpg',
+    '/multiplexauto/images/gallery/gallery-18.jpg',
+  ]
+
+  // Colonne 3 - Ordre 3 (encore différent)
+  const column3Images = [
+    '/multiplexauto/images/gallery/gallery-21.jpg',
+    '/multiplexauto/images/gallery/gallery-16.jpg',
+    '/multiplexauto/images/gallery/gallery-13.jpg',
+    '/multiplexauto/images/gallery/gallery-7.jpg',
+    '/multiplexauto/images/gallery/gallery-4.jpg',
+    '/multiplexauto/images/gallery/gallery-19.jpg',
+    '/multiplexauto/images/gallery/gallery-15.jpg',
   ]
 
   return (
@@ -81,7 +96,7 @@ const Hero = () => {
           <div className="hidden lg:flex gap-4 h-[600px] relative overflow-hidden">
             {/* Colonne 1 - défile vers le bas */}
             <div className="flex-1 flex flex-col gap-4 animate-scroll-down">
-              {[...galleryImages, ...galleryImages].map((img, idx) => (
+              {[...column1Images, ...column1Images].map((img, idx) => (
                 <div key={`col1-${idx}`} className="relative h-48 rounded-xl overflow-hidden flex-shrink-0 border border-silver-accent/10">
                   <img src={img} alt={`Car ${idx + 1}`} className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
@@ -91,7 +106,7 @@ const Hero = () => {
 
             {/* Colonne 2 - défile vers le haut (sens inverse) */}
             <div className="flex-1 flex flex-col gap-4 animate-scroll-up">
-              {[...galleryImages.slice().reverse(), ...galleryImages.slice().reverse()].map((img, idx) => (
+              {[...column2Images, ...column2Images].map((img, idx) => (
                 <div key={`col2-${idx}`} className="relative h-48 rounded-xl overflow-hidden flex-shrink-0 border border-silver-accent/10">
                   <img src={img} alt={`Car ${idx + 1}`} className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
@@ -101,7 +116,7 @@ const Hero = () => {
 
             {/* Colonne 3 - défile vers le bas */}
             <div className="flex-1 flex flex-col gap-4 animate-scroll-down">
-              {[...galleryImages, ...galleryImages].map((img, idx) => (
+              {[...column3Images, ...column3Images].map((img, idx) => (
                 <div key={`col3-${idx}`} className="relative h-48 rounded-xl overflow-hidden flex-shrink-0 border border-silver-accent/10">
                   <img src={img} alt={`Car ${idx + 1}`} className="w-full h-full object-cover" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
