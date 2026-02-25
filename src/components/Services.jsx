@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
-import { Car, Zap, Trophy, Shield, Sun, Lock, Wind, Palette, Users } from 'lucide-react'
+import { Car, Zap, Trophy, Shield, Sun, Lock, Wind, Palette, Users, Truck } from 'lucide-react'
 
 const Services = () => {
-  const [activeCategory, setActiveCategory] = useState('2faces')
+  const [activeCategory, setActiveCategory] = useState('3portes')
 
   const categories = [
     {
-      id: '2faces',
-      name: '2 Faces',
+      id: '3portes',
+      name: '3 Portes',
       icon: Car,
-      description: 'Vitres latérales avant',
+      description: 'Citadines et petits véhicules',
       features: [
         'Confort thermique optimal',
         'Esthétique soignée',
@@ -20,38 +20,38 @@ const Services = () => {
       image: '/multiplexauto/images/services/citadine.jpg',
     },
     {
-      id: 'entier',
-      name: 'Véhicule Entier',
+      id: '5portes',
+      name: '5 Portes',
       icon: Shield,
-      description: 'Vitrage complet du véhicule',
+      description: 'Berlines et compactes',
       features: [
         'Confort maximal',
         'Esthétique complète',
         'Sécurité totale',
         'Protection intégrale',
       ],
-      price: 'À partir de 250€',
+      price: 'À partir de 200€',
       image: '/multiplexauto/images/services/berline.jpg',
     },
     {
-      id: 'lunette',
-      name: 'Lunette SUV / Panoramique',
+      id: 'break',
+      name: 'Break / SUV / Monospace',
       icon: Zap,
-      description: 'Spécial SUV et toits panoramiques',
+      description: 'Véhicules familiaux et SUV',
       features: [
         'Confort thermique supérieur',
         'Esthétique premium',
         'Sécurité optimale',
         'Réduction chaleur 80%',
       ],
-      price: 'À partir de 200€',
+      price: 'À partir de 250€',
       image: '/multiplexauto/images/services/sportive.jpg',
     },
     {
       id: 'minibus',
-      name: 'Minibus',
+      name: 'Minibus et Utilitaire',
       icon: Users,
-      description: 'Pour véhicules utilitaires et minibus',
+      description: 'Véhicules professionnels',
       features: [
         'Confort pour tous les passagers',
         'Esthétique professionnelle',
@@ -93,14 +93,14 @@ const Services = () => {
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`flex items-center space-x-3 px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover-lift ${
+                className={`flex items-center justify-center sm:space-x-3 px-4 sm:px-6 py-4 rounded-xl font-semibold transition-all duration-300 hover-lift ${
                   activeCategory === category.id
                     ? 'bg-silver-accent text-black red-glow'
                     : 'glass-effect text-gray-300 hover:bg-white/10'
                 }`}
               >
                 <Icon className="w-6 h-6" />
-                <span>{category.name}</span>
+                <span className="hidden sm:inline">{category.name}</span>
               </button>
             )
           })}
