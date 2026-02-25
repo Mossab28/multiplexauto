@@ -257,40 +257,40 @@ const Simulator = () => {
             {/* Step 5: Result */}
             {step === 5 && (
               <div className="animate-slide-up text-center">
-                <div className="mb-4">
-                  <div className="w-12 h-12 bg-silver-accent/20 rounded-full flex items-center justify-center mx-auto mb-2">
-                    <Check className="w-6 h-6 text-silver-accent" />
+                <div className="mb-5">
+                  <div className="w-14 h-14 bg-silver-accent/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Check className="w-7 h-7 text-silver-accent" />
                   </div>
-                  <h2 className="text-xl font-racing font-bold text-white mb-1">
+                  <h2 className="text-2xl font-racing font-bold text-white mb-2">
                     Votre devis estimatif
                   </h2>
-                  <p className="text-gray-400 text-xs mb-3">
+                  <p className="text-gray-400 text-sm mb-4">
                     Voici une estimation pour votre projet
                   </p>
                 </div>
 
-                <div className="bg-white/5 rounded-xl p-4 mb-4">
-                  <div className="space-y-2 mb-3">
-                    <div className="flex justify-between items-center py-1.5 border-b border-gray-700 text-xs">
+                <div className="bg-white/5 rounded-xl p-5 mb-5">
+                  <div className="space-y-2.5 mb-4">
+                    <div className="flex justify-between items-center py-2 border-b border-gray-700 text-sm">
                       <span className="text-gray-300">Type de véhicule</span>
                       <span className="text-white font-semibold">
                         {vehicleTypes.find(v => v.id === formData.vehicleType)?.name}
                       </span>
                     </div>
-                    <div className="flex justify-between items-center py-1.5 border-b border-gray-700 text-xs">
+                    <div className="flex justify-between items-center py-2 border-b border-gray-700 text-sm">
                       <span className="text-gray-300">Vitres</span>
                       <span className="text-white font-semibold">
                         {windowTypes.find(w => w.id === formData.windowType)?.name}
                       </span>
                     </div>
-                    <div className="flex justify-between items-center py-1.5 border-b border-gray-700 text-xs">
+                    <div className="flex justify-between items-center py-2 border-b border-gray-700 text-sm">
                       <span className="text-gray-300">Niveau de teinte</span>
                       <span className="text-white font-semibold">
                         {tintLevels.find(t => t.id === formData.tintLevel)?.name}
                       </span>
                     </div>
                     {formData.extras.length > 0 && (
-                      <div className="flex justify-between items-center py-1.5 border-b border-gray-700 text-xs">
+                      <div className="flex justify-between items-center py-2 border-b border-gray-700 text-sm">
                         <span className="text-gray-300">Options</span>
                         <span className="text-white font-semibold">
                           {formData.extras.length} option(s)
@@ -299,23 +299,23 @@ const Simulator = () => {
                     )}
                   </div>
 
-                  <div className="pt-3 border-t-2 border-silver-accent">
+                  <div className="pt-4 border-t-2 border-silver-accent">
                     <div className="flex justify-between items-center">
-                      <span className="text-lg font-racing font-bold text-white">TOTAL ESTIMÉ</span>
-                      <span className="text-2xl font-racing font-bold gradient-text">
+                      <span className="text-xl font-racing font-bold text-white">TOTAL ESTIMÉ</span>
+                      <span className="text-3xl font-racing font-bold gradient-text">
                         {calculatePrice()}€
                       </span>
                     </div>
-                    <p className="text-gray-400 text-[10px] mt-0.5">
+                    <p className="text-gray-400 text-xs mt-1">
                       * Prix indicatif, devis personnalisé sur demande
                     </p>
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-2">
+                <div className="flex flex-col sm:flex-row gap-3">
                   <button
                     onClick={() => setShowContactForm(true)}
-                    className="flex-1 bg-silver-accent hover:bg-white text-black px-5 py-2.5 rounded-lg font-bold text-sm transition-all duration-300 transform hover:scale-105 shadow-lg text-center"
+                    className="flex-1 bg-silver-accent hover:bg-white text-black px-6 py-3 rounded-lg font-bold text-base transition-all duration-300 transform hover:scale-105 shadow-lg text-center"
                   >
                     Demander un devis personnalisé
                   </button>
@@ -324,7 +324,7 @@ const Simulator = () => {
                       setStep(1)
                       setFormData({ vehicleType: '', windowType: '', tintLevel: '', extras: [] })
                     }}
-                    className="flex-1 bg-white/5 hover:bg-white/10 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 border border-white/20"
+                    className="flex-1 bg-white/5 hover:bg-white/10 text-white px-6 py-3 rounded-lg font-semibold text-base transition-all duration-300 border border-white/20"
                   >
                     Recommencer
                   </button>
