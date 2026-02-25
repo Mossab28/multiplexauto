@@ -197,10 +197,10 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-silver-accent hover:bg-red-700 text-white px-6 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover-lift flex items-center justify-center space-x-2"
+                  className="w-full bg-silver-accent hover:bg-white active:bg-gray-400 text-black px-6 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover-lift flex items-center justify-center space-x-2 shadow-lg"
                 >
                   <Send className="w-5 h-5" />
-                  <span>Envoyer la Demande</span>
+                  <span>Devis Gratuit</span>
                 </button>
               </div>
             </form>
