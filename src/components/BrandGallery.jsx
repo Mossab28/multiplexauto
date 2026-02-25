@@ -142,7 +142,6 @@ const BrandGallery = () => {
 
           <div className="relative max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
             <div className="text-center mb-6">
-              <div className="text-5xl mb-3">{selectedBrand.logo}</div>
               <h3 className="text-3xl font-racing font-bold text-silver-accent mb-2">
                 {selectedBrand.name}
               </h3>
