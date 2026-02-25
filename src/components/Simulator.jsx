@@ -256,7 +256,7 @@ const Simulator = () => {
 
             {/* Step 5: Result */}
             {step === 5 && (
-              <div className="animate-slide-up text-center">
+              <div className="animate-slide-up text-center scale-[0.8] origin-top">
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-silver-accent/20 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Check className="w-8 h-8 text-silver-accent" />
