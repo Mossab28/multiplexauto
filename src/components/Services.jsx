@@ -1,59 +1,72 @@
 import React, { useState } from 'react'
-import { Car, Zap, Trophy, Shield, Sun, Lock } from 'lucide-react'
+import { Car, Zap, Trophy, Shield, Sun, Lock, Wind, Palette, Users } from 'lucide-react'
 
 const Services = () => {
-  const [activeCategory, setActiveCategory] = useState('citadine')
+  const [activeCategory, setActiveCategory] = useState('2faces')
 
   const categories = [
     {
-      id: 'citadine',
-      name: 'Citadine',
+      id: '2faces',
+      name: '2 Faces',
       icon: Car,
-      description: 'Parfait pour les véhicules urbains',
+      description: 'Vitres latérales avant',
       features: [
-        'Vitres latérales teintées',
-        'Lunette arrière',
+        'Confort thermique optimal',
+        'Esthétique soignée',
+        'Sécurité renforcée',
         'Protection UV 99%',
-        'Garantie 5 ans',
       ],
       price: 'À partir de 150€',
       image: '/multiplexauto/images/services/citadine.jpg',
     },
     {
-      id: 'berline',
-      name: 'Berline',
+      id: 'entier',
+      name: 'Véhicule Entier',
       icon: Shield,
-      description: 'Élégance et protection optimale',
+      description: 'Vitrage complet du véhicule',
       features: [
-        'Vitrage complet',
-        'Film premium anti-effraction',
-        'Réduction chaleur 80%',
-        'Garantie 7 ans',
+        'Confort maximal',
+        'Esthétique complète',
+        'Sécurité totale',
+        'Protection intégrale',
       ],
       price: 'À partir de 250€',
       image: '/multiplexauto/images/services/berline.jpg',
     },
     {
-      id: 'sportive',
-      name: 'Sportive',
+      id: 'lunette',
+      name: 'Lunette SUV / Panoramique',
       icon: Zap,
-      description: 'Performance et style racing',
+      description: 'Spécial SUV et toits panoramiques',
       features: [
-        'Film haute performance',
-        'Teinte personnalisée',
-        'Protection maximale',
-        'Garantie 10 ans',
+        'Confort thermique supérieur',
+        'Esthétique premium',
+        'Sécurité optimale',
+        'Réduction chaleur 80%',
       ],
-      price: 'À partir de 350€',
+      price: 'À partir de 200€',
       image: '/multiplexauto/images/services/sportive.jpg',
+    },
+    {
+      id: 'minibus',
+      name: 'Minibus',
+      icon: Users,
+      description: 'Pour véhicules utilitaires et minibus',
+      features: [
+        'Confort pour tous les passagers',
+        'Esthétique professionnelle',
+        'Sécurité renforcée',
+        'Protection complète',
+      ],
+      price: 'Sur devis',
+      image: '/multiplexauto/images/services/berline.jpg',
     },
   ]
 
   const benefits = [
-    { icon: Sun, title: 'Protection UV', desc: 'Bloque 99% des rayons UV nocifs' },
-    { icon: Shield, title: 'Anti-Effraction', desc: 'Renforce la sécurité de vos vitres' },
-    { icon: Trophy, title: 'Confort Thermique', desc: 'Réduit la chaleur de 80%' },
-    { icon: Lock, title: 'Confidentialité', desc: 'Protège votre intimité' },
+    { icon: Wind, title: 'Confort', desc: 'Réduction de la chaleur et des éblouissements' },
+    { icon: Palette, title: 'Esthétique', desc: 'Look moderne et élégant' },
+    { icon: Shield, title: 'Sécurité', desc: 'Protection anti-effraction et UV' },
   ]
 
   const activeService = categories.find(cat => cat.id === activeCategory)
@@ -64,12 +77,12 @@ const Services = () => {
         <div className="text-center mb-12 sm:mb-16 animate-slide-up">
           <span className="text-silver-accent font-racing font-bold text-xs sm:text-sm tracking-wider">NOS SERVICES</span>
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-racing font-bold mt-3 sm:mt-4 mb-4 sm:mb-6 leading-tight">
-            <span className="gradient-text">VITRAGE POUR TOUS</span>
+            <span className="gradient-text">VITRES TEINTÉES</span>
             <br />
-            <span className="text-white">TYPES DE VÉHICULES</span>
+            <span className="text-white">POUR TOUS VOS BESOINS</span>
           </h2>
           <p className="text-gray-400 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto px-4">
-            Des solutions adaptées à chaque type de véhicule avec une qualité professionnelle garantie
+            Des solutions adaptées à chaque configuration avec une qualité professionnelle garantie
           </p>
         </div>
 
