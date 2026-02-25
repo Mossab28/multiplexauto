@@ -70,11 +70,13 @@ const Navbar = ({ scrolled }) => {
                   key={link.name}
                   to={link.href}
                   onClick={() => handleNavClick(link.scrollTo, link.scrollToTop)}
-                  className="text-gray-300 hover:text-silver-accent transition-colors duration-300 font-medium relative group flex items-center space-x-1"
+                  className="text-gray-300 hover:text-silver-accent transition-colors duration-300 font-medium group flex items-center space-x-1"
                 >
                   {LinkIcon && <LinkIcon className="w-4 h-4" />}
-                  <span>{link.name}</span>
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-silver-accent group-hover:w-full transition-all duration-300" />
+                  <span className="relative">
+                    {link.name}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-silver-accent group-hover:w-full transition-all duration-300" />
+                  </span>
                 </Link>
               )
             })}
