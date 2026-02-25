@@ -72,7 +72,7 @@ const Navbar = ({ scrolled }) => {
         </div>
 
         {isOpen && (
-          <div className="lg:hidden mt-4 pb-4 animate-slide-up">
+          <div className="lg:hidden mt-4 pb-4 animate-slide-up bg-matte-black/95 backdrop-blur-md rounded-lg px-4">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <a
