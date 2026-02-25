@@ -35,18 +35,18 @@ const Hero = () => {
               Spécialiste du vitrage automobile à Troyes. Protection, style et confort pour votre véhicule.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center lg:items-start gap-4 sm:gap-4 mb-10 sm:mb-12 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center lg:items-start gap-3 sm:gap-4 mb-8 sm:mb-12 animate-slide-up" style={{ animationDelay: '0.4s' }}>
               <a
-                href="#contact"
+                href="/multiplexauto/simulateur"
                 className="bg-silver-accent hover:bg-white active:bg-gray-400 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 w-full sm:w-auto shadow-lg text-center"
               >
-                Devis Gratuit
+                Simulateur de Prix
               </a>
               <a
-                href="#services"
+                href="#contact"
                 className="bg-white/5 hover:bg-white/10 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 border border-white/20 w-full sm:w-auto text-center"
               >
-                Nos Services
+                Devis Gratuit
               </a>
             </div>
 

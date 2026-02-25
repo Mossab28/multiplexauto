@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
-import { Menu, X, Phone, MapPin } from 'lucide-react'
+import { Link, useLocation } from 'react-router-dom'
+import { Menu, X, Phone, MapPin, Calculator } from 'lucide-react'
 
 const Navbar = ({ scrolled }) => {
   const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation()
 
   const navLinks = [
-    { name: 'Accueil', href: '#home' },
-    { name: 'À Propos', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Galerie', href: '#gallery' },
-    { name: 'Avis', href: '#testimonials' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Accueil', href: '/', type: 'route' },
+    { name: 'À Propos', href: '#about', type: 'anchor' },
+    { name: 'Services', href: '#services', type: 'anchor' },
+    { name: 'Galerie', href: '#gallery', type: 'anchor' },
+    { name: 'Simulateur', href: '/simulateur', type: 'route', icon: Calculator },
+    { name: 'Contact', href: '#contact', type: 'anchor' },
   ]
 
   return (
@@ -36,16 +38,29 @@ const Navbar = ({ scrolled }) => {
           </div>
 
           <div className="hidden lg:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-gray-300 hover:text-silver-accent transition-colors duration-300 font-medium relative group"
-              >
-                {link.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-silver-accent group-hover:w-full transition-all duration-300" />
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const LinkIcon = link.icon
+              return link.type === 'route' ? (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="text-gray-300 hover:text-silver-accent transition-colors duration-300 font-medium relative group flex items-center space-x-1"
+                >
+                  {LinkIcon && <LinkIcon className="w-4 h-4" />}
+                  <span>{link.name}</span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-silver-accent group-hover:w-full transition-all duration-300" />
+                </Link>
+              ) : (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-gray-300 hover:text-silver-accent transition-colors duration-300 font-medium relative group"
+                >
+                  {link.name}
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-silver-accent group-hover:w-full transition-all duration-300" />
+                </a>
+              )
+            })}
             <a
               href="tel:0663207808"
               className="bg-call-green hover:bg-green-600 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover-lift flex items-center space-x-2"
@@ -74,16 +89,29 @@ const Navbar = ({ scrolled }) => {
         {isOpen && (
           <div className="lg:hidden mt-4 pb-4 animate-slide-up bg-matte-black/95 backdrop-blur-md rounded-lg px-4">
             <div className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-gray-300 hover:text-silver-accent transition-colors duration-300 font-medium py-2 border-b border-gray-800"
-                >
-                  {link.name}
-                </a>
-              ))}
+              {navLinks.map((link) => {
+                const LinkIcon = link.icon
+                return link.type === 'route' ? (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-gray-300 hover:text-silver-accent transition-colors duration-300 font-medium py-2 border-b border-gray-800 flex items-center space-x-2"
+                  >
+                    {LinkIcon && <LinkIcon className="w-4 h-4" />}
+                    <span>{link.name}</span>
+                  </Link>
+                ) : (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-gray-300 hover:text-silver-accent transition-colors duration-300 font-medium py-2 border-b border-gray-800"
+                  >
+                    {link.name}
+                  </a>
+                )
+              })}
             </div>
           </div>
         )}

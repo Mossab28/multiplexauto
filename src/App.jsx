@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -8,6 +9,7 @@ import BrandGallery from './components/BrandGallery'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Simulator from './components/Simulator'
 
 function App() {
   const [scrolled, setScrolled] = useState(false)
@@ -20,11 +22,8 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  return (
-    <div className="relative">
-      <div className="fixed inset-0 bg-matte-black -z-10" />
-      
-      <Navbar scrolled={scrolled} />
+  const HomePage = () => (
+    <>
       <Hero />
       <About />
       <Services />
@@ -32,8 +31,22 @@ function App() {
       <BrandGallery />
       <Testimonials />
       <Contact />
-      <Footer />
-    </div>
+    </>
+  )
+
+  return (
+    <Router basename="/multiplexauto">
+      <div className="relative">
+        <div className="fixed inset-0 bg-matte-black -z-10" />
+        
+        <Navbar scrolled={scrolled} />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/simulateur" element={<Simulator />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   )
 }
 
