@@ -20,7 +20,14 @@ const Navbar = ({ scrolled }) => {
       setTimeout(() => {
         const element = document.getElementById(scrollTo)
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' })
+          const navbarHeight = 100
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+          const offsetPosition = elementPosition - navbarHeight
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          })
         }
       }, 100)
     }
