@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { ChevronRight, ChevronLeft, Check, Car, Shield, Zap, Users } from 'lucide-react'
 
 const Simulator = () => {
@@ -306,12 +307,20 @@ const Simulator = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href="/#/contact"
+                  <Link
+                    to="/"
+                    onClick={() => {
+                      setTimeout(() => {
+                        const contactSection = document.getElementById('contact')
+                        if (contactSection) {
+                          contactSection.scrollIntoView({ behavior: 'smooth' })
+                        }
+                      }, 100)
+                    }}
                     className="flex-1 bg-silver-accent hover:bg-white text-black px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-center"
                   >
                     Demander un devis personnalisé
-                  </a>
+                  </Link>
                   <button
                     onClick={() => {
                       setStep(1)
