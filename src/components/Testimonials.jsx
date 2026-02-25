@@ -6,43 +6,43 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: 'Alexandre D.',
-      vehicle: 'Audi RS6',
+      name: 'Jeremy Vivig',
+      vehicle: 'Client vérifié',
       rating: 5,
-      text: "Travail impeccable sur mon RS6. La pose est parfaite, aucune bulle, aucun défaut. Le résultat est exactement ce que je voulais. Professionnel, rapide et de qualité. Je recommande à 100%.",
-      date: 'Il y a 3 semaines',
+      text: "J'ai découvert cet atelier par le biais de Google et grâce à de très bons avis et bien cela se confirme la teinte des vitres de ma voiture est impeccable, le professionnalisme et la gentillesse du patron lui valent bien ces 5 étoiles. Merci beaucoup",
+      date: 'Il y a 1 an',
       verified: true,
     },
     {
-      name: 'Julien M.',
-      vehicle: 'BMW M4',
+      name: 'Marie Auriac',
+      vehicle: 'Client vérifié',
       rating: 5,
-      text: "Excellent service ! Pose soignée, finitions parfaites. L'équipe est à l'écoute et de bon conseil. Ma M4 a gagné en esthétique et en confort thermique. Très satisfait du résultat.",
-      date: 'Il y a 1 mois',
+      text: "Ayant acheté un véhicule dans ce garage qui se trouve à plus de 700km de chez moi, le garagiste n'a pas hésité à me descendre la voiture au 3/4 du chemin. La transaction s'est bien déroulée, la personne est très professionnelle et a su gagner ma confiance. Merci encore pour votre gentillesse et je n'hésiterais pas à vous recommander.",
+      date: 'Il y a 1 an',
       verified: true,
     },
     {
-      name: 'Sarah B.',
-      vehicle: 'Mercedes GLC',
+      name: 'Lucie Guillot',
+      vehicle: 'Client vérifié',
       rating: 5,
-      text: "Je recommande vivement ! Travail très professionnel, délais respectés et tarifs corrects. Les vitres teintées changent vraiment l'aspect du véhicule. Équipe sympathique et compétente.",
-      date: 'Il y a 2 semaines',
+      text: "Très satisfaits du service. Nous voulions teindre les vitres et notre voiture est spécifique avec un défi technique pour le toit, défi relevé haut la main. Personne de confiance, très doué dans son métier, sérieux, et avec un contact agréable. Je recommande à 100% !",
+      date: 'Il y a 3 ans',
       verified: true,
     },
     {
-      name: 'Kevin L.',
-      vehicle: 'Golf 7 GTI',
+      name: 'Micka VINCENT',
+      vehicle: 'Client vérifié',
       rating: 5,
-      text: "Super prestation ! La pose est nickel, pas de défaut. Le rendu est top et la différence de chaleur dans l'habitacle est impressionnante. Rapport qualité-prix imbattable.",
-      date: 'Il y a 1 semaine',
+      text: "Très professionnel et à l'écoute, travail propre et soigné, prix très attractif. Je recommande, merci",
+      date: 'Il y a 5 ans',
       verified: true,
     },
     {
-      name: 'Nicolas P.',
-      vehicle: 'Range Rover Sport',
+      name: 'Carole Gresle',
+      vehicle: 'Client vérifié',
       rating: 5,
-      text: "Travail de qualité professionnelle. L'installation a été rapide et soignée. Le film est de très bonne qualité et le résultat est impeccable. Je reviendrai sans hésiter.",
-      date: 'Il y a 3 mois',
+      text: "Très professionnel. De très bons conseils. Il vous dit la teinture exacte qui vous faut pour le vitrage de votre voiture. Prix correct et bon travail",
+      date: 'Il y a 4 ans',
       verified: true,
     },
   ]
@@ -138,16 +138,16 @@ const Testimonials = () => {
 
           <div className="grid sm:grid-cols-3 gap-6 mt-12">
             <div className="glass-effect p-6 rounded-xl text-center hover-lift">
-              <div className="text-4xl font-racing font-bold gradient-text mb-2">4.9/5</div>
-              <p className="text-gray-400">Note Moyenne</p>
+              <div className="text-4xl font-racing font-bold gradient-text mb-2">4.8/5</div>
+              <p className="text-gray-400">Note Google</p>
             </div>
             <div className="glass-effect p-6 rounded-xl text-center hover-lift">
-              <div className="text-4xl font-racing font-bold gradient-text mb-2">500+</div>
+              <div className="text-4xl font-racing font-bold gradient-text mb-2">39</div>
               <p className="text-gray-400">Avis Clients</p>
             </div>
             <div className="glass-effect p-6 rounded-xl text-center hover-lift">
-              <div className="text-4xl font-racing font-bold gradient-text mb-2">98%</div>
-              <p className="text-gray-400">Recommandations</p>
+              <div className="text-4xl font-racing font-bold gradient-text mb-2">100%</div>
+              <p className="text-gray-400">Satisfaction</p>
             </div>
           </div>
 
