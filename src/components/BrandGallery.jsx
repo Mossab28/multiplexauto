@@ -73,19 +73,19 @@ const BrandGallery = () => {
   return (
     <section id="gallery" className="py-20 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-slide-up">
-          <span className="text-silver-accent font-racing font-bold text-sm tracking-wider">NOTRE GALERIE</span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-racing font-bold mt-4 mb-6">
+        <div className="text-center mb-12 sm:mb-16 animate-slide-up">
+          <span className="text-silver-accent font-racing font-bold text-xs sm:text-sm tracking-wider">NOTRE GALERIE</span>
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-racing font-bold mt-3 sm:mt-4 mb-4 sm:mb-6 leading-tight">
             <span className="gradient-text">NOS RÉALISATIONS</span>
             <br />
             <span className="text-white">Par Marque</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto px-4">
             Découvrez nos installations par marque automobile. Cliquez sur une marque pour voir toutes les réalisations.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto">
           {brands.map((brand, index) => (
             <button
               key={index}
@@ -109,7 +109,7 @@ const BrandGallery = () => {
               </div>
               
               {/* Nom de la marque en dessous */}
-              <h3 className="text-xl font-racing font-bold text-white group-hover:text-silver-accent transition-colors duration-300 mt-4 text-center">
+              <h3 className="text-base sm:text-lg lg:text-xl font-racing font-bold text-white group-hover:text-silver-accent transition-colors duration-300 mt-3 sm:mt-4 text-center">
                 {brand.name}
               </h3>
             </button>

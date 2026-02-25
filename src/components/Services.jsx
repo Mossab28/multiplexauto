@@ -61,19 +61,19 @@ const Services = () => {
   return (
     <section id="services" className="py-20 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-slide-up">
-          <span className="text-silver-accent font-racing font-bold text-sm tracking-wider">NOS SERVICES</span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-racing font-bold mt-4 mb-6">
+        <div className="text-center mb-12 sm:mb-16 animate-slide-up">
+          <span className="text-silver-accent font-racing font-bold text-xs sm:text-sm tracking-wider">NOS SERVICES</span>
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-racing font-bold mt-3 sm:mt-4 mb-4 sm:mb-6 leading-tight">
             <span className="gradient-text">VITRAGE POUR TOUS</span>
             <br />
             <span className="text-white">TYPES DE VÉHICULES</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto px-4">
             Des solutions adaptées à chaque type de véhicule avec une qualité professionnelle garantie
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-12">
           {categories.map((category) => {
             const Icon = category.icon
             return (

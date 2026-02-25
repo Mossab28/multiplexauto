@@ -53,12 +53,20 @@ const Navbar = ({ scrolled }) => {
             </a>
           </div>
 
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-white p-2 hover:bg-silver-accent/20 rounded-lg transition-colors"
-          >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+          <div className="lg:hidden flex items-center space-x-3">
+            <a
+              href="tel:0663207808"
+              className="bg-call-green hover:bg-green-600 text-white p-3 rounded-full transition-all duration-300 hover-lift"
+            >
+              <Phone size={20} />
+            </a>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-white p-2 hover:bg-silver-accent/20 rounded-lg transition-colors"
+            >
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
 
         {isOpen && (
@@ -74,13 +82,6 @@ const Navbar = ({ scrolled }) => {
                   {link.name}
                 </a>
               ))}
-              <a
-                href="tel:0663207808"
-                className="bg-call-green hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
-              >
-                <Phone size={18} />
-                <span>06 63 20 78 08</span>
-              </a>
             </div>
           </div>
         )}

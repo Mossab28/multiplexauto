@@ -19,52 +19,52 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Contenu à gauche */}
           <div className="text-center lg:text-left animate-fade-in">
-            <div className="inline-block mb-6">
-              <span className="bg-silver-accent/10 text-silver-accent px-6 py-2 rounded-md text-sm font-semibold border border-silver-accent/20">
+            <div className="inline-block mb-4 sm:mb-6">
+              <span className="bg-silver-accent/10 text-silver-accent px-4 py-2 sm:px-6 rounded-md text-xs sm:text-sm font-semibold border border-silver-accent/20">
                 Atelier de Personnalisation Automobile
               </span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-racing font-bold mb-6 animate-slide-up">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-racing font-bold mb-4 sm:mb-6 animate-slide-up leading-tight">
               <span className="gradient-text">VITRES TEINTÉES</span>
               <br />
               <span className="text-white">DE HAUTE QUALITÉ</span>
             </h1>
             
-            <p className="text-lg sm:text-xl text-gray-300 mb-8 lg:max-w-xl animate-slide-up" style={{ animationDelay: '0.2s' }}>
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 lg:max-w-xl animate-slide-up leading-relaxed" style={{ animationDelay: '0.2s' }}>
               Spécialiste du vitrage automobile à Troyes. Protection, style et confort pour votre véhicule.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 mb-12 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center lg:items-start gap-3 sm:gap-4 mb-8 sm:mb-12 animate-slide-up" style={{ animationDelay: '0.4s' }}>
               <a
                 href="#contact"
-                className="bg-silver-accent hover:bg-white text-black px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 w-full sm:w-auto shadow-lg"
+                className="bg-silver-accent hover:bg-white active:bg-gray-400 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 w-full sm:w-auto shadow-lg text-center"
               >
                 Devis Gratuit
               </a>
               <a
                 href="#services"
-                className="bg-white/5 hover:bg-white/10 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 border border-white/20 w-full sm:w-auto"
+                className="bg-white/5 hover:bg-white/10 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 border border-white/20 w-full sm:w-auto text-center"
               >
                 Nos Services
               </a>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 animate-slide-up" style={{ animationDelay: '0.6s' }}>
-              <div className="bg-white/5 backdrop-blur-sm p-4 rounded-lg border border-white/10 transition-all duration-300 hover:bg-white/10">
-                <Shield className="w-8 h-8 text-silver-accent mx-auto lg:mx-0 mb-2" />
-                <h3 className="font-racing font-semibold text-base mb-1">Protection UV</h3>
-                <p className="text-gray-400 text-xs">99% des rayons UV bloqués</p>
+            <div className="grid grid-cols-3 gap-3 sm:gap-4 animate-slide-up" style={{ animationDelay: '0.6s' }}>
+              <div className="bg-white/5 backdrop-blur-sm p-3 sm:p-4 rounded-lg border border-white/10 transition-all duration-300 hover:bg-white/10">
+                <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-silver-accent mx-auto lg:mx-0 mb-1 sm:mb-2" />
+                <h3 className="font-racing font-semibold text-xs sm:text-base mb-0.5 sm:mb-1">Protection UV</h3>
+                <p className="text-gray-400 text-[10px] sm:text-xs">99% UV bloqués</p>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm p-4 rounded-lg border border-white/10 transition-all duration-300 hover:bg-white/10">
-                <Sparkles className="w-8 h-8 text-silver-accent mx-auto lg:mx-0 mb-2" />
-                <h3 className="font-racing font-semibold text-base mb-1">Finition Premium</h3>
-                <p className="text-gray-400 text-xs">Installation professionnelle</p>
+              <div className="bg-white/5 backdrop-blur-sm p-3 sm:p-4 rounded-lg border border-white/10 transition-all duration-300 hover:bg-white/10">
+                <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-silver-accent mx-auto lg:mx-0 mb-1 sm:mb-2" />
+                <h3 className="font-racing font-semibold text-xs sm:text-base mb-0.5 sm:mb-1">Finition Premium</h3>
+                <p className="text-gray-400 text-[10px] sm:text-xs">Installation pro</p>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm p-4 rounded-lg border border-white/10 transition-all duration-300 hover:bg-white/10">
-                <Award className="w-8 h-8 text-silver-accent mx-auto lg:mx-0 mb-2" />
-                <h3 className="font-racing font-semibold text-base mb-1">Garantie Qualité</h3>
-                <p className="text-gray-400 text-xs">Satisfaction garantie</p>
+              <div className="bg-white/5 backdrop-blur-sm p-3 sm:p-4 rounded-lg border border-white/10 transition-all duration-300 hover:bg-white/10">
+                <Award className="w-6 h-6 sm:w-8 sm:h-8 text-silver-accent mx-auto lg:mx-0 mb-1 sm:mb-2" />
+                <h3 className="font-racing font-semibold text-xs sm:text-base mb-0.5 sm:mb-1">Garantie Qualité</h3>
+                <p className="text-gray-400 text-[10px] sm:text-xs">Satisfaction garantie</p>
               </div>
             </div>
           </div>

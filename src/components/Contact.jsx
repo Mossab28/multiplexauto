@@ -24,22 +24,22 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-slide-up">
-          <span className="text-silver-accent font-racing font-bold text-sm tracking-wider">CONTACT</span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-racing font-bold mt-4 mb-6">
+        <div className="text-center mb-12 sm:mb-16 animate-slide-up">
+          <span className="text-silver-accent font-racing font-bold text-xs sm:text-sm tracking-wider">CONTACT</span>
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-racing font-bold mt-3 sm:mt-4 mb-4 sm:mb-6 leading-tight">
             <span className="gradient-text">PRENEZ RENDEZ-VOUS</span>
             <br />
             <span className="text-white">Dès Maintenant</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto px-4">
             Contactez-nous pour un devis gratuit et personnalisé
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
           <div className="animate-slide-right">
-            <div className="glass-effect p-8 rounded-2xl mb-6">
-              <h3 className="text-2xl font-racing font-bold mb-6 gradient-text">
+            <div className="glass-effect p-6 sm:p-8 rounded-2xl mb-6">
+              <h3 className="text-xl sm:text-2xl font-racing font-bold mb-4 sm:mb-6 gradient-text">
                 Informations de Contact
               </h3>
               
