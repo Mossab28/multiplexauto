@@ -17,7 +17,7 @@ const Services = () => {
         'Protection UV 99%',
       ],
       price: 'À partir de 150€',
-      image: '/multiplexauto/images/services/citadine.jpg',
+      image: '/multiplexauto/images/gallery/gallery-22.jpg',
     },
     {
       id: '5portes',
@@ -31,7 +31,7 @@ const Services = () => {
         'Protection intégrale',
       ],
       price: 'À partir de 200€',
-      image: '/multiplexauto/images/services/berline.jpg',
+      image: '/multiplexauto/images/gallery/gallery-7.jpg',
     },
     {
       id: 'break',

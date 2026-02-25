@@ -10,8 +10,8 @@ const BrandGallery = () => {
       name: 'BMW',
       logo: '🏁',
       images: [
-        '/multiplexauto/images/gallery/gallery-1.jpg',
-        '/multiplexauto/images/gallery/gallery-2.jpg',
+        '/multiplexauto/images/gallery/gallery-16.jpg',
+        '/multiplexauto/images/gallery/gallery-17.jpg',
       ],
       color: '#1C69D4'
     },
@@ -21,16 +21,20 @@ const BrandGallery = () => {
       images: [
         '/multiplexauto/images/gallery/gallery-4.jpg',
         '/multiplexauto/images/gallery/gallery-5.jpg',
-        '/multiplexauto/images/gallery/gallery-1.jpg',
+        '/multiplexauto/images/gallery/gallery-6.jpg',
+        '/multiplexauto/images/gallery/gallery-13.jpg',
+        '/multiplexauto/images/gallery/gallery-14.jpg',
+        '/multiplexauto/images/gallery/gallery-15.jpg',
       ],
       color: '#BB0A30'
     },
     {
-      name: 'Mercedes',
-      logo: '⭐',
+      name: 'Volkswagen',
+      logo: '🚗',
       images: [
         '/multiplexauto/images/gallery/gallery-7.jpg',
         '/multiplexauto/images/gallery/gallery-8.jpg',
+        '/multiplexauto/images/gallery/gallery-9.jpg',
       ],
       color: '#00ADEF'
     },
@@ -38,9 +42,44 @@ const BrandGallery = () => {
       name: 'Maserati',
       logo: '🔱',
       images: [
-        '/multiplexauto/images/gallery/gallery-13.jpg',
+        '/multiplexauto/images/gallery/gallery-20.jpg',
       ],
       color: '#0C2340'
+    },
+    {
+      name: 'Peugeot',
+      logo: '🦁',
+      images: [
+        '/multiplexauto/images/gallery/gallery-10.jpg',
+        '/multiplexauto/images/gallery/gallery-11.jpg',
+        '/multiplexauto/images/gallery/gallery-12.jpg',
+      ],
+      color: '#002FA7'
+    },
+    {
+      name: 'Renault',
+      logo: '💎',
+      images: [
+        '/multiplexauto/images/gallery/gallery-18.jpg',
+        '/multiplexauto/images/gallery/gallery-21.jpg',
+      ],
+      color: '#FFCC00'
+    },
+    {
+      name: 'Mini',
+      logo: '🎯',
+      images: [
+        '/multiplexauto/images/gallery/gallery-22.jpg',
+      ],
+      color: '#000000'
+    },
+    {
+      name: 'Land Rover',
+      logo: '🏔️',
+      images: [
+        '/multiplexauto/images/gallery/gallery-19.jpg',
+      ],
+      color: '#005A2B'
     }
   ]
 

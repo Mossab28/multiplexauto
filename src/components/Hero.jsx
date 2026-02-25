@@ -10,6 +10,14 @@ const Hero = () => {
     '/multiplexauto/images/gallery/gallery-7.jpg',
     '/multiplexauto/images/gallery/gallery-8.jpg',
     '/multiplexauto/images/gallery/gallery-13.jpg',
+    '/multiplexauto/images/gallery/gallery-15.jpg',
+    '/multiplexauto/images/gallery/gallery-16.jpg',
+    '/multiplexauto/images/gallery/gallery-17.jpg',
+    '/multiplexauto/images/gallery/gallery-18.jpg',
+    '/multiplexauto/images/gallery/gallery-19.jpg',
+    '/multiplexauto/images/gallery/gallery-20.jpg',
+    '/multiplexauto/images/gallery/gallery-21.jpg',
+    '/multiplexauto/images/gallery/gallery-22.jpg',
   ]
 
   return (
