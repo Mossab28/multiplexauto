@@ -8,12 +8,23 @@ const Navbar = ({ scrolled }) => {
 
   const navLinks = [
     { name: 'Accueil', href: '/', type: 'route' },
-    { name: 'À Propos', href: '#about', type: 'anchor' },
-    { name: 'Services', href: '#services', type: 'anchor' },
-    { name: 'Galerie', href: '#gallery', type: 'anchor' },
+    { name: 'À Propos', href: '/', type: 'route', scrollTo: 'about' },
+    { name: 'Services', href: '/', type: 'route', scrollTo: 'services' },
+    { name: 'Galerie', href: '/', type: 'route', scrollTo: 'gallery' },
     { name: 'Simulateur', href: '/simulateur', type: 'route', icon: Calculator },
-    { name: 'Contact', href: '#contact', type: 'anchor' },
+    { name: 'Contact', href: '/', type: 'route', scrollTo: 'contact' },
   ]
+
+  const handleNavClick = (scrollTo) => {
+    if (scrollTo) {
+      setTimeout(() => {
+        const element = document.getElementById(scrollTo)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 100)
+    }
+  }
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -40,25 +51,17 @@ const Navbar = ({ scrolled }) => {
           <div className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => {
               const LinkIcon = link.icon
-              return link.type === 'route' ? (
+              return (
                 <Link
                   key={link.name}
                   to={link.href}
+                  onClick={() => handleNavClick(link.scrollTo)}
                   className="text-gray-300 hover:text-silver-accent transition-colors duration-300 font-medium relative group flex items-center space-x-1"
                 >
                   {LinkIcon && <LinkIcon className="w-4 h-4" />}
                   <span>{link.name}</span>
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-silver-accent group-hover:w-full transition-all duration-300" />
                 </Link>
-              ) : (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-gray-300 hover:text-silver-accent transition-colors duration-300 font-medium relative group"
-                >
-                  {link.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-silver-accent group-hover:w-full transition-all duration-300" />
-                </a>
               )
             })}
             <a
@@ -91,25 +94,19 @@ const Navbar = ({ scrolled }) => {
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => {
                 const LinkIcon = link.icon
-                return link.type === 'route' ? (
+                return (
                   <Link
                     key={link.name}
                     to={link.href}
-                    onClick={() => setIsOpen(false)}
+                    onClick={() => {
+                      setIsOpen(false)
+                      handleNavClick(link.scrollTo)
+                    }}
                     className="text-gray-300 hover:text-silver-accent transition-colors duration-300 font-medium py-2 border-b border-gray-800 flex items-center space-x-2"
                   >
                     {LinkIcon && <LinkIcon className="w-4 h-4" />}
                     <span>{link.name}</span>
                   </Link>
-                ) : (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className="text-gray-300 hover:text-silver-accent transition-colors duration-300 font-medium py-2 border-b border-gray-800"
-                  >
-                    {link.name}
-                  </a>
                 )
               })}
             </div>
