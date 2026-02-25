@@ -13,29 +13,29 @@ const Hero = () => {
   ]
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-16 sm:pt-20 pb-8 sm:pb-0">
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Contenu à gauche */}
-          <div className="text-center lg:text-left animate-fade-in">
-            <div className="inline-block mb-4 sm:mb-6">
+          <div className="text-center lg:text-left animate-fade-in py-4 sm:py-0">
+            <div className="inline-block mb-6 sm:mb-6">
               <span className="bg-silver-accent/10 text-silver-accent px-4 py-2 sm:px-6 rounded-md text-xs sm:text-sm font-semibold border border-silver-accent/20">
                 Atelier de Personnalisation Automobile
               </span>
             </div>
             
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-racing font-bold mb-4 sm:mb-6 animate-slide-up leading-tight">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-racing font-bold mb-6 sm:mb-6 animate-slide-up leading-tight">
               <span className="gradient-text">VITRES TEINTÉES</span>
               <br />
               <span className="text-white">DE HAUTE QUALITÉ</span>
             </h1>
             
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 lg:max-w-xl animate-slide-up leading-relaxed" style={{ animationDelay: '0.2s' }}>
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-8 lg:max-w-xl animate-slide-up leading-relaxed" style={{ animationDelay: '0.2s' }}>
               Spécialiste du vitrage automobile à Troyes. Protection, style et confort pour votre véhicule.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center lg:items-start gap-3 sm:gap-4 mb-8 sm:mb-12 animate-slide-up" style={{ animationDelay: '0.4s' }}>
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center lg:items-start gap-4 sm:gap-4 mb-10 sm:mb-12 animate-slide-up" style={{ animationDelay: '0.4s' }}>
               <a
                 href="#contact"
                 className="bg-silver-accent hover:bg-white active:bg-gray-400 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 w-full sm:w-auto shadow-lg text-center"
