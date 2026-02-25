@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Star, ChevronLeft, ChevronRight, Quote, CheckCircle } from 'lucide-react'
+import { Star, ChevronLeft, ChevronRight, Quote, BadgeCheck } from 'lucide-react'
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -69,7 +69,7 @@ const Testimonials = () => {
             Découvrez les avis de nos clients satisfaits
           </p>
           <div className="flex items-center justify-center gap-2 text-sm text-gray-500">
-            <CheckCircle className="w-4 h-4 text-blue-500" />
+            <BadgeCheck className="w-4 h-4 text-blue-500 fill-blue-500" />
             <span>Avis Google vérifiés</span>
           </div>
         </div>
@@ -95,7 +95,7 @@ const Testimonials = () => {
                     {testimonials[currentIndex].name}
                   </h4>
                   {testimonials[currentIndex].verified && (
-                    <CheckCircle className="w-5 h-5 text-blue-500 fill-blue-500" title="Avis vérifié Google" />
+                    <BadgeCheck className="w-5 h-5 text-blue-500 fill-blue-500" title="Avis vérifié Google" />
                   )}
                 </div>
                 <p className="text-silver-accent font-semibold mb-1">
