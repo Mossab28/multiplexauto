@@ -88,9 +88,7 @@ const Simulator = () => {
           {/* Header */}
           <div className="text-center mb-12 animate-fade-in">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-racing font-bold mb-4">
-              <span className="gradient-text">SIMULATEUR</span>
-              <br />
-              <span className="text-white">DE DEVIS</span>
+              <span className="gradient-text">SIMULATEUR DE DEVIS</span>
             </h1>
             <p className="text-gray-400 text-lg">
               Obtenez une estimation instantanée pour vos vitres teintées
