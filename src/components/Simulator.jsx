@@ -1,14 +1,20 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { ChevronRight, ChevronLeft, Check, Car, Shield, Zap, Users } from 'lucide-react'
 
 const Simulator = () => {
   const [step, setStep] = useState(1)
+  const [showContactForm, setShowContactForm] = useState(false)
   const [formData, setFormData] = useState({
     vehicleType: '',
     windowType: '',
     tintLevel: '',
     extras: []
+  })
+  const [contactData, setContactData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
   })
 
   const vehicleTypes = [
@@ -307,20 +313,12 @@ const Simulator = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link
-                    to="/"
-                    onClick={() => {
-                      setTimeout(() => {
-                        const contactSection = document.getElementById('contact')
-                        if (contactSection) {
-                          contactSection.scrollIntoView({ behavior: 'smooth' })
-                        }
-                      }, 100)
-                    }}
+                  <button
+                    onClick={() => setShowContactForm(true)}
                     className="flex-1 bg-silver-accent hover:bg-white text-black px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-center"
                   >
                     Demander un devis personnalisé
-                  </Link>
+                  </button>
                   <button
                     onClick={() => {
                       setStep(1)
@@ -331,6 +329,80 @@ const Simulator = () => {
                     Recommencer
                   </button>
                 </div>
+              </div>
+            )}
+
+            {/* Contact Form */}
+            {step === 5 && showContactForm && (
+              <div className="mt-8 glass-effect p-8 rounded-2xl animate-slide-up">
+                <h3 className="text-2xl font-racing font-bold text-white mb-6 text-center">
+                  Demande de devis personnalisé
+                </h3>
+                <form className="space-y-4">
+                  <div>
+                    <label className="block text-gray-300 mb-2">Nom complet *</label>
+                    <input
+                      type="text"
+                      value={contactData.name}
+                      onChange={(e) => setContactData({ ...contactData, name: e.target.value })}
+                      className="w-full bg-dark-gray border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-silver-accent transition-colors"
+                      placeholder="Jean Dupont"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-gray-300 mb-2">Email *</label>
+                    <input
+                      type="email"
+                      value={contactData.email}
+                      onChange={(e) => setContactData({ ...contactData, email: e.target.value })}
+                      className="w-full bg-dark-gray border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-silver-accent transition-colors"
+                      placeholder="jean.dupont@email.com"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-gray-300 mb-2">Téléphone *</label>
+                    <input
+                      type="tel"
+                      value={contactData.phone}
+                      onChange={(e) => setContactData({ ...contactData, phone: e.target.value })}
+                      className="w-full bg-dark-gray border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-silver-accent transition-colors"
+                      placeholder="06 12 34 56 78"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-gray-300 mb-2">Message (facultatif)</label>
+                    <textarea
+                      value={contactData.message}
+                      onChange={(e) => setContactData({ ...contactData, message: e.target.value })}
+                      rows="4"
+                      className="w-full bg-dark-gray border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-silver-accent transition-colors resize-none"
+                      placeholder="Précisions sur votre projet..."
+                    />
+                  </div>
+                  <div className="flex gap-4">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        alert(`Demande de devis envoyée !\n\nNom: ${contactData.name}\nEmail: ${contactData.email}\nTéléphone: ${contactData.phone}\nPrix estimé: ${calculatePrice()}€\n\nNous vous contacterons rapidement.`)
+                        setShowContactForm(false)
+                        setContactData({ name: '', email: '', phone: '', message: '' })
+                      }}
+                      className="flex-1 bg-silver-accent hover:bg-white text-black px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                    >
+                      Envoyer la demande
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setShowContactForm(false)}
+                      className="flex-1 bg-white/5 hover:bg-white/10 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 border border-white/20"
+                    >
+                      Annuler
+                    </button>
+                  </div>
+                </form>
               </div>
             )}
           </div>
