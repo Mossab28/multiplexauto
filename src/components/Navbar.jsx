@@ -74,16 +74,16 @@ const Navbar = ({ scrolled }) => {
             <Link
               to="/simulateur"
               onClick={() => handleNavClick(null, true)}
-              className="bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white px-6 py-2.5 rounded-lg font-black transition-all duration-300 hover-lift flex items-center space-x-2 shadow-lg border-2 border-red-400/50"
+              className="bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all duration-300 hover-lift flex items-center space-x-1.5 shadow-lg border-2 border-red-400/50"
             >
-              <Calculator size={18} />
+              <Calculator size={16} />
               <span className="font-racing tracking-wide">COMBIEN ÇA COÛTE ?</span>
             </Link>
             <a
               href="tel:0663207808"
-              className="bg-call-green hover:bg-green-600 text-white px-6 py-2.5 rounded-lg font-black transition-all duration-300 hover-lift flex items-center space-x-2 shadow-lg border-2 border-green-400/50"
+              className="bg-call-green hover:bg-green-600 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all duration-300 hover-lift flex items-center space-x-1.5 shadow-lg border-2 border-green-400/50"
             >
-              <Phone size={18} />
+              <Phone size={16} />
               <span className="font-racing tracking-wide">06 63 20 78 08</span>
             </a>
           </div>
