@@ -16,14 +16,17 @@ const Hero = () => {
               </span>
             </div>
             
-            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-racing font-bold mb-6 sm:mb-6 animate-slide-up leading-tight">
-              <span className="gradient-text">VITRES TEINTÉES</span>
-              <br />
-              <span className="text-white">DE HAUTE QUALITÉ</span>
+            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-racing font-bold mb-6 sm:mb-6 animate-slide-up leading-tight">
+              <span className="gradient-text">PERFECT' CAR</span>
+              <span className="text-white">, expert en vitres teintées automobiles à Troyes</span>
             </h1>
             
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-8 lg:max-w-xl animate-slide-up leading-relaxed" style={{ animationDelay: '0.2s' }}>
-              Spécialiste du vitrage automobile à Troyes. Protection, style et confort pour votre véhicule.
+            <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-6 lg:max-w-xl animate-slide-up leading-relaxed" style={{ animationDelay: '0.2s' }}>
+              Chez <span className="font-bold text-white">PERFECT' CAR</span>, nous sommes spécialisés dans la pose de <span className="font-bold text-white">vitres teintées haut de gamme</span>, conçues pour améliorer <span className="font-bold text-white">le confort, la sécurité et la valeur</span> de votre véhicule. Installés à <span className="font-bold text-white">Troyes</span>, nous accompagnons particuliers et professionnels avec des prestations <span className="font-bold text-white">précises, durables et conformes à la réglementation</span>.
+            </p>
+            
+            <p className="text-base sm:text-lg text-gray-300 mb-8 sm:mb-8 lg:max-w-xl animate-slide-up leading-relaxed" style={{ animationDelay: '0.3s' }}>
+              Nos films solaires professionnels offrent de <span className="font-bold text-white">véritables bénéfices au quotidien</span> :
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center lg:items-start gap-3 sm:gap-4 mb-8 sm:mb-12 animate-slide-up" style={{ animationDelay: '0.4s' }}>
