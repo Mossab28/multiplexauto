@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Car, Zap, Trophy, Shield, Sun, Lock, Wind, Palette, Users, Truck } from 'lucide-react'
+import { Car, Wind, Palette, Shield, Truck } from 'lucide-react'
 
 const Services = () => {
   const [activeCategory, setActiveCategory] = useState('3portes')
@@ -9,7 +9,7 @@ const Services = () => {
       id: '3portes',
       name: '3 Portes',
       icon: Car,
-      description: 'Citadines et petits véhicules',
+      description: 'Citadines',
       features: [
         'Confort thermique optimal',
         'Esthétique soignée',
@@ -22,41 +22,69 @@ const Services = () => {
     {
       id: '5portes',
       name: '5 Portes',
-      icon: Shield,
+      icon: Car,
       description: 'Berlines et compactes',
       features: [
-        'Confort maximal',
-        'Esthétique complète',
-        'Sécurité totale',
-        'Protection intégrale',
+        'Confort thermique optimal',
+        'Esthétique soignée',
+        'Sécurité renforcée',
+        'Protection UV 99%',
       ],
       price: 'À partir de 200€',
       image: '/multiplexauto/images/gallery/gallery-7.jpg',
     },
     {
-      id: 'break',
-      name: 'Break / SUV / Monospace',
-      icon: Zap,
-      description: 'Véhicules familiaux et SUV',
+      id: 'suv',
+      name: 'SUV',
+      icon: Car,
+      description: 'SUV et 4x4',
       features: [
-        'Confort thermique supérieur',
-        'Esthétique premium',
-        'Sécurité optimale',
-        'Réduction chaleur 80%',
+        'Confort thermique optimal',
+        'Esthétique soignée',
+        'Sécurité renforcée',
+        'Protection UV 99%',
       ],
       price: 'À partir de 250€',
       image: '/multiplexauto/images/services/sportive.jpg',
     },
     {
-      id: 'minibus',
-      name: 'Minibus et Utilitaire',
-      icon: Users,
-      description: 'Véhicules professionnels',
+      id: 'break',
+      name: 'Break / Monospace',
+      icon: Truck,
+      description: 'Break et monospace',
       features: [
-        'Confort pour tous les passagers',
-        'Esthétique professionnelle',
+        'Confort thermique optimal',
+        'Esthétique soignée',
         'Sécurité renforcée',
-        'Protection complète',
+        'Protection UV 99%',
+      ],
+      price: 'À partir de 280€',
+      image: '/multiplexauto/images/services/berline.jpg',
+    },
+    {
+      id: 'minibus',
+      name: 'Minibus',
+      icon: Truck,
+      description: 'Minibus',
+      features: [
+        'Confort thermique optimal',
+        'Esthétique soignée',
+        'Sécurité renforcée',
+        'Protection UV 99%',
+      ],
+      price: 'Sur devis',
+      image: '/multiplexauto/images/services/berline.jpg',
+    },
+    {
+      id: 'utilitaire',
+      name: 'Utilitaire',
+      icon: Truck,
+      description: 'Sur devis personnalisé',
+      features: [
+        'Confort thermique optimal',
+        'Esthétique soignée',
+        'Sécurité renforcée',
+        'Protection UV 99%',
       ],
       price: 'Sur devis',
       image: '/multiplexauto/images/services/berline.jpg',
@@ -142,7 +170,7 @@ const Services = () => {
                 {activeService.price}
               </p>
               <a
-                href="#contact"
+                href="/multiplexauto/#/simulateur"
                 className="block w-full bg-silver-accent hover:bg-white text-black text-center px-6 py-4 rounded-lg font-bold transition-all duration-300 hover-lift"
               >
                 Devis Gratuit
