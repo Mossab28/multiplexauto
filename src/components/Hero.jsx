@@ -15,7 +15,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-6 lg:max-w-xl animate-slide-up leading-relaxed" style={{ animationDelay: '0.2s' }}>
-              Chez <span className="font-bold text-white">PERFECT' CAR</span>, nous sommes spécialisés dans la pose de <span className="font-bold text-white">vitres teintées haut de gamme</span>, conçues pour améliorer <span className="font-bold text-white">le confort, la sécurité et la valeur</span> de votre véhicule. Installés à <span className="font-bold text-white">Troyes</span>, nous accompagnons particuliers et professionnels avec des prestations <span className="font-bold text-white">précises, durables et conformes à la réglementation</span>.
+              Chez <span className="font-bold text-white">PERFECT' car</span>, nous sommes spécialisés dans la pose de <span className="font-bold text-white">vitres teintées haut de gamme</span>, conçues pour améliorer <span className="font-bold text-white">le confort, la sécurité et la valeur</span> de votre véhicule. Installés à <span className="font-bold text-white">Troyes</span>, nous accompagnons particuliers et professionnels avec des prestations <span className="font-bold text-white">précises, durables et conformes à la réglementation</span>.
             </p>
             
 
@@ -24,7 +24,7 @@ const Hero = () => {
             </p>
 
             <p className="text-base sm:text-lg text-gray-300 mb-8 animate-slide-up leading-relaxed" style={{ animationDelay: '0.5s' }}>
-              <span className="font-bold text-white">PERFECT' CAR</span> incarne l'exigence du détail et la finition haut de gamme au service de votre confort.
+              <span className="font-bold text-white">PERFECT' car</span> incarne l'exigence du détail et la finition haut de gamme au service de votre confort.
             </p>
           </div>
 
