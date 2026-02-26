@@ -28,31 +28,31 @@ const Hero = () => {
             </p>
 
             {/* Réseaux sociaux */}
-            <div className="glass-effect p-6 rounded-xl mb-8 animate-slide-up lg:max-w-xl" style={{ animationDelay: '0.6s' }}>
-              <h3 className="text-lg font-racing font-bold mb-4 text-white">Suivez-nous</h3>
-              <div className="space-y-3">
+            <div className="glass-effect p-4 rounded-xl mb-8 animate-slide-up lg:max-w-xl" style={{ animationDelay: '0.6s' }}>
+              <h3 className="text-sm font-racing font-bold mb-3 text-white">Suivez-nous</h3>
+              <div className="flex gap-2">
                 <a
                   href="https://www.instagram.com/perfect_car_troyes/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-4 rounded-lg font-semibold transition-all duration-300 hover-lift"
+                  className="flex-1 flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-3 py-3 rounded-lg font-semibold transition-all duration-300 hover-lift"
                 >
-                  <Instagram className="w-6 h-6" />
-                  <div>
-                    <p className="font-bold">@perfect_car_troyes</p>
-                    <p className="text-sm opacity-90">5006 followers • 103 publications</p>
+                  <Instagram className="w-5 h-5 flex-shrink-0" />
+                  <div className="min-w-0">
+                    <p className="font-bold text-xs truncate">@perfect_car_troyes</p>
+                    <p className="text-xs opacity-90">5006 followers • 103 publications</p>
                   </div>
                 </a>
                 <a
                   href="https://www.facebook.com/PERFECTCarTROYES/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-4 rounded-lg font-semibold transition-all duration-300 hover-lift"
+                  className="flex-1 flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-3 py-3 rounded-lg font-semibold transition-all duration-300 hover-lift"
                 >
-                  <Facebook className="w-6 h-6" />
-                  <div>
-                    <p className="font-bold">PERFECT'Car TROYES</p>
-                    <p className="text-sm opacity-90">Suivez notre actualité</p>
+                  <Facebook className="w-5 h-5 flex-shrink-0" />
+                  <div className="min-w-0">
+                    <p className="font-bold text-xs truncate">PERFECT'Car TROYES</p>
+                    <p className="text-xs opacity-90">Suivez notre actualité</p>
                   </div>
                 </a>
               </div>
