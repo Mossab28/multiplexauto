@@ -8,7 +8,7 @@ const BrandGallery = () => {
   const brands = [
     {
       name: 'BMW',
-      logo: 'https://logo.clearbit.com/bmw.com',
+      logo: '🏁',
       images: [
         '/multiplexauto/images/gallery/gallery-16.jpg',
         '/multiplexauto/images/gallery/gallery-17.jpg',
@@ -17,7 +17,7 @@ const BrandGallery = () => {
     },
     {
       name: 'Audi',
-      logo: 'https://logo.clearbit.com/audi.com',
+      logo: '⭕',
       images: [
         '/multiplexauto/images/gallery/gallery-4.jpg',
         '/multiplexauto/images/gallery/gallery-5.jpg',
@@ -30,7 +30,7 @@ const BrandGallery = () => {
     },
     {
       name: 'Volkswagen',
-      logo: 'https://logo.clearbit.com/vw.com',
+      logo: '🚗',
       images: [
         '/multiplexauto/images/gallery/gallery-7.jpg',
         '/multiplexauto/images/gallery/gallery-8.jpg',
@@ -40,7 +40,7 @@ const BrandGallery = () => {
     },
     {
       name: 'Maserati',
-      logo: 'https://logo.clearbit.com/maserati.com',
+      logo: '🔱',
       images: [
         '/multiplexauto/images/gallery/gallery-20.jpg',
       ],
@@ -48,7 +48,7 @@ const BrandGallery = () => {
     },
     {
       name: 'Peugeot',
-      logo: 'https://logo.clearbit.com/peugeot.com',
+      logo: '🦁',
       images: [
         '/multiplexauto/images/gallery/gallery-10.jpg',
         '/multiplexauto/images/gallery/gallery-11.jpg',
@@ -58,7 +58,7 @@ const BrandGallery = () => {
     },
     {
       name: 'Renault',
-      logo: 'https://logo.clearbit.com/renault.com',
+      logo: '💎',
       images: [
         '/multiplexauto/images/gallery/gallery-18.jpg',
         '/multiplexauto/images/gallery/gallery-21.jpg',
@@ -67,7 +67,7 @@ const BrandGallery = () => {
     },
     {
       name: 'Mini',
-      logo: 'https://logo.clearbit.com/mini.com',
+      logo: '🎯',
       images: [
         '/multiplexauto/images/gallery/gallery-22.jpg',
       ],
@@ -75,7 +75,7 @@ const BrandGallery = () => {
     },
     {
       name: 'Land Rover',
-      logo: 'https://logo.clearbit.com/landrover.com',
+      logo: '🏔️',
       images: [
         '/multiplexauto/images/gallery/gallery-19.jpg',
       ],
@@ -137,12 +137,10 @@ const BrandGallery = () => {
                 <div className="absolute -inset-0.5 rounded-full bg-gradient-to-tr from-silver-accent/20 to-silver-accent/10 group-hover:from-silver-accent/30 group-hover:to-silver-accent/20 transition-all duration-300" />
                 
                 {/* Logo de la marque */}
-                <div className="relative aspect-square rounded-full overflow-hidden border border-silver-accent/20 group-hover:border-silver-accent/40 transition-all duration-300 bg-white flex items-center justify-center p-6">
-                  <img 
-                    src={brand.logo} 
-                    alt={brand.name}
-                    className="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500"
-                  />
+                <div className="relative aspect-square rounded-full overflow-hidden border border-silver-accent/20 group-hover:border-silver-accent/40 transition-all duration-300 bg-white flex items-center justify-center">
+                  <span className="text-6xl transform group-hover:scale-110 transition-transform duration-500">
+                    {brand.logo}
+                  </span>
                 </div>
               </div>
               
