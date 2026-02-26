@@ -233,11 +233,6 @@ const Simulator = () => {
                     * Pour les monospaces et minibus, merci de nous contacter pour confirmer le tarif exact en fonction de votre modèle.
                   </p>
                 )}
-                {(formData.vehicleType === 'break' || formData.vehicleType === 'minibus') && (
-                  <p className="text-yellow-500 text-xs mt-3 text-center">
-                    * Pour les monospaces et minibus, merci de nous contacter pour confirmer le tarif exact en fonction de votre modèle.
-                  </p>
-                )}
               </div>
             )}
 
