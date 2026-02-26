@@ -62,25 +62,29 @@ const Hero = () => {
 
           {/* Section Avantages à droite */}
           <div className="hidden lg:block">
-            {/* Garantie à vie - Mise en avant */}
-            <div className="bg-gradient-to-br from-green-500/20 to-green-600/10 border-2 border-green-500 rounded-2xl p-8 mb-6 animate-slide-up">
-              <div className="flex items-center justify-center mb-4">
-                <CheckCircle2 className="w-16 h-16 text-green-500" />
+            {/* Garantie à vie - Mise en avant compacte */}
+            <div className="glass-effect border border-blue-500/30 rounded-xl p-6 mb-6 animate-slide-up hover-lift">
+              <div className="flex items-center space-x-4">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-blue-500/20 rounded-full animate-ping" />
+                  <div className="relative bg-blue-500/10 p-3 rounded-full border-2 border-blue-500">
+                    <CheckCircle2 className="w-8 h-8 text-blue-500" />
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-racing font-bold text-blue-500 mb-1">
+                    GARANTIE À VIE OFFERTE
+                  </h3>
+                  <p className="text-gray-300 text-sm">
+                    Sur toutes nos installations de vitres teintées
+                  </p>
+                </div>
               </div>
-              <h3 className="text-3xl font-racing font-bold text-center mb-3 text-green-500">
-                GARANTIE À VIE
-              </h3>
-              <p className="text-center text-white text-lg font-semibold mb-2">
-                Offerte sur tous nos services
-              </p>
-              <p className="text-center text-gray-300 text-sm">
-                Nous sommes tellement confiants dans la qualité de notre travail que nous offrons une garantie à vie sur toutes nos installations.
-              </p>
             </div>
 
             {/* Avantages des vitres teintées */}
-            <div className="space-y-4 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              <h3 className="text-2xl font-racing font-bold text-white mb-4">Les avantages des vitres teintées</h3>
+            <div className="space-y-3 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+              <h3 className="text-xl font-racing font-bold text-white mb-3">Pourquoi teinter vos vitres ?</h3>
               
               <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift">
                 <div className="flex items-start space-x-4">
