@@ -29,9 +29,17 @@ const Hero = () => {
               Chaque installation est réalisée avec un <span className="font-bold text-white">matériel professionnel</span>, une <span className="font-bold text-white">pose millimétrée sans bulles</span>, et des <span className="font-bold text-white">films garantis</span>, pour un rendu irréprochable et durable dans le temps.
             </p>
 
-            <p className="text-base sm:text-lg text-gray-300 mb-8 animate-slide-up leading-relaxed" style={{ animationDelay: '0.5s' }}>
+            <p className="text-base sm:text-lg text-gray-300 mb-6 animate-slide-up leading-relaxed" style={{ animationDelay: '0.5s' }}>
               <span className="font-bold text-white">PERFECT' CAR</span> incarne l'exigence du détail et la finition haut de gamme au service de votre confort.
             </p>
+
+            {/* Valorisation du véhicule */}
+            <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift animate-slide-up lg:max-w-xl" style={{ animationDelay: '0.6s' }}>
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">💰</span>
+                <p className="text-gray-300 text-sm"><span className="font-bold text-white">Valorisation du véhicule</span> à la revente</p>
+              </div>
+            </div>
           </div>
 
           {/* Section Avantages à droite */}
@@ -95,12 +103,6 @@ const Hero = () => {
                 <div className="flex items-start space-x-3">
                   <span className="text-2xl">💎</span>
                   <p className="text-gray-300 text-sm"><span className="font-bold text-white">Esthétique premium :</span> finition nette, élégante et homogène</p>
-                </div>
-              </div>
-              <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift">
-                <div className="flex items-start space-x-3">
-                  <span className="text-2xl">💰</span>
-                  <p className="text-gray-300 text-sm"><span className="font-bold text-white">Valorisation du véhicule</span> à la revente</p>
                 </div>
               </div>
             </div>
