@@ -1,5 +1,5 @@
 import React from 'react'
-import { ChevronDown, Shield, Sun, Eye, ThermometerSun, CheckCircle2, Sparkles } from 'lucide-react'
+import { ChevronDown, Shield, Sun, Eye, ThermometerSun, CheckCircle2, Sparkles, Award } from 'lucide-react'
 
 const Hero = () => {
 
