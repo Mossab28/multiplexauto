@@ -36,16 +36,14 @@ function App() {
 
   return (
     <Router>
-      <div className="relative min-h-screen flex flex-col">
+      <div className="relative">
         <div className="fixed inset-0 bg-matte-black -z-10" />
         
         <Navbar scrolled={scrolled} />
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/simulateur" element={<Simulator />} />
-          </Routes>
-        </main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/simulateur" element={<Simulator />} />
+        </Routes>
         <Footer />
       </div>
     </Router>
