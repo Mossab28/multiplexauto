@@ -14,14 +14,6 @@ const Testimonials = () => {
       verified: true,
     },
     {
-      name: 'Marie Auriac',
-      vehicle: 'Client vérifié',
-      rating: 5,
-      text: "Ayant acheté un véhicule dans ce garage qui se trouve à plus de 700km de chez moi, le garagiste n'a pas hésité à me descendre la voiture au 3/4 du chemin. La transaction s'est bien déroulée, la personne est très professionnelle et a su gagner ma confiance. Merci encore pour votre gentillesse et je n'hésiterais pas à vous recommander.",
-      date: 'Il y a 1 an',
-      verified: true,
-    },
-    {
       name: 'Lucie Guillot',
       vehicle: 'Client vérifié',
       rating: 5,
