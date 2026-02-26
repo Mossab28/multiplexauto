@@ -8,7 +8,7 @@ const BrandGallery = () => {
   const brands = [
     {
       name: 'BMW',
-      logo: '/multiplexauto/images/logo-bmw.jpg',
+      logo: '/multiplexauto/images/logo-bmw.png',
       images: [
         '/multiplexauto/images/gallery/gallery-16.jpg',
         '/multiplexauto/images/gallery/gallery-17.jpg',
