@@ -1,5 +1,5 @@
 import React from 'react'
-import { ChevronDown, Shield, Sun, Eye, ThermometerSun, BadgeCheck, Sparkles, Award } from 'lucide-react'
+import { ChevronDown, Shield, Sun, Eye, ThermometerSun, BadgeCheck, Sparkles, Award, Instagram, Facebook } from 'lucide-react'
 
 const Hero = () => {
 
@@ -23,9 +23,40 @@ const Hero = () => {
               Chaque installation est réalisée avec un <span className="font-bold text-white">matériel professionnel</span>, une <span className="font-bold text-white">pose millimétrée sans bulles</span>, et des <span className="font-bold text-white">films garantis</span>, pour un rendu irréprochable et durable dans le temps.
             </p>
 
-            <p className="text-base sm:text-lg text-gray-300 mb-8 animate-slide-up leading-relaxed" style={{ animationDelay: '0.5s' }}>
+            <p className="text-base sm:text-lg text-gray-300 mb-6 animate-slide-up leading-relaxed" style={{ animationDelay: '0.5s' }}>
               <span className="font-bold text-white">PERFECT' car</span> incarne l'exigence du détail et la finition haut de gamme au service de votre confort.
             </p>
+
+            {/* Réseaux sociaux */}
+            <div className="glass-effect p-6 rounded-xl mb-8 animate-slide-up lg:max-w-xl" style={{ animationDelay: '0.6s' }}>
+              <h3 className="text-lg font-racing font-bold mb-4 text-white">Suivez-nous</h3>
+              <div className="space-y-3">
+                <a
+                  href="https://www.instagram.com/perfect_car_troyes/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-4 rounded-lg font-semibold transition-all duration-300 hover-lift"
+                >
+                  <Instagram className="w-6 h-6" />
+                  <div>
+                    <p className="font-bold">@perfect_car_troyes</p>
+                    <p className="text-sm opacity-90">5006 followers • 103 publications</p>
+                  </div>
+                </a>
+                <a
+                  href="https://www.facebook.com/PERFECTCarTROYES/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-3 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-4 rounded-lg font-semibold transition-all duration-300 hover-lift"
+                >
+                  <Facebook className="w-6 h-6" />
+                  <div>
+                    <p className="font-bold">PERFECT'Car TROYES</p>
+                    <p className="text-sm opacity-90">Suivez notre actualité</p>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Section Avantages à droite */}

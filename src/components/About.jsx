@@ -37,14 +37,6 @@ const About = () => {
               </div>
             </div>
 
-            <a
-              href="https://www.instagram.com/perfect_car_troyes/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover-lift"
-            >
-              📱 Suivez-nous sur Instagram
-            </a>
           </div>
 
           <div className="relative animate-slide-up">
