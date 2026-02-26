@@ -9,15 +9,14 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="w-16 h-16 flex items-center justify-center">
+            <div className="flex items-center mb-4">
+              <div className="w-24 h-24 flex items-center justify-center">
                 <img 
-                  src="/multiplexauto/logo.png" 
+                  src="/multiplexauto/logo-new.png" 
                   alt="Perfect'Car Logo" 
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h3 className="text-xl font-racing font-bold gradient-text">PERFECT CAR</h3>
             </div>
             <p className="text-gray-400 mb-4">
               Votre spécialiste en vitres teintées à Troyes. Qualité professionnelle et service personnalisé.

@@ -45,19 +45,13 @@ const Navbar = ({ scrolled }) => {
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+          <div className="flex items-center">
+            <div className="w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center">
               <img 
-                src="/multiplexauto/logo.png" 
+                src="/multiplexauto/logo-new.png" 
                 alt="Perfect'Car Logo" 
                 className="w-full h-full object-contain"
               />
-            </div>
-            <div>
-              <h1 className="text-xl sm:text-2xl font-racing font-bold gradient-text">
-                PERFECT CAR
-              </h1>
-              <p className="text-xs text-gray-400 hidden sm:block">Vitres Teintées Premium</p>
             </div>
           </div>
 
