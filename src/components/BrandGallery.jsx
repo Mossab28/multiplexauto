@@ -17,7 +17,7 @@ const BrandGallery = () => {
     },
     {
       name: 'Audi',
-      logo: '/multiplexauto/images/logo-audi.jpg',
+      logo: '/multiplexauto/images/logo-audi.png',
       images: [
         '/multiplexauto/images/gallery/gallery-4.jpg',
         '/multiplexauto/images/gallery/gallery-5.jpg',
