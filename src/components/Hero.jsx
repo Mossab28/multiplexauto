@@ -10,14 +10,8 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Contenu à gauche */}
           <div className="text-center lg:text-left animate-fade-in py-4 sm:py-0">
-            <div className="inline-block mb-6 sm:mb-6">
-              <span className="bg-silver-accent/10 text-silver-accent px-4 py-2 sm:px-6 rounded-md text-xs sm:text-sm font-semibold border border-silver-accent/20">
-                Atelier de Personnalisation Automobile
-              </span>
-            </div>
-            
             <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-racing font-bold mb-6 sm:mb-6 animate-slide-up leading-tight">
-              <span className="gradient-text">PERFECT' CAR</span>
+              <span className="gradient-text">VITRES TEINTÉES DE HAUTE QUALITÉ</span>
             </h1>
             
             <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-6 lg:max-w-xl animate-slide-up leading-relaxed" style={{ animationDelay: '0.2s' }}>
