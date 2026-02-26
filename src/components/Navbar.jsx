@@ -45,11 +45,12 @@ const Navbar = ({ scrolled }) => {
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <div className="flex items-center -ml-4">
+          <div className="flex items-center -ml-8 overflow-hidden">
             <img 
               src="/multiplexauto/logo-new.png" 
               alt="Perfect'Car Logo" 
-              className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 object-contain"
+              className="w-56 h-56 sm:w-64 sm:h-64 lg:w-72 lg:h-72 object-contain scale-150"
+              style={{ objectPosition: 'left center' }}
             />
           </div>
 
