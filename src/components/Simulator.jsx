@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ChevronRight, ChevronLeft, Check, Car, Shield, Zap, Users } from 'lucide-react'
+import { ChevronRight, ChevronLeft, Check, Car, Truck, Bus } from 'lucide-react'
 
 const Simulator = () => {
   const [step, setStep] = useState(1)
@@ -18,16 +18,18 @@ const Simulator = () => {
   })
 
   const vehicleTypes = [
-    { id: '3portes', name: '3 Portes', icon: Car, basePrice: 150, description: 'Citadines et petits véhicules' },
-    { id: '5portes', name: '5 Portes', icon: Shield, basePrice: 200, description: 'Berlines et compactes' },
-    { id: 'break', name: 'Break / SUV / Monospace', icon: Zap, basePrice: 250, description: 'Véhicules familiaux' },
-    { id: 'minibus', name: 'Minibus et Utilitaire', icon: Users, basePrice: 350, description: 'Véhicules professionnels' }
+    { id: '3portes', name: '3 Portes', icon: Car, description: 'Citadines' },
+    { id: '5portes', name: '5 Portes', icon: Car, description: 'Berlines et compactes' },
+    { id: 'suv', name: 'SUV', icon: Car, description: 'SUV et 4x4' },
+    { id: 'break', name: 'Break / Monospace', icon: Truck, description: 'Break et monospace' },
+    { id: 'minibus', name: 'Minibus', icon: Bus, description: 'Minibus' },
+    { id: 'utilitaire', name: 'Utilitaire', icon: Truck, description: 'Sur devis personnalisé' }
   ]
 
   const windowTypes = [
-    { id: 'avant', name: 'Vitres avant uniquement', price: 0, description: '2 vitres latérales avant' },
-    { id: 'arriere', name: 'Vitres arrière uniquement', price: 50, description: 'Vitres latérales arrière + lunette' },
-    { id: 'complet', name: 'Véhicule complet', price: 100, description: 'Toutes les vitres' }
+    { id: 'avant', name: 'Vitres avant uniquement', description: '2 vitres latérales avant' },
+    { id: '3/4', name: '3/4 (Vitres arrière)', description: 'Vitres latérales arrière + lunette' },
+    { id: 'complet', name: 'Véhicule complet', description: 'Toutes les vitres' }
   ]
 
   const tintLevels = [
@@ -42,16 +44,28 @@ const Simulator = () => {
     { id: 'garantie', name: 'Garantie 10 ans', price: 50 }
   ]
 
+  const priceGrid = {
+    '3portes': { 'avant': 120, '3/4': 160, 'complet': 260 },
+    '5portes': { 'avant': 120, '3/4': 190, 'complet': 290 },
+    'suv': { 'avant': 120, '3/4': 220, 'complet': 320 },
+    'break': { 'avant': 120, '3/4': 240, 'complet': 340 },
+    'minibus': { 'avant': 120, '3/4': 290, 'complet': 390 },
+    'utilitaire': { 'avant': 0, '3/4': 0, 'complet': 0 }
+  }
+
   const calculatePrice = () => {
-    const vehicle = vehicleTypes.find(v => v.id === formData.vehicleType)
-    const window = windowTypes.find(w => w.id === formData.windowType)
+    if (formData.vehicleType === 'utilitaire') {
+      return 'Sur devis'
+    }
+    
+    const basePrice = priceGrid[formData.vehicleType]?.[formData.windowType] || 0
     const tint = tintLevels.find(t => t.id === formData.tintLevel)
     const extrasPrice = formData.extras.reduce((sum, extraId) => {
       const extra = extras.find(e => e.id === extraId)
       return sum + (extra?.price || 0)
     }, 0)
 
-    return (vehicle?.basePrice || 0) + (window?.price || 0) + (tint?.price || 0) + extrasPrice
+    return basePrice + (tint?.price || 0) + extrasPrice
   }
 
   const nextStep = () => setStep(prev => Math.min(prev + 1, 5))
@@ -88,10 +102,10 @@ const Simulator = () => {
           {/* Header */}
           <div className="text-center mb-12 animate-fade-in">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-racing font-bold mb-4">
-              <span className="gradient-text">SIMULATEUR DE DEVIS</span>
+              <span className="gradient-text">CALCULATEUR DE PRIX</span>
             </h1>
             <p className="text-gray-400 text-lg">
-              Obtenez une estimation instantanée pour vos vitres teintées
+              Consultez le prix de vitres teintées pour votre voiture
             </p>
           </div>
 
@@ -135,8 +149,7 @@ const Simulator = () => {
                       >
                         <Icon className="w-12 h-12 text-silver-accent mx-auto mb-3" />
                         <h3 className="font-racing font-bold text-white mb-2">{vehicle.name}</h3>
-                        <p className="text-gray-400 text-sm mb-2">{vehicle.description}</p>
-                        <p className="text-silver-accent font-bold">À partir de {vehicle.basePrice}€</p>
+                        <p className="text-gray-400 text-sm">{vehicle.description}</p>
                       </button>
                     )
                   })}
@@ -161,14 +174,9 @@ const Simulator = () => {
                           : 'border-gray-700 hover:border-silver-accent/50'
                       }`}
                     >
-                      <div className="flex justify-between items-center">
-                        <div>
-                          <h3 className="font-racing font-bold text-white mb-1">{window.name}</h3>
-                          <p className="text-gray-400 text-sm">{window.description}</p>
-                        </div>
-                        <p className="text-silver-accent font-bold">
-                          {window.price > 0 ? `+${window.price}€` : 'Inclus'}
-                        </p>
+                      <div>
+                        <h3 className="font-racing font-bold text-white mb-1">{window.name}</h3>
+                        <p className="text-gray-400 text-sm">{window.description}</p>
                       </div>
                     </button>
                   ))}
@@ -301,7 +309,7 @@ const Simulator = () => {
                     <div className="flex justify-between items-center">
                       <span className="text-xl font-racing font-bold text-white">TOTAL ESTIMÉ</span>
                       <span className="text-3xl font-racing font-bold gradient-text">
-                        {calculatePrice()}€
+                        {typeof calculatePrice() === 'number' ? `${calculatePrice()}€` : calculatePrice()}
                       </span>
                     </div>
                     <p className="text-gray-400 text-xs mt-1">
