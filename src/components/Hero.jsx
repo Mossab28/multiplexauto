@@ -24,36 +24,6 @@ const Hero = () => {
               Chez <span className="font-bold text-white">PERFECT' CAR</span>, nous sommes spécialisés dans la pose de <span className="font-bold text-white">vitres teintées haut de gamme</span>, conçues pour améliorer <span className="font-bold text-white">le confort, la sécurité et la valeur</span> de votre véhicule. Installés à <span className="font-bold text-white">Troyes</span>, nous accompagnons particuliers et professionnels avec des prestations <span className="font-bold text-white">précises, durables et conformes à la réglementation</span>.
             </p>
             
-            <div className="space-y-3 mb-8 animate-slide-up" style={{ animationDelay: '0.3s' }}>
-              <div className="flex items-start space-x-3">
-                <span className="text-2xl">☀️</span>
-                <p className="text-gray-300 text-sm sm:text-base"><span className="font-bold text-white">Rejet élevé de la chaleur :</span> jusqu'à -60 % de chaleur ressentie, pour un habitacle plus frais été comme hiver</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-2xl">🛡️</span>
-                <p className="text-gray-300 text-sm sm:text-base"><span className="font-bold text-white">Protection UV à 99 % :</span> préserve la peau, évite la décoloration des sièges, cuirs et plastiques</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-2xl">🔒</span>
-                <p className="text-gray-300 text-sm sm:text-base"><span className="font-bold text-white">Sécurité renforcée :</span> en cas de choc ou de bris de glace, le film retient les éclats</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-2xl">👀</span>
-                <p className="text-gray-300 text-sm sm:text-base"><span className="font-bold text-white">Intimité et discrétion</span> sans compromettre la visibilité</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-2xl">🚫</span>
-                <p className="text-gray-300 text-sm sm:text-base"><span className="font-bold text-white">Réduction de l'éblouissement</span> et de la fatigue visuelle</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-2xl">💎</span>
-                <p className="text-gray-300 text-sm sm:text-base"><span className="font-bold text-white">Esthétique premium :</span> finition nette, élégante et homogène</p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-2xl">💰</span>
-                <p className="text-gray-300 text-sm sm:text-base"><span className="font-bold text-white">Valorisation du véhicule</span> à la revente</p>
-              </div>
-            </div>
 
             <p className="text-base sm:text-lg text-gray-300 mb-6 animate-slide-up leading-relaxed" style={{ animationDelay: '0.4s' }}>
               Chaque installation est réalisée avec un <span className="font-bold text-white">matériel professionnel</span>, une <span className="font-bold text-white">pose millimétrée sans bulles</span>, et des <span className="font-bold text-white">films garantis</span>, pour un rendu irréprochable et durable dans le temps.
@@ -91,66 +61,33 @@ const Hero = () => {
 
             {/* Avantages des vitres teintées */}
             <div className="space-y-3 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              <h3 className="text-xl font-racing font-bold text-white mb-3">Pourquoi teinter vos vitres ?</h3>
-              
-              <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-silver-accent/10 p-3 rounded-lg">
-                    <Sun className="w-6 h-6 text-silver-accent" />
-                  </div>
-                  <div>
-                    <h4 className="font-racing font-bold text-white mb-1">Protection UV 99%</h4>
-                    <p className="text-gray-400 text-sm">Bloquez les rayons UV nocifs et protégez votre peau et l'intérieur de votre véhicule.</p>
-                  </div>
-                </div>
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">☀️</span>
+                <p className="text-gray-300 text-sm"><span className="font-bold text-white">Rejet élevé de la chaleur :</span> jusqu'à -60 % de chaleur ressentie, pour un habitacle plus frais été comme hiver</p>
               </div>
-
-              <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-silver-accent/10 p-3 rounded-lg">
-                    <ThermometerSun className="w-6 h-6 text-silver-accent" />
-                  </div>
-                  <div>
-                    <h4 className="font-racing font-bold text-white mb-1">Réduction de chaleur</h4>
-                    <p className="text-gray-400 text-sm">Jusqu'à 60% de chaleur en moins dans votre habitacle, pour un confort optimal.</p>
-                  </div>
-                </div>
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">🛡️</span>
+                <p className="text-gray-300 text-sm"><span className="font-bold text-white">Protection UV à 99 % :</span> préserve la peau, évite la décoloration des sièges, cuirs et plastiques</p>
               </div>
-
-              <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-silver-accent/10 p-3 rounded-lg">
-                    <Eye className="w-6 h-6 text-silver-accent" />
-                  </div>
-                  <div>
-                    <h4 className="font-racing font-bold text-white mb-1">Intimité renforcée</h4>
-                    <p className="text-gray-400 text-sm">Protégez votre vie privée et dissuadez les tentatives d'effraction.</p>
-                  </div>
-                </div>
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">🔒</span>
+                <p className="text-gray-300 text-sm"><span className="font-bold text-white">Sécurité renforcée :</span> en cas de choc ou de bris de glace, le film retient les éclats</p>
               </div>
-
-              <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-silver-accent/10 p-3 rounded-lg">
-                    <Sparkles className="w-6 h-6 text-silver-accent" />
-                  </div>
-                  <div>
-                    <h4 className="font-racing font-bold text-white mb-1">Esthétique premium</h4>
-                    <p className="text-gray-400 text-sm">Donnez un look sportif et élégant à votre véhicule.</p>
-                  </div>
-                </div>
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">👀</span>
+                <p className="text-gray-300 text-sm"><span className="font-bold text-white">Intimité et discrétion</span> sans compromettre la visibilité</p>
               </div>
-
-              <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-silver-accent/10 p-3 rounded-lg">
-                    <Shield className="w-6 h-6 text-silver-accent" />
-                  </div>
-                  <div>
-                    <h4 className="font-racing font-bold text-white mb-1">Protection anti-effraction</h4>
-                    <p className="text-gray-400 text-sm">Le film renforce vos vitres et retarde les tentatives d'intrusion.</p>
-                  </div>
-                </div>
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">🚫</span>
+                <p className="text-gray-300 text-sm"><span className="font-bold text-white">Réduction de l'éblouissement</span> et de la fatigue visuelle</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">💎</span>
+                <p className="text-gray-300 text-sm"><span className="font-bold text-white">Esthétique premium :</span> finition nette, élégante et homogène</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">💰</span>
+                <p className="text-gray-300 text-sm"><span className="font-bold text-white">Valorisation du véhicule</span> à la revente</p>
               </div>
             </div>
           </div>
