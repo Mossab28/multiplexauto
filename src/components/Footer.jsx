@@ -1,5 +1,5 @@
 import React from 'react'
-import { Instagram, Phone, Mail, MapPin, Heart } from 'lucide-react'
+import { Instagram, Phone, Mail, MapPin, Heart, Facebook } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom'
 
 const Footer = () => {
@@ -36,15 +36,26 @@ const Footer = () => {
             <p className="text-gray-400 mb-4">
               Votre spécialiste en vitres teintées à Troyes. Qualité professionnelle et service personnalisé.
             </p>
-            <a
-              href="https://www.instagram.com/perfect_car_troyes/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 text-silver-accent hover:text-red-600 transition-colors"
-            >
-              <Instagram className="w-5 h-5" />
-              <span className="font-semibold">@perfect_car_troyes</span>
-            </a>
+            <div className="flex flex-col space-y-3">
+              <a
+                href="https://www.instagram.com/perfect_car_troyes/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 text-silver-accent hover:text-red-600 transition-colors"
+              >
+                <Instagram className="w-5 h-5" />
+                <span className="font-semibold">@perfect_car_troyes</span>
+              </a>
+              <a
+                href="https://www.facebook.com/PERFECTCarTROYES/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 text-silver-accent hover:text-blue-600 transition-colors"
+              >
+                <Facebook className="w-5 h-5" />
+                <span className="font-semibold">PERFECT'Car TROYES</span>
+              </a>
+            </div>
           </div>
 
           <div>
