@@ -89,10 +89,10 @@ const Navbar = ({ scrolled }) => {
             </Link>
             <a
               href="tel:0663207808"
-              className="bg-call-green hover:bg-green-600 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover-lift flex items-center space-x-2"
+              className="bg-call-green hover:bg-green-600 text-white px-6 py-2.5 rounded-lg font-black transition-all duration-300 hover-lift flex items-center space-x-2 shadow-lg border-2 border-green-400/50"
             >
               <Phone size={18} />
-              <span>06 63 20 78 08</span>
+              <span className="font-racing tracking-wide">06 63 20 78 08</span>
             </a>
           </div>
 
