@@ -1,5 +1,5 @@
 import React from 'react'
-import { ChevronDown, Shield, Sun, Eye, ThermometerSun, CheckCircle2, Sparkles, Award } from 'lucide-react'
+import { ChevronDown, Shield, Sun, Eye, ThermometerSun, BadgeCheck, Sparkles, Award } from 'lucide-react'
 
 const Hero = () => {
 
@@ -67,8 +67,8 @@ const Hero = () => {
               <div className="flex items-center space-x-4">
                 <div className="relative">
                   <div className="absolute inset-0 bg-blue-500/20 rounded-full animate-ping" />
-                  <div className="relative bg-blue-500/10 p-3 rounded-full border-2 border-blue-500">
-                    <CheckCircle2 className="w-8 h-8 text-blue-500" />
+                  <div className="relative">
+                    <BadgeCheck className="w-12 h-12 text-blue-500 fill-blue-500" />
                   </div>
                 </div>
                 <div className="flex-1">
