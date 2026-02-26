@@ -68,7 +68,10 @@ const Hero = () => {
                 <div className="relative">
                   <div className="absolute inset-0 bg-blue-500/20 rounded-full animate-ping" />
                   <div className="relative">
-                    <BadgeCheck className="w-12 h-12 text-blue-500 fill-blue-500" />
+                    <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="#3B82F6"/>
+                      <path d="M9 12L11 14L15 10" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
                   </div>
                 </div>
                 <div className="flex-1">
