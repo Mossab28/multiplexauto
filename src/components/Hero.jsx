@@ -35,7 +35,7 @@ const Hero = () => {
           </div>
 
           {/* Section Avantages à droite */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:block pt-16">
             {/* Garantie à vie - Mise en avant compacte */}
             <div className="glass-effect border border-blue-500/30 rounded-xl p-6 mb-6 animate-slide-up hover-lift">
               <div className="flex items-center space-x-4">
