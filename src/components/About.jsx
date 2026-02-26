@@ -25,7 +25,7 @@ const About = () => {
               Basé à <span className="text-silver-accent font-semibold">Troyes</span>, nous sommes spécialisés dans la pose de vitres teintées pour tous types de véhicules. Notre atelier de personnalisation automobile offre des services de haute qualité avec une attention particulière aux détails.
             </p>
             <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              Avec plus de <span className="text-silver-accent font-semibold">5000 followers</span> sur Instagram et des centaines de clients satisfaits, nous sommes reconnus pour notre expertise et notre professionnalisme dans le domaine du vitrage automobile.
+              Avec plus de <span className="text-silver-accent font-semibold">5000 followers</span> sur Instagram et plus de <span className="text-silver-accent font-semibold">300 clients satisfaits</span>, nous sommes reconnus pour notre expertise et notre professionnalisme dans le domaine du vitrage automobile.
             </p>
 
             <div className="flex items-start space-x-3 mb-6 glass-effect p-4 rounded-lg">
@@ -45,7 +45,7 @@ const About = () => {
                 <div className="w-16 h-16 bg-silver-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-silver-accent" />
                 </div>
-                <h3 className="text-3xl font-racing font-bold text-white mb-2">5000+</h3>
+                <h3 className="text-3xl font-racing font-bold text-white mb-2">300+</h3>
                 <p className="text-gray-400">Clients Satisfaits</p>
               </div>
               <div className="glass-effect p-6 rounded-xl hover-lift text-center mt-8">
