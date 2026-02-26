@@ -1,8 +1,25 @@
 import React from 'react'
 import { Instagram, Phone, Mail, MapPin, Heart } from 'lucide-react'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
+  const navigate = useNavigate()
+
+  const handleNavClick = (sectionId) => {
+    navigate('/')
+    setTimeout(() => {
+      const element = document.getElementById(sectionId)
+      if (element) {
+        const navbarHeight = 100
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+        window.scrollTo({
+          top: elementPosition - navbarHeight,
+          behavior: 'smooth'
+        })
+      }
+    }, 100)
+  }
 
   return (
     <footer className="relative py-12 border-t border-gray-800">
@@ -36,34 +53,29 @@ const Footer = () => {
             <h4 className="font-racing font-bold text-lg mb-4">Navigation</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#home" className="text-gray-400 hover:text-silver-accent transition-colors">
+                <button onClick={() => handleNavClick('home')} className="text-gray-400 hover:text-silver-accent transition-colors">
                   Accueil
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#about" className="text-gray-400 hover:text-silver-accent transition-colors">
+                <button onClick={() => handleNavClick('about')} className="text-gray-400 hover:text-silver-accent transition-colors">
                   À Propos
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#services" className="text-gray-400 hover:text-silver-accent transition-colors">
+                <button onClick={() => handleNavClick('services')} className="text-gray-400 hover:text-silver-accent transition-colors">
                   Services
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#gallery" className="text-gray-400 hover:text-silver-accent transition-colors">
+                <button onClick={() => handleNavClick('gallery')} className="text-gray-400 hover:text-silver-accent transition-colors">
                   Galerie
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#testimonials" className="text-gray-400 hover:text-silver-accent transition-colors">
+                <button onClick={() => handleNavClick('testimonials')} className="text-gray-400 hover:text-silver-accent transition-colors">
                   Avis
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="text-gray-400 hover:text-silver-accent transition-colors">
-                  Contact
-                </a>
+                </button>
               </li>
             </ul>
           </div>

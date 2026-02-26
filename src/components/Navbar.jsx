@@ -11,7 +11,6 @@ const Navbar = ({ scrolled }) => {
     { name: 'À Propos', href: '/', type: 'route', scrollTo: 'about' },
     { name: 'Services', href: '/', type: 'route', scrollTo: 'services' },
     { name: 'Galerie', href: '/', type: 'route', scrollTo: 'gallery' },
-    { name: 'Contact', href: '/', type: 'route', scrollTo: 'contact' },
   ]
 
   const handleNavClick = (scrollTo, scrollToTop) => {
