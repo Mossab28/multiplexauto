@@ -100,7 +100,7 @@ const Simulator = () => {
                 <h2 className="text-2xl font-racing font-bold text-white mb-6 text-center">
                   Quel type de véhicule ?
                 </h2>
-                <div className="grid sm:grid-cols-2 gap-4">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {vehicleTypes.map((vehicle) => {
                     const Icon = vehicle.icon
                     return (

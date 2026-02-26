@@ -1,39 +1,7 @@
 import React from 'react'
-import { ChevronDown, Sparkles, Shield, Award } from 'lucide-react'
+import { ChevronDown, Shield, Sun, Eye, ThermometerSun, CheckCircle2, Sparkles } from 'lucide-react'
 
 const Hero = () => {
-  // Colonne 1 - Ordre 1
-  const column1Images = [
-    '/multiplexauto/images/gallery/gallery-1.jpg',
-    '/multiplexauto/images/gallery/gallery-4.jpg',
-    '/multiplexauto/images/gallery/gallery-7.jpg',
-    '/multiplexauto/images/gallery/gallery-13.jpg',
-    '/multiplexauto/images/gallery/gallery-16.jpg',
-    '/multiplexauto/images/gallery/gallery-19.jpg',
-    '/multiplexauto/images/gallery/gallery-22.jpg',
-  ]
-
-  // Colonne 2 - Ordre 2 (différent)
-  const column2Images = [
-    '/multiplexauto/images/gallery/gallery-2.jpg',
-    '/multiplexauto/images/gallery/gallery-5.jpg',
-    '/multiplexauto/images/gallery/gallery-8.jpg',
-    '/multiplexauto/images/gallery/gallery-15.jpg',
-    '/multiplexauto/images/gallery/gallery-17.jpg',
-    '/multiplexauto/images/gallery/gallery-20.jpg',
-    '/multiplexauto/images/gallery/gallery-18.jpg',
-  ]
-
-  // Colonne 3 - Ordre 3 (encore différent)
-  const column3Images = [
-    '/multiplexauto/images/gallery/gallery-21.jpg',
-    '/multiplexauto/images/gallery/gallery-16.jpg',
-    '/multiplexauto/images/gallery/gallery-13.jpg',
-    '/multiplexauto/images/gallery/gallery-7.jpg',
-    '/multiplexauto/images/gallery/gallery-4.jpg',
-    '/multiplexauto/images/gallery/gallery-19.jpg',
-    '/multiplexauto/images/gallery/gallery-15.jpg',
-  ]
 
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-16 sm:pt-20 pb-8 sm:pb-0">
@@ -92,41 +60,88 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Animation d'images à droite - visible uniquement sur desktop */}
-          <div className="hidden lg:flex gap-4 h-[600px] relative overflow-hidden">
-            {/* Colonne 1 - défile vers le bas */}
-            <div className="flex-1 flex flex-col gap-4 animate-scroll-down">
-              {[...column1Images, ...column1Images].map((img, idx) => (
-                <div key={`col1-${idx}`} className="relative h-48 rounded-xl overflow-hidden flex-shrink-0 border border-silver-accent/10">
-                  <img src={img} alt={`Car ${idx + 1}`} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                </div>
-              ))}
+          {/* Section Avantages à droite */}
+          <div className="hidden lg:block">
+            {/* Garantie à vie - Mise en avant */}
+            <div className="bg-gradient-to-br from-green-500/20 to-green-600/10 border-2 border-green-500 rounded-2xl p-8 mb-6 animate-slide-up">
+              <div className="flex items-center justify-center mb-4">
+                <CheckCircle2 className="w-16 h-16 text-green-500" />
+              </div>
+              <h3 className="text-3xl font-racing font-bold text-center mb-3 text-green-500">
+                GARANTIE À VIE
+              </h3>
+              <p className="text-center text-white text-lg font-semibold mb-2">
+                Offerte sur tous nos services
+              </p>
+              <p className="text-center text-gray-300 text-sm">
+                Nous sommes tellement confiants dans la qualité de notre travail que nous offrons une garantie à vie sur toutes nos installations.
+              </p>
             </div>
 
-            {/* Colonne 2 - défile vers le haut (sens inverse) */}
-            <div className="flex-1 flex flex-col gap-4 animate-scroll-up">
-              {[...column2Images, ...column2Images].map((img, idx) => (
-                <div key={`col2-${idx}`} className="relative h-48 rounded-xl overflow-hidden flex-shrink-0 border border-silver-accent/10">
-                  <img src={img} alt={`Car ${idx + 1}`} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+            {/* Avantages des vitres teintées */}
+            <div className="space-y-4 animate-slide-up" style={{ animationDelay: '0.2s' }}>
+              <h3 className="text-2xl font-racing font-bold text-white mb-4">Les avantages des vitres teintées</h3>
+              
+              <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-silver-accent/10 p-3 rounded-lg">
+                    <Sun className="w-6 h-6 text-silver-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-racing font-bold text-white mb-1">Protection UV 99%</h4>
+                    <p className="text-gray-400 text-sm">Bloquez les rayons UV nocifs et protégez votre peau et l'intérieur de votre véhicule.</p>
+                  </div>
                 </div>
-              ))}
-            </div>
+              </div>
 
-            {/* Colonne 3 - défile vers le bas */}
-            <div className="flex-1 flex flex-col gap-4 animate-scroll-down">
-              {[...column3Images, ...column3Images].map((img, idx) => (
-                <div key={`col3-${idx}`} className="relative h-48 rounded-xl overflow-hidden flex-shrink-0 border border-silver-accent/10">
-                  <img src={img} alt={`Car ${idx + 1}`} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+              <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-silver-accent/10 p-3 rounded-lg">
+                    <ThermometerSun className="w-6 h-6 text-silver-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-racing font-bold text-white mb-1">Réduction de chaleur</h4>
+                    <p className="text-gray-400 text-sm">Jusqu'à 60% de chaleur en moins dans votre habitacle, pour un confort optimal.</p>
+                  </div>
                 </div>
-              ))}
-            </div>
+              </div>
 
-            {/* Gradient overlay pour masquer les bords */}
-            <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-matte-black to-transparent pointer-events-none z-10" />
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-matte-black to-transparent pointer-events-none z-10" />
+              <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-silver-accent/10 p-3 rounded-lg">
+                    <Eye className="w-6 h-6 text-silver-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-racing font-bold text-white mb-1">Intimité renforcée</h4>
+                    <p className="text-gray-400 text-sm">Protégez votre vie privée et dissuadez les tentatives d'effraction.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-silver-accent/10 p-3 rounded-lg">
+                    <Sparkles className="w-6 h-6 text-silver-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-racing font-bold text-white mb-1">Esthétique premium</h4>
+                    <p className="text-gray-400 text-sm">Donnez un look sportif et élégant à votre véhicule.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-silver-accent/10 p-3 rounded-lg">
+                    <Shield className="w-6 h-6 text-silver-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-racing font-bold text-white mb-1">Protection anti-effraction</h4>
+                    <p className="text-gray-400 text-sm">Le film renforce vos vitres et retarde les tentatives d'intrusion.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
