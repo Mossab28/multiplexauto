@@ -87,7 +87,7 @@ const Hero = () => {
               </div>
               <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift">
                 <div className="flex items-start space-x-3">
-                  <span className="text-2xl">🚫</span>
+                  <span className="text-2xl">�</span>
                   <p className="text-gray-300 text-sm"><span className="font-bold text-white">Réduction de l'éblouissement</span> et de la fatigue visuelle</p>
                 </div>
               </div>
