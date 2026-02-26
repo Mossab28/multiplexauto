@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Contenu à gauche */}
-          <div className="text-center lg:text-left animate-fade-in py-4 sm:py-0">
+          <div className="text-center lg:text-left animate-fade-in py-4 sm:py-0 lg:pt-8">
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-racing font-bold mb-6 lg:max-w-xl animate-slide-up leading-tight" style={{ animationDelay: '0.2s' }}>
               <span className="gradient-text">Chez PERFECT' car, nous sommes spécialisés dans la pose de vitres teintées haut de gamme</span>
             </h1>
