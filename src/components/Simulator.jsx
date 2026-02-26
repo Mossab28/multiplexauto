@@ -119,6 +119,17 @@ const Simulator = () => {
                     )
                   })}
                 </div>
+                {step > 1 && (
+                  <div className="mt-6">
+                    <button
+                      onClick={prevStep}
+                      className="flex items-center space-x-2 text-gray-400 hover:text-silver-accent transition-colors"
+                    >
+                      <ChevronLeft className="w-5 h-5" />
+                      <span>Retour</span>
+                    </button>
+                  </div>
+                )}
               </div>
             )}
 
@@ -156,6 +167,17 @@ const Simulator = () => {
                     </button>
                   ))}
                 </div>
+                {step > 1 && (
+                  <div className="mt-6">
+                    <button
+                      onClick={prevStep}
+                      className="flex items-center space-x-2 text-gray-400 hover:text-silver-accent transition-colors"
+                    >
+                      <ChevronLeft className="w-5 h-5" />
+                      <span>Retour</span>
+                    </button>
+                  </div>
+                )}
               </div>
             )}
 
@@ -232,6 +254,17 @@ const Simulator = () => {
                   <p className="text-yellow-500 text-xs mt-3 text-center">
                     * Pour les monospaces et minibus, merci de nous contacter pour confirmer le tarif exact en fonction de votre modèle.
                   </p>
+                )}
+                {step > 1 && (
+                  <div className="mt-6">
+                    <button
+                      onClick={prevStep}
+                      className="flex items-center space-x-2 text-gray-400 hover:text-silver-accent transition-colors"
+                    >
+                      <ChevronLeft className="w-5 h-5" />
+                      <span>Retour</span>
+                    </button>
+                  </div>
                 )}
               </div>
             )}
@@ -311,18 +344,6 @@ const Simulator = () => {
             )}
           </div>
 
-          {/* Navigation Buttons */}
-          {step < 3 && step > 1 && (
-            <div className="flex justify-between mt-8">
-              <button
-                onClick={prevStep}
-                className="flex items-center space-x-2 text-gray-400 hover:text-silver-accent transition-colors"
-              >
-                <ChevronLeft className="w-5 h-5" />
-                <span>Retour</span>
-              </button>
-            </div>
-          )}
         </div>
       </div>
     </div>

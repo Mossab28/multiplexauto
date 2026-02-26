@@ -24,42 +24,44 @@ const Hero = () => {
               Chez <span className="font-bold text-white">PERFECT' CAR</span>, nous sommes spécialisés dans la pose de <span className="font-bold text-white">vitres teintées haut de gamme</span>, conçues pour améliorer <span className="font-bold text-white">le confort, la sécurité et la valeur</span> de votre véhicule. Installés à <span className="font-bold text-white">Troyes</span>, nous accompagnons particuliers et professionnels avec des prestations <span className="font-bold text-white">précises, durables et conformes à la réglementation</span>.
             </p>
             
-            <p className="text-base sm:text-lg text-gray-300 mb-8 sm:mb-8 lg:max-w-xl animate-slide-up leading-relaxed" style={{ animationDelay: '0.3s' }}>
-              Nos films solaires professionnels offrent de <span className="font-bold text-white">véritables bénéfices au quotidien</span> :
+            <div className="space-y-3 mb-8 animate-slide-up" style={{ animationDelay: '0.3s' }}>
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">☀️</span>
+                <p className="text-gray-300 text-sm sm:text-base"><span className="font-bold text-white">Rejet élevé de la chaleur :</span> jusqu'à -60 % de chaleur ressentie, pour un habitacle plus frais été comme hiver</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">🛡️</span>
+                <p className="text-gray-300 text-sm sm:text-base"><span className="font-bold text-white">Protection UV à 99 % :</span> préserve la peau, évite la décoloration des sièges, cuirs et plastiques</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">🔒</span>
+                <p className="text-gray-300 text-sm sm:text-base"><span className="font-bold text-white">Sécurité renforcée :</span> en cas de choc ou de bris de glace, le film retient les éclats</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">👀</span>
+                <p className="text-gray-300 text-sm sm:text-base"><span className="font-bold text-white">Intimité et discrétion</span> sans compromettre la visibilité</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">🚫</span>
+                <p className="text-gray-300 text-sm sm:text-base"><span className="font-bold text-white">Réduction de l'éblouissement</span> et de la fatigue visuelle</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">💎</span>
+                <p className="text-gray-300 text-sm sm:text-base"><span className="font-bold text-white">Esthétique premium :</span> finition nette, élégante et homogène</p>
+              </div>
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">💰</span>
+                <p className="text-gray-300 text-sm sm:text-base"><span className="font-bold text-white">Valorisation du véhicule</span> à la revente</p>
+              </div>
+            </div>
+
+            <p className="text-base sm:text-lg text-gray-300 mb-6 animate-slide-up leading-relaxed" style={{ animationDelay: '0.4s' }}>
+              Chaque installation est réalisée avec un <span className="font-bold text-white">matériel professionnel</span>, une <span className="font-bold text-white">pose millimétrée sans bulles</span>, et des <span className="font-bold text-white">films garantis</span>, pour un rendu irréprochable et durable dans le temps.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center lg:items-start gap-3 sm:gap-4 mb-8 sm:mb-12 animate-slide-up" style={{ animationDelay: '0.4s' }}>
-              <a
-                href="/multiplexauto/simulateur"
-                className="bg-silver-accent hover:bg-white active:bg-gray-400 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 w-full sm:w-auto shadow-lg text-center"
-              >
-                Simulateur de Prix
-              </a>
-              <a
-                href="#contact"
-                className="bg-white/5 hover:bg-white/10 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 border border-white/20 w-full sm:w-auto text-center"
-              >
-                Devis Gratuit
-              </a>
-            </div>
-
-            <div className="grid grid-cols-3 gap-3 sm:gap-4 animate-slide-up" style={{ animationDelay: '0.6s' }}>
-              <div className="bg-white/5 backdrop-blur-sm p-3 sm:p-4 rounded-lg border border-white/10 transition-all duration-300 hover:bg-white/10">
-                <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-silver-accent mx-auto lg:mx-0 mb-1 sm:mb-2" />
-                <h3 className="font-racing font-semibold text-xs sm:text-base mb-0.5 sm:mb-1">Protection UV</h3>
-                <p className="text-gray-400 text-[10px] sm:text-xs">99% UV bloqués</p>
-              </div>
-              <div className="bg-white/5 backdrop-blur-sm p-3 sm:p-4 rounded-lg border border-white/10 transition-all duration-300 hover:bg-white/10">
-                <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-silver-accent mx-auto lg:mx-0 mb-1 sm:mb-2" />
-                <h3 className="font-racing font-semibold text-xs sm:text-base mb-0.5 sm:mb-1">Finition Premium</h3>
-                <p className="text-gray-400 text-[10px] sm:text-xs">Installation pro</p>
-              </div>
-              <div className="bg-white/5 backdrop-blur-sm p-3 sm:p-4 rounded-lg border border-white/10 transition-all duration-300 hover:bg-white/10">
-                <Award className="w-6 h-6 sm:w-8 sm:h-8 text-silver-accent mx-auto lg:mx-0 mb-1 sm:mb-2" />
-                <h3 className="font-racing font-semibold text-xs sm:text-base mb-0.5 sm:mb-1">Garantie Qualité</h3>
-                <p className="text-gray-400 text-[10px] sm:text-xs">Satisfaction garantie</p>
-              </div>
-            </div>
+            <p className="text-base sm:text-lg text-gray-300 mb-8 animate-slide-up leading-relaxed" style={{ animationDelay: '0.5s' }}>
+              <span className="font-bold text-white">PERFECT' CAR</span> incarne l'exigence du détail et la finition haut de gamme au service de votre confort.
+            </p>
           </div>
 
           {/* Section Avantages à droite */}
