@@ -61,23 +61,15 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center lg:items-start gap-3 sm:gap-4 mb-8 sm:mb-12 animate-slide-up" style={{ animationDelay: '0.4s' }}>
               <a
                 href="/multiplexauto/simulateur"
-                className="relative bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white px-6 sm:px-8 py-4 sm:py-5 rounded-xl font-black text-base sm:text-xl transition-all duration-300 transform hover:scale-105 w-full sm:w-auto shadow-2xl text-center overflow-hidden group"
+                className="bg-silver-accent hover:bg-white active:bg-gray-400 text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 w-full sm:w-auto shadow-lg text-center"
               >
-                <span className="relative z-10 flex items-center justify-center gap-2">
-                  <span className="text-yellow-300 text-xl sm:text-2xl">⚡</span>
-                  <span className="font-racing tracking-wide">DEVIS RAPIDE & PAS CHER</span>
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                Simulateur de Prix
               </a>
               <a
                 href="#contact"
-                className="relative bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white px-6 sm:px-8 py-4 sm:py-5 rounded-xl font-black text-base sm:text-xl transition-all duration-300 transform hover:scale-105 w-full sm:w-auto shadow-2xl text-center overflow-hidden group border-2 border-green-400/50"
+                className="bg-white/5 hover:bg-white/10 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 border border-white/20 w-full sm:w-auto text-center"
               >
-                <span className="relative z-10 flex items-center justify-center gap-2">
-                  <span className="text-2xl">💰</span>
-                  <span className="font-racing tracking-wide">VITRES À MOINDRE COÛT</span>
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                Devis Gratuit
               </a>
             </div>
 

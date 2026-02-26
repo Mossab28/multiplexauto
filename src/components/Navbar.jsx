@@ -11,7 +11,6 @@ const Navbar = ({ scrolled }) => {
     { name: 'À Propos', href: '/', type: 'route', scrollTo: 'about' },
     { name: 'Services', href: '/', type: 'route', scrollTo: 'services' },
     { name: 'Galerie', href: '/', type: 'route', scrollTo: 'gallery' },
-    { name: 'Simulateur', href: '/simulateur', type: 'route', icon: Calculator, scrollToTop: true },
     { name: 'Contact', href: '/', type: 'route', scrollTo: 'contact' },
   ]
 
@@ -80,6 +79,14 @@ const Navbar = ({ scrolled }) => {
                 </Link>
               )
             })}
+            <Link
+              to="/simulateur"
+              onClick={() => handleNavClick(null, true)}
+              className="bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white px-6 py-2.5 rounded-lg font-black transition-all duration-300 hover-lift flex items-center space-x-2 shadow-lg border-2 border-red-400/50"
+            >
+              <Calculator size={18} />
+              <span className="font-racing tracking-wide">COMBIEN ÇA COÛTE ?</span>
+            </Link>
             <a
               href="tel:0663207808"
               className="bg-call-green hover:bg-green-600 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover-lift flex items-center space-x-2"
@@ -125,6 +132,17 @@ const Navbar = ({ scrolled }) => {
                   </Link>
                 )
               })}
+              <Link
+                to="/simulateur"
+                onClick={() => {
+                  setIsOpen(false)
+                  handleNavClick(null, true)
+                }}
+                className="bg-gradient-to-r from-red-600 to-red-500 text-white px-4 py-3 rounded-lg font-black transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg border-2 border-red-400/50"
+              >
+                <Calculator size={18} />
+                <span className="font-racing tracking-wide">COMBIEN ÇA COÛTE ?</span>
+              </Link>
             </div>
           </div>
         )}
