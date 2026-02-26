@@ -16,9 +16,8 @@ const Hero = () => {
               </span>
             </div>
             
-            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-racing font-bold mb-6 sm:mb-6 animate-slide-up leading-tight">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-racing font-bold mb-6 sm:mb-6 animate-slide-up leading-tight">
               <span className="gradient-text">PERFECT' CAR</span>
-              <span className="text-white">, expert en vitres teintées automobiles à Troyes</span>
             </h1>
             
             <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-6 lg:max-w-xl animate-slide-up leading-relaxed" style={{ animationDelay: '0.2s' }}>
