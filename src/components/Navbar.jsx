@@ -49,7 +49,7 @@ const Navbar = ({ scrolled }) => {
             <img 
               src="/multiplexauto/logo-new.png" 
               alt="Perfect'Car Logo" 
-              className="h-16 sm:h-20 lg:h-24 w-auto object-contain pt-3"
+              className="h-16 sm:h-20 lg:h-24 w-auto object-contain pt-6"
             />
           </div>
 
