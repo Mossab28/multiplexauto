@@ -75,7 +75,7 @@ const Hero = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-racing font-bold text-blue-500 mb-1">
-                    GARANTIE À VIE OFFERTE
+                    GARANTIE JUSQU'À LA CESSION DU VÉHICULE
                   </h3>
                   <p className="text-gray-300 text-sm">
                     Sur toutes nos installations de vitres teintées
