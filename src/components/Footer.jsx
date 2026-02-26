@@ -61,11 +61,6 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavClick('services')} className="text-gray-400 hover:text-silver-accent transition-colors">
-                  Services
-                </button>
-              </li>
-              <li>
                 <button onClick={() => handleNavClick('gallery')} className="text-gray-400 hover:text-silver-accent transition-colors">
                   Galerie
                 </button>

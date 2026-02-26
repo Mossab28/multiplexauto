@@ -9,7 +9,6 @@ const Navbar = ({ scrolled }) => {
   const navLinks = [
     { name: 'Accueil', href: '/', type: 'route' },
     { name: 'À Propos', href: '/', type: 'route', scrollTo: 'about' },
-    { name: 'Services', href: '/', type: 'route', scrollTo: 'services' },
     { name: 'Galerie', href: '/', type: 'route', scrollTo: 'gallery' },
   ]
 

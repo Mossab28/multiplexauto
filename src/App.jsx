@@ -3,7 +3,6 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
-import Services from './components/Services'
 import Certification from './components/Certification'
 import BrandGallery from './components/BrandGallery'
 import Testimonials from './components/Testimonials'
@@ -26,7 +25,6 @@ function App() {
     <>
       <Hero />
       <About />
-      <Services />
       <Certification />
       <BrandGallery />
       <Testimonials />
