@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
-import { ChevronRight, ChevronLeft, Check, Car, Truck, Bus } from 'lucide-react'
+import { ChevronRight, ChevronLeft, Check, Car, Shield, Zap, Users } from 'lucide-react'
 
 const Simulator = () => {
   const [step, setStep] = useState(1)
   const [showContactForm, setShowContactForm] = useState(false)
   const [formData, setFormData] = useState({
     vehicleType: '',
-    windowType: ''
+    windowType: '',
+    tintLevel: '',
+    extras: []
   })
   const [contactData, setContactData] = useState({
     name: '',
@@ -16,39 +18,43 @@ const Simulator = () => {
   })
 
   const vehicleTypes = [
-    { id: '3portes', name: '3 Portes', icon: Car, description: 'Citadines' },
-    { id: '5portes', name: '5 Portes', icon: Car, description: 'Berlines et compactes' },
-    { id: 'suv', name: 'SUV', icon: Car, description: 'SUV et 4x4' },
-    { id: 'break', name: 'Break / Monospace', icon: Truck, description: 'Break et monospace' },
-    { id: 'minibus', name: 'Minibus', icon: Bus, description: 'Minibus' },
-    { id: 'utilitaire', name: 'Utilitaire', icon: Truck, description: 'Sur devis personnalisé' }
+    { id: '3portes', name: '3 Portes', icon: Car, basePrice: 150, description: 'Citadines et petits véhicules' },
+    { id: '5portes', name: '5 Portes', icon: Shield, basePrice: 200, description: 'Berlines et compactes' },
+    { id: 'break', name: 'Break / SUV / Monospace', icon: Zap, basePrice: 250, description: 'Véhicules familiaux' },
+    { id: 'minibus', name: 'Minibus et Utilitaire', icon: Users, basePrice: 350, description: 'Véhicules professionnels' }
   ]
 
   const windowTypes = [
-    { id: 'avant', name: 'Vitres avant uniquement', description: '2 vitres latérales avant' },
-    { id: '3/4', name: '3/4 (Vitres arrière)', description: 'Vitres latérales arrière + lunette' },
-    { id: 'complet', name: 'Véhicule complet', description: 'Toutes les vitres' }
+    { id: 'avant', name: 'Vitres avant uniquement', price: 0, description: '2 vitres latérales avant' },
+    { id: 'arriere', name: 'Vitres arrière uniquement', price: 50, description: 'Vitres latérales arrière + lunette' },
+    { id: 'complet', name: 'Véhicule complet', price: 100, description: 'Toutes les vitres' }
   ]
 
+  const tintLevels = [
+    { id: 'leger', name: 'Léger (30%)', price: 0, description: 'Conforme réglementation' },
+    { id: 'moyen', name: 'Moyen (20%)', price: 20, description: 'Bon compromis' },
+    { id: 'fonce', name: 'Foncé (5%)', price: 40, description: 'Protection maximale' }
+  ]
 
-  const priceGrid = {
-    '3portes': { 'avant': 120, '3/4': 160, 'complet': 260 },
-    '5portes': { 'avant': 120, '3/4': 190, 'complet': 290 },
-    'suv': { 'avant': 120, '3/4': 220, 'complet': 320 },
-    'break': { 'avant': 120, '3/4': 240, 'complet': 340 },
-    'minibus': { 'avant': 120, '3/4': 290, 'complet': 390 },
-    'utilitaire': { 'avant': 0, '3/4': 0, 'complet': 0 }
-  }
+  const extras = [
+    { id: 'panoramique', name: 'Toit panoramique', price: 100 },
+    { id: 'antieffraction', name: 'Film anti-effraction', price: 80 },
+    { id: 'garantie', name: 'Garantie 10 ans', price: 50 }
+  ]
 
   const calculatePrice = () => {
-    if (formData.vehicleType === 'utilitaire') {
-      return 'Sur devis'
-    }
-    
-    return priceGrid[formData.vehicleType]?.[formData.windowType] || 0
+    const vehicle = vehicleTypes.find(v => v.id === formData.vehicleType)
+    const window = windowTypes.find(w => w.id === formData.windowType)
+    const tint = tintLevels.find(t => t.id === formData.tintLevel)
+    const extrasPrice = formData.extras.reduce((sum, extraId) => {
+      const extra = extras.find(e => e.id === extraId)
+      return sum + (extra?.price || 0)
+    }, 0)
+
+    return (vehicle?.basePrice || 0) + (window?.price || 0) + (tint?.price || 0) + extrasPrice
   }
 
-  const nextStep = () => setStep(prev => Math.min(prev + 1, 3))
+  const nextStep = () => setStep(prev => Math.min(prev + 1, 5))
   const prevStep = () => setStep(prev => Math.max(prev - 1, 1))
 
   const selectVehicle = (id) => {
@@ -61,6 +67,20 @@ const Simulator = () => {
     setTimeout(nextStep, 300)
   }
 
+  const selectTint = (id) => {
+    setFormData({ ...formData, tintLevel: id })
+    setTimeout(nextStep, 300)
+  }
+
+  const toggleExtra = (id) => {
+    setFormData(prev => ({
+      ...prev,
+      extras: prev.extras.includes(id)
+        ? prev.extras.filter(e => e !== id)
+        : [...prev.extras, id]
+    }))
+  }
+
   return (
     <div className="min-h-screen bg-matte-black pt-36 sm:pt-40 pb-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,17 +88,17 @@ const Simulator = () => {
           {/* Header */}
           <div className="text-center mb-12 animate-fade-in">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-racing font-bold mb-4">
-              <span className="gradient-text">CALCULATEUR DE PRIX</span>
+              <span className="gradient-text">SIMULATEUR DE DEVIS</span>
             </h1>
             <p className="text-gray-400 text-lg">
-              Consultez le prix de vitres teintées pour votre voiture
+              Obtenez une estimation instantanée pour vos vitres teintées
             </p>
           </div>
 
           {/* Progress Bar */}
           <div className="mb-12">
             <div className="flex justify-between items-center mb-2">
-              {[1, 2, 3].map((s) => (
+              {[1, 2, 3, 4, 5].map((s) => (
                 <div
                   key={s}
                   className={`w-full h-2 mx-1 rounded-full transition-all duration-500 ${
@@ -88,7 +108,7 @@ const Simulator = () => {
               ))}
             </div>
             <p className="text-center text-gray-400 text-sm mt-2">
-              Étape {step} sur 3
+              Étape {step} sur 5
             </p>
           </div>
 
@@ -100,7 +120,7 @@ const Simulator = () => {
                 <h2 className="text-2xl font-racing font-bold text-white mb-6 text-center">
                   Quel type de véhicule ?
                 </h2>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="grid sm:grid-cols-2 gap-4">
                   {vehicleTypes.map((vehicle) => {
                     const Icon = vehicle.icon
                     return (
@@ -115,7 +135,8 @@ const Simulator = () => {
                       >
                         <Icon className="w-12 h-12 text-silver-accent mx-auto mb-3" />
                         <h3 className="font-racing font-bold text-white mb-2">{vehicle.name}</h3>
-                        <p className="text-gray-400 text-sm">{vehicle.description}</p>
+                        <p className="text-gray-400 text-sm mb-2">{vehicle.description}</p>
+                        <p className="text-silver-accent font-bold">À partir de {vehicle.basePrice}€</p>
                       </button>
                     )
                   })}
@@ -140,19 +161,14 @@ const Simulator = () => {
                           : 'border-gray-700 hover:border-silver-accent/50'
                       }`}
                     >
-                      <div className="flex justify-between items-center w-full">
+                      <div className="flex justify-between items-center">
                         <div>
                           <h3 className="font-racing font-bold text-white mb-1">{window.name}</h3>
                           <p className="text-gray-400 text-sm">{window.description}</p>
                         </div>
-                        {formData.vehicleType !== 'utilitaire' && (
-                          <p className="text-silver-accent font-bold text-2xl">
-                            {priceGrid[formData.vehicleType]?.[window.id]}€
-                          </p>
-                        )}
-                        {formData.vehicleType === 'utilitaire' && (
-                          <p className="text-silver-accent font-bold text-lg">Sur devis</p>
-                        )}
+                        <p className="text-silver-accent font-bold">
+                          {window.price > 0 ? `+${window.price}€` : 'Inclus'}
+                        </p>
                       </div>
                     </button>
                   ))}
@@ -160,8 +176,84 @@ const Simulator = () => {
               </div>
             )}
 
-            {/* Step 3: Result */}
+            {/* Step 3: Tint Level */}
             {step === 3 && (
+              <div className="animate-slide-up">
+                <h2 className="text-2xl font-racing font-bold text-white mb-6 text-center">
+                  Niveau de teinte souhaité ?
+                </h2>
+                <div className="space-y-4">
+                  {tintLevels.map((tint) => (
+                    <button
+                      key={tint.id}
+                      onClick={() => selectTint(tint.id)}
+                      className={`w-full p-6 rounded-xl border-2 transition-all duration-300 hover-lift text-left ${
+                        formData.tintLevel === tint.id
+                          ? 'border-silver-accent bg-silver-accent/10'
+                          : 'border-gray-700 hover:border-silver-accent/50'
+                      }`}
+                    >
+                      <div className="flex justify-between items-center">
+                        <div>
+                          <h3 className="font-racing font-bold text-white mb-1">{tint.name}</h3>
+                          <p className="text-gray-400 text-sm">{tint.description}</p>
+                        </div>
+                        <p className="text-silver-accent font-bold">
+                          {tint.price > 0 ? `+${tint.price}€` : 'Inclus'}
+                        </p>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Step 4: Extras */}
+            {step === 4 && (
+              <div className="animate-slide-up">
+                <h2 className="text-2xl font-racing font-bold text-white mb-6 text-center">
+                  Options supplémentaires (facultatif)
+                </h2>
+                <div className="space-y-4 mb-6">
+                  {extras.map((extra) => (
+                    <button
+                      key={extra.id}
+                      onClick={() => toggleExtra(extra.id)}
+                      className={`w-full p-6 rounded-xl border-2 transition-all duration-300 hover-lift text-left ${
+                        formData.extras.includes(extra.id)
+                          ? 'border-silver-accent bg-silver-accent/10'
+                          : 'border-gray-700 hover:border-silver-accent/50'
+                      }`}
+                    >
+                      <div className="flex justify-between items-center">
+                        <div className="flex items-center space-x-3">
+                          <div className={`w-6 h-6 rounded border-2 flex items-center justify-center ${
+                            formData.extras.includes(extra.id)
+                              ? 'border-silver-accent bg-silver-accent'
+                              : 'border-gray-600'
+                          }`}>
+                            {formData.extras.includes(extra.id) && (
+                              <Check className="w-4 h-4 text-black" />
+                            )}
+                          </div>
+                          <h3 className="font-racing font-bold text-white">{extra.name}</h3>
+                        </div>
+                        <p className="text-silver-accent font-bold">+{extra.price}€</p>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+                <button
+                  onClick={nextStep}
+                  className="w-full bg-silver-accent hover:bg-white text-black px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
+                  Voir le devis
+                </button>
+              </div>
+            )}
+
+            {/* Step 5: Result */}
+            {step === 5 && (
               <div className="animate-slide-up text-center">
                 <div className="mb-5">
                   <div className="w-14 h-14 bg-silver-accent/20 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -189,49 +281,70 @@ const Simulator = () => {
                         {windowTypes.find(w => w.id === formData.windowType)?.name}
                       </span>
                     </div>
+                    <div className="flex justify-between items-center py-2 border-b border-gray-700 text-sm">
+                      <span className="text-gray-300">Niveau de teinte</span>
+                      <span className="text-white font-semibold">
+                        {tintLevels.find(t => t.id === formData.tintLevel)?.name}
+                      </span>
+                    </div>
+                    {formData.extras.length > 0 && (
+                      <div className="flex justify-between items-center py-2 border-b border-gray-700 text-sm">
+                        <span className="text-gray-300">Options</span>
+                        <span className="text-white font-semibold">
+                          {formData.extras.length} option(s)
+                        </span>
+                      </div>
+                    )}
                   </div>
 
                   <div className="pt-4 border-t-2 border-silver-accent">
-                    <div className="flex justify-between items-center mb-4">
-                      <span className="text-xl font-racing font-bold text-white">PRIX TOTAL</span>
+                    <div className="flex justify-between items-center">
+                      <span className="text-xl font-racing font-bold text-white">TOTAL ESTIMÉ</span>
                       <span className="text-3xl font-racing font-bold gradient-text">
-                        {typeof calculatePrice() === 'number' ? `${calculatePrice()}€` : calculatePrice()}
+                        {calculatePrice()}€
                       </span>
                     </div>
-                    <div className="bg-green-500/10 border-2 border-green-500 rounded-lg p-4 mb-2">
-                      <div className="flex items-center justify-center space-x-2">
-                        <Check className="w-6 h-6 text-green-500" />
-                        <span className="text-green-500 font-bold text-lg">GARANTIE À VIE INCLUSE GRATUITEMENT</span>
-                      </div>
-                    </div>
-                    <p className="text-gray-400 text-xs mt-2 text-center">
-                      * Prix final, garantie à vie offerte sur tous nos services
+                    <p className="text-gray-400 text-xs mt-1">
+                      * Prix indicatif, devis personnalisé sur demande
                     </p>
                   </div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3">
                   <button
-                    onClick={() => setShowContactForm(true)}
+                    onClick={() => {
+                      setShowContactForm(true)
+                      setTimeout(() => {
+                        const formElement = document.querySelector('.glass-effect.p-8.rounded-2xl.animate-slide-up')
+                        if (formElement) {
+                          formElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                        }
+                      }, 100)
+                    }}
                     className="flex-1 bg-silver-accent hover:bg-white text-black px-6 py-3 rounded-lg font-bold text-base transition-all duration-300 transform hover:scale-105 shadow-lg text-center"
                   >
-                    Demander un devis personnalisé
+                    Demander un devis personnalisé{(formData.vehicleType === 'break' || formData.vehicleType === 'minibus') && ' *'}
                   </button>
                   <button
                     onClick={() => {
                       setStep(1)
-                      setFormData({ vehicleType: '', windowType: '' })
+                      setFormData({ vehicleType: '', windowType: '', tintLevel: '', extras: [] })
                     }}
                     className="flex-1 bg-white/5 hover:bg-white/10 text-white px-6 py-3 rounded-lg font-semibold text-base transition-all duration-300 border border-white/20"
                   >
                     Recommencer
                   </button>
                 </div>
+                {(formData.vehicleType === 'break' || formData.vehicleType === 'minibus') && (
+                  <p className="text-yellow-500 text-xs mt-3 text-center">
+                    * Pour les monospaces et minibus, merci de nous contacter pour confirmer le tarif exact en fonction de votre modèle.
+                  </p>
+                )}
               </div>
             )}
 
             {/* Contact Form */}
-            {step === 3 && showContactForm && (
+            {step === 5 && showContactForm && (
               <div className="mt-8 glass-effect p-8 rounded-2xl animate-slide-up">
                 <h3 className="text-2xl font-racing font-bold text-white mb-6 text-center">
                   Demande de devis personnalisé
@@ -306,7 +419,7 @@ const Simulator = () => {
           </div>
 
           {/* Navigation Buttons */}
-          {step < 3 && step > 1 && (
+          {step < 5 && step > 1 && (
             <div className="flex justify-between mt-8">
               <button
                 onClick={prevStep}
@@ -315,6 +428,11 @@ const Simulator = () => {
                 <ChevronLeft className="w-5 h-5" />
                 <span>Retour</span>
               </button>
+              {step === 4 && (
+                <div className="text-gray-400 text-sm">
+                  Cliquez sur "Voir le devis" pour continuer
+                </div>
+              )}
             </div>
           )}
         </div>
