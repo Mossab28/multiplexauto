@@ -61,33 +61,47 @@ const Hero = () => {
 
             {/* Avantages des vitres teintées */}
             <div className="space-y-3 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-              <div className="flex items-start space-x-3">
-                <span className="text-2xl">☀️</span>
-                <p className="text-gray-300 text-sm"><span className="font-bold text-white">Rejet élevé de la chaleur :</span> jusqu'à -60 % de chaleur ressentie, pour un habitacle plus frais été comme hiver</p>
+              <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift">
+                <div className="flex items-start space-x-3">
+                  <span className="text-2xl">☀️</span>
+                  <p className="text-gray-300 text-sm"><span className="font-bold text-white">Rejet élevé de la chaleur :</span> jusqu'à -60 % de chaleur ressentie, pour un habitacle plus frais été comme hiver</p>
+                </div>
               </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-2xl">🛡️</span>
-                <p className="text-gray-300 text-sm"><span className="font-bold text-white">Protection UV à 99 % :</span> préserve la peau, évite la décoloration des sièges, cuirs et plastiques</p>
+              <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift">
+                <div className="flex items-start space-x-3">
+                  <span className="text-2xl">🛡️</span>
+                  <p className="text-gray-300 text-sm"><span className="font-bold text-white">Protection UV à 99 % :</span> préserve la peau, évite la décoloration des sièges, cuirs et plastiques</p>
+                </div>
               </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-2xl">🔒</span>
-                <p className="text-gray-300 text-sm"><span className="font-bold text-white">Sécurité renforcée :</span> en cas de choc ou de bris de glace, le film retient les éclats</p>
+              <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift">
+                <div className="flex items-start space-x-3">
+                  <span className="text-2xl">🔒</span>
+                  <p className="text-gray-300 text-sm"><span className="font-bold text-white">Sécurité renforcée :</span> en cas de choc ou de bris de glace, le film retient les éclats</p>
+                </div>
               </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-2xl">👀</span>
-                <p className="text-gray-300 text-sm"><span className="font-bold text-white">Intimité et discrétion</span> sans compromettre la visibilité</p>
+              <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift">
+                <div className="flex items-start space-x-3">
+                  <span className="text-2xl">👀</span>
+                  <p className="text-gray-300 text-sm"><span className="font-bold text-white">Intimité et discrétion</span> sans compromettre la visibilité</p>
+                </div>
               </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-2xl">🚫</span>
-                <p className="text-gray-300 text-sm"><span className="font-bold text-white">Réduction de l'éblouissement</span> et de la fatigue visuelle</p>
+              <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift">
+                <div className="flex items-start space-x-3">
+                  <span className="text-2xl">🚫</span>
+                  <p className="text-gray-300 text-sm"><span className="font-bold text-white">Réduction de l'éblouissement</span> et de la fatigue visuelle</p>
+                </div>
               </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-2xl">💎</span>
-                <p className="text-gray-300 text-sm"><span className="font-bold text-white">Esthétique premium :</span> finition nette, élégante et homogène</p>
+              <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift">
+                <div className="flex items-start space-x-3">
+                  <span className="text-2xl">💎</span>
+                  <p className="text-gray-300 text-sm"><span className="font-bold text-white">Esthétique premium :</span> finition nette, élégante et homogène</p>
+                </div>
               </div>
-              <div className="flex items-start space-x-3">
-                <span className="text-2xl">💰</span>
-                <p className="text-gray-300 text-sm"><span className="font-bold text-white">Valorisation du véhicule</span> à la revente</p>
+              <div className="glass-effect p-4 rounded-xl border border-silver-accent/20 hover-lift">
+                <div className="flex items-start space-x-3">
+                  <span className="text-2xl">💰</span>
+                  <p className="text-gray-300 text-sm"><span className="font-bold text-white">Valorisation du véhicule</span> à la revente</p>
+                </div>
               </div>
             </div>
           </div>
