@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react'
 import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import About from './components/About'
+import Testimonials from './components/Testimonials'
 import Certification from './components/Certification'
 import BrandGallery from './components/BrandGallery'
-import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Simulator from './components/Simulator'
+import FAQ from './components/FAQ'
 
 function App() {
   const [scrolled, setScrolled] = useState(false)
@@ -24,10 +24,10 @@ function App() {
   const HomePage = () => (
     <>
       <Hero />
-      <About />
+      <Testimonials />
       <Certification />
       <BrandGallery />
-      <Testimonials />
+      <FAQ />
       <Contact />
     </>
   )

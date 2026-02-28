@@ -7,34 +7,170 @@ const Testimonials = () => {
   const testimonials = [
     {
       name: 'Jeremy Vivig',
-      vehicle: 'Client vérifié',
       rating: 5,
       text: "J'ai découvert cet atelier par le biais de Google et grâce à de très bons avis et bien cela se confirme la teinte des vitres de ma voiture est impeccable, le professionnalisme et la gentillesse du patron lui valent bien ces 5 étoiles. Merci beaucoup",
-      date: 'Il y a 1 an',
       verified: true,
     },
     {
       name: 'Lucie Guillot',
-      vehicle: 'Client vérifié',
       rating: 5,
       text: "Très satisfaits du service. Nous voulions teindre les vitres et notre voiture est spécifique avec un défi technique pour le toit, défi relevé haut la main. Personne de confiance, très doué dans son métier, sérieux, et avec un contact agréable. Je recommande à 100% !",
-      date: 'Il y a 3 ans',
       verified: true,
     },
     {
-      name: 'Micka VINCENT',
-      vehicle: 'Client vérifié',
+      name: 'david lobgeois',
       rating: 5,
-      text: "Très professionnel et à l'écoute, travail propre et soigné, prix très attractif. Je recommande, merci",
-      date: 'Il y a 5 ans',
+      text: "Très pro service de qualité rien n'a redire",
+      verified: true,
+    },
+    {
+      name: 'Catherine Bernet',
+      rating: 5,
+      text: "Très professionnel\nBon rendu",
+      verified: true,
+    },
+    {
+      name: 'Youyou You',
+      rating: 5,
+      text: "Super au top rien à dire très à l'écoute et donne beaucoup de conseil avant et après travaux, je recommande fortement",
+      verified: true,
+    },
+    {
+      name: 'Syd fr',
+      rating: 5,
+      text: "Service et suivi au top, gérant hyper sympa",
+      verified: true,
+    },
+    {
+      name: 'Laurie CLEM',
+      rating: 5,
+      text: "Je suis satisfaite du résultat.\nGérant professionnel et à l'écoute.\nTravail soigné et propre.\nJe recommande 👍🏾",
+      verified: true,
+    },
+    {
+      name: 'Himeur Samir',
+      rating: 5,
+      text: "Très bon établissement patron très sympa et arrangeant et le rapport qualité-prix exceptionnel",
       verified: true,
     },
     {
       name: 'Carole Gresle',
-      vehicle: 'Client vérifié',
       rating: 5,
-      text: "Très professionnel. De très bons conseils. Il vous dit la teinture exacte qui vous faut pour le vitrage de votre voiture. Prix correct et bon travail",
-      date: 'Il y a 4 ans',
+      text: "très professionnel.\nDe très bons conseils.\nIl vous dit la teinture exacte qui vous faut pour le vitrage de votre voiture.\nprix correct et bon travail",
+      verified: true,
+    },
+    {
+      name: 'Sylvia Bertrand',
+      rating: 5,
+      text: "Sur teintage sur Audi A5 Très professionnel, très sympathique. Résultat très satisfaisant Je recommande à 100%.",
+      verified: true,
+    },
+    {
+      name: 'christopher vaz braz',
+      rating: 5,
+      text: "Très professionnel, résultat impeccable",
+      verified: true,
+    },
+    {
+      name: 'thomas mougenot',
+      rating: 5,
+      text: "Personne très professionnel avec un prix très abordable pour notre BMW série 5\nMême avec une batterie qui a fait des siennes , ce professionnel a tout fait pour la faire redémarrer rapidement\nJe recommende !",
+      verified: true,
+    },
+    {
+      name: 'Franck Gaillard',
+      rating: 5,
+      text: "Travail soigné impeccable sur Trafic minibus, prix raisonnable et personne vraiment sympa....",
+      verified: true,
+    },
+    {
+      name: 'David Liedot',
+      rating: 5,
+      text: "Superbe accueil, travail parfait et soigné.\nLe film est de qualité supérieur",
+      verified: true,
+    },
+    {
+      name: 'Frédéric Haby',
+      rating: 5,
+      text: "Accueil très agréable\nExcellent conseil\nTravail impeccable",
+      verified: true,
+    },
+    {
+      name: 'Micka VINCENT',
+      rating: 5,
+      text: "très professionnel et à l'écoute\ntravail propre et soigné\nprix très attractif\nje recommande, merci",
+      verified: true,
+    },
+    {
+      name: 'Nassi minto Aziz',
+      rating: 5,
+      text: "très satisfait de mes vitre teinté, très pro propre et très sympatrique je recommande les yeux fermé",
+      verified: true,
+    },
+    {
+      name: 'Poisson Sébastien',
+      rating: 5,
+      text: "J'ai déjà appelé\nPlusieurs personnes qui proposent les mêmes services pour comparer les prix et les disponibilités j'étais pourtant habitué à aller chez un concurrent ayant l'habitude de faire mais véhicule en glass teintée et la vraiment surpris déjà un prix très intéressant une disponibilité  au top pourtant c'était pour faire une lunette arrière de Clio 2 pas se qu'il ya de plus facile le rendu et parfait avec un film de qualité vraiment je conseille vivement c'est service je pense pas que vous trouverez mieux ailleurs et je parle en connaissance aillant été fidèle plusieurs années à un concurrent qui c'est gavés pour un résultat des fois descevent un grand merci j'ai trouvé mon nouveau garage attitré !!!! Encore un grand merci et a bientôt",
+      verified: true,
+    },
+    {
+      name: 'Anthnoy Taquet',
+      rating: 5,
+      text: "Je suis très satisfait de mes vitres teintées, très pro, . Le gérant est arrangeant et sympa, je le recommande vivement.",
+      verified: true,
+    },
+    {
+      name: 'Anais Fourré',
+      rating: 5,
+      text: "Je suis très satisfaite des vitres teintées, très sympathique et arrangeant. Total confiance. Je recommande. ☝️😊",
+      verified: true,
+    },
+    {
+      name: 'rrfefre frrefrfre',
+      rating: 5,
+      text: "Gérant très sympa et professionnel. Vitre teinté effectué parfaitement en quelques minutes, je recommande.",
+      verified: true,
+    },
+    {
+      name: 'Stephane devienne',
+      rating: 5,
+      text: "Bonjour a tous\nDepuis mes vitres teintées mon audi a pris un charme fou , a recommander , travail soigné\nRien a dire nikel 👍",
+      verified: true,
+    },
+    {
+      name: 'Miguel Borges',
+      rating: 5,
+      text: "Travail soigné personne sympathique  et rdv rapide à conseillé sans probleme👍",
+      verified: true,
+    },
+    {
+      name: 'patmax pat-',
+      rating: 5,
+      text: "Passage le 31 Mai au matin, Très bon travail, consciencieux, n'a pas hésité a refaire une vitre après un défaut.",
+      verified: true,
+    },
+    {
+      name: 'Flo Rotary',
+      rating: 5,
+      text: "Super accueil. Super service. Merci encore. Au top.",
+      verified: true,
+    },
+    {
+      name: 'Florian Thavot',
+      rating: 5,
+      text: "Tres bon acceuil et travail impeccable. Rien à dire",
+      verified: true,
+    },
+    {
+      name: 'sarah huart',
+      rating: 5,
+      text: "Un super accueil. Rendez vous rapide. Allez y sans hésiter.",
+      verified: true,
+    },
+    {
+      name: 'zouhir boudjerada',
+      rating: 5,
+      text: "Tres bon service, professionnel et de tres bons conseils. Je recommande vivement.",
       verified: true,
     },
   ]
@@ -53,12 +189,12 @@ const Testimonials = () => {
         <div className="text-center mb-16 animate-slide-up">
           <span className="text-silver-accent font-racing font-bold text-sm tracking-wider">TÉMOIGNAGES</span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-racing font-bold mt-4 mb-6">
-            <span className="gradient-text">ILS NOUS FONT</span>
+            <span className="gradient-text">NOS CLIENTS</span>
             <br />
-            <span className="text-white">Confiance</span>
+            <span className="text-white">Nous Font Confiance</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-3">
-            Découvrez les avis de nos clients satisfaits
+            Plus de 300 clients satisfaits et des dizaines d'avis 5 étoiles sur Google
           </p>
           <div className="flex items-center justify-center gap-2 text-sm text-gray-500">
             <BadgeCheck className="w-4 h-4 text-blue-500 fill-blue-500" />
@@ -82,7 +218,7 @@ const Testimonials = () => {
               </p>
 
               <div className="text-center">
-                <div className="flex items-center justify-center gap-2 mb-1">
+                <div className="flex items-center justify-center gap-2">
                   <h4 className="font-racing font-bold text-xl">
                     {testimonials[currentIndex].name}
                   </h4>
@@ -90,11 +226,8 @@ const Testimonials = () => {
                     <BadgeCheck className="w-5 h-5 text-blue-500 fill-blue-500" title="Avis vérifié Google" />
                   )}
                 </div>
-                <p className="text-silver-accent font-semibold mb-1">
-                  {testimonials[currentIndex].vehicle}
-                </p>
-                <p className="text-gray-500 text-sm">
-                  {testimonials[currentIndex].date}
+                <p className="text-silver-accent font-semibold text-sm mt-1">
+                  Client vérifié Google
                 </p>
               </div>
             </div>
