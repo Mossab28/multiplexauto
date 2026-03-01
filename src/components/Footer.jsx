@@ -67,8 +67,8 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavClick('about')} className="text-gray-400 hover:text-silver-accent transition-colors">
-                  À Propos
+                <button onClick={() => handleNavClick('testimonials')} className="text-gray-400 hover:text-silver-accent transition-colors">
+                  Avis
                 </button>
               </li>
               <li>
@@ -77,8 +77,8 @@ const Footer = () => {
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavClick('testimonials')} className="text-gray-400 hover:text-silver-accent transition-colors">
-                  Avis
+                <button onClick={() => handleNavClick('contact')} className="text-gray-400 hover:text-silver-accent transition-colors">
+                  Contact
                 </button>
               </li>
             </ul>
