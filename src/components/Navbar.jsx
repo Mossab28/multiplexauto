@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X, Phone, Calculator } from 'lucide-react'
+import croppedLogo from '../../Images/cropped_logo.png'
 
 const Navbar = ({ scrolled }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -42,42 +43,57 @@ const Navbar = ({ scrolled }) => {
       scrolled ? 'glass-effect py-3 sm:py-4 red-glow' : 'bg-transparent py-4 sm:py-5'
     }`}>
       <div className="container mx-auto px-3 sm:px-6 lg:px-8 relative">
-        <div className="flex min-h-[88px] sm:min-h-[102px] lg:min-h-[118px] items-center justify-between gap-3 sm:gap-4">
+        <Link
+          to="/"
+          onClick={() => {
+            setIsOpen(false)
+            handleNavClick(null, true)
+          }}
+          className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:flex lg:items-center lg:justify-center"
+        >
+          <img
+            src={croppedLogo}
+            alt="Perfect'Car Logo"
+            className="w-[360px] xl:w-[420px] 2xl:w-[480px] h-auto object-contain"
+          />
+        </Link>
+
+        <div className="flex min-h-[88px] sm:min-h-[102px] lg:min-h-[124px] items-center justify-between gap-3 sm:gap-4">
           <Link
             to="/"
             onClick={() => {
               setIsOpen(false)
               handleNavClick(null, true)
             }}
-            className="flex flex-shrink-0 items-center"
+            className="flex items-center justify-start lg:invisible"
           >
             <img
-              src="/multiplexauto/logo-new.png"
+              src={croppedLogo}
               alt="Perfect'Car Logo"
-              className="h-16 sm:h-20 lg:h-28 xl:h-32 w-auto object-contain"
+              className="h-16 sm:h-20 w-auto object-contain"
             />
           </Link>
 
-          <div className="ml-auto flex items-center gap-2 sm:gap-3 lg:gap-4">
+          <div className="relative z-10 ml-auto flex items-center justify-end gap-2 sm:gap-3 lg:gap-4">
             <Link
               to="/simulateur"
               onClick={() => {
                 setIsOpen(false)
                 handleNavClick(null, true)
               }}
-              className="bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg font-bold text-xs sm:text-sm transition-all duration-300 hover-lift flex items-center space-x-1.5 shadow-lg border-2 border-red-400/50"
+              className="bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg font-bold text-xs sm:text-sm transition-all duration-300 hover-lift flex flex-shrink-0 items-center space-x-1.5 shadow-lg border-2 border-red-400/50"
             >
               <Calculator size={16} />
-              <span className="font-racing tracking-wide hidden sm:inline">COMBIEN ÇA COÛTE ?</span>
-              <span className="font-racing tracking-wide sm:hidden">DEVIS</span>
+              <span className="font-racing tracking-wide hidden whitespace-nowrap sm:inline">COMBIEN ÇA COÛTE ?</span>
+              <span className="font-racing tracking-wide whitespace-nowrap sm:hidden">DEVIS</span>
             </Link>
             <a
               href="tel:0663207808"
-              className="bg-call-green hover:bg-green-600 text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg font-bold text-xs sm:text-sm transition-all duration-300 hover-lift flex items-center space-x-1.5 shadow-lg border-2 border-green-400/50"
+              className="bg-call-green hover:bg-green-600 text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg font-bold text-xs sm:text-sm transition-all duration-300 hover-lift flex flex-shrink-0 items-center space-x-1.5 shadow-lg border-2 border-green-400/50"
             >
               <Phone size={16} />
-              <span className="font-racing tracking-wide hidden sm:inline">06 63 20 78 08</span>
-              <span className="font-racing tracking-wide sm:hidden">APPEL</span>
+              <span className="font-racing tracking-wide hidden whitespace-nowrap sm:inline">06 63 20 78 08</span>
+              <span className="font-racing tracking-wide whitespace-nowrap sm:hidden">APPEL</span>
             </a>
             <button
               onClick={() => setIsOpen(!isOpen)}

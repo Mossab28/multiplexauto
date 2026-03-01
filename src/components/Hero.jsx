@@ -15,16 +15,25 @@ const Hero = () => {
               <span className="gradient-text">Chez PERFECT'car,</span>
             </h1>
             
-            <p className="text-sm sm:text-base lg:text-lg text-gray-300 mb-4 lg:mb-6 lg:max-w-xl animate-slide-up leading-relaxed" style={{ animationDelay: '0.3s' }}>
+            <p
+              className="text-sm sm:text-base lg:text-lg text-gray-300 mb-4 lg:mb-6 lg:max-w-xl mx-auto lg:mx-0 animate-slide-up leading-relaxed text-left"
+              style={{ animationDelay: '0.3s', textAlign: 'justify' }}
+            >
               nous sommes spécialisés dans la pose de vitres teintées haut de gamme conçues pour améliorer <span className="font-bold text-white">le confort, la sécurité et la valeur</span> de votre véhicule. Installés à <span className="font-bold text-white">Troyes</span>, nous accompagnons particuliers et professionnels avec des prestations <span className="font-bold text-white">précises, durables et conformes à la réglementation</span>.
             </p>
             
 
-            <p className="text-sm sm:text-base lg:text-lg text-gray-300 mb-4 lg:mb-6 animate-slide-up leading-relaxed" style={{ animationDelay: '0.4s' }}>
+            <p
+              className="text-sm sm:text-base lg:text-lg text-gray-300 mb-4 lg:mb-6 lg:max-w-xl mx-auto lg:mx-0 animate-slide-up leading-relaxed text-left"
+              style={{ animationDelay: '0.4s', textAlign: 'justify' }}
+            >
               Chaque installation est réalisée avec un <span className="font-bold text-white">matériel professionnel</span>, une <span className="font-bold text-white">pose millimétrée sans bulles</span>, et des <span className="font-bold text-white">films garantis</span>, pour un rendu irréprochable et durable dans le temps.
             </p>
 
-            <p className="text-sm sm:text-base lg:text-lg text-gray-300 mb-4 lg:mb-6 animate-slide-up leading-relaxed" style={{ animationDelay: '0.5s' }}>
+            <p
+              className="text-sm sm:text-base lg:text-lg text-gray-300 mb-4 lg:mb-6 lg:max-w-xl mx-auto lg:mx-0 animate-slide-up leading-relaxed text-left"
+              style={{ animationDelay: '0.5s', textAlign: 'justify' }}
+            >
               <span className="font-bold text-white">PERFECT'car</span> incarne l'exigence du détail et la finition haut de gamme au service de votre confort.
             </p>
 
