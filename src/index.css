@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Animations pour le Hero - colonnes défilantes */
-@keyframes scroll-down {
+@keyframes column-scroll-down {
   0% {
     transform: translateY(0);
   }
@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@keyframes scroll-up {
+@keyframes column-scroll-up {
   0% {
     transform: translateY(-50%);
   }
@@ -96,15 +96,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .animate-scroll-down {
-  animation: scroll-down 30s linear infinite;
+  animation: column-scroll-down 30s linear infinite !important;
 }
 
 .animate-scroll-up {
-  animation: scroll-up 30s linear infinite;
+  animation: column-scroll-up 30s linear infinite !important;
 }
 
 /* Animations d'apparition - ne se jouent qu'une seule fois */
-@keyframes fade-in {
+@keyframes fade-in-once {
   from {
     opacity: 0;
   }
@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-@keyframes slide-up {
+@keyframes slide-up-once {
   from {
     opacity: 0;
     transform: translateY(30px);
@@ -125,9 +125,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .animate-fade-in {
-  animation: fade-in 0.6s ease-out forwards;
+  animation: fade-in-once 0.6s ease-out forwards !important;
 }
 
 .animate-slide-up {
-  animation: slide-up 0.6s ease-out forwards;
+  animation: slide-up-once 0.6s ease-out forwards !important;
 }
