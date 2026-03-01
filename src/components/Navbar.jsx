@@ -8,7 +8,7 @@ const Navbar = ({ scrolled }) => {
 
   const navLinks = [
     { name: 'Accueil', href: '/', type: 'route' },
-    { name: 'À Propos', href: '/', type: 'route', scrollTo: 'about' },
+    { name: 'Nos avis', href: '/', type: 'route', scrollTo: 'testimonials' },
     { name: 'Galerie', href: '/', type: 'route', scrollTo: 'gallery' },
   ]
 
