@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ChevronRight, ChevronLeft, Check, Car, Truck, Bus } from 'lucide-react'
+import { ChevronLeft, Check } from 'lucide-react'
 
 const Simulator = () => {
   const [step, setStep] = useState(1)
@@ -14,14 +14,15 @@ const Simulator = () => {
     phone: '',
     message: ''
   })
+  const vehiclesRequiringConfirmation = ['suv', 'break', 'minibus']
 
   const vehicleTypes = [
-    { id: '3portes', name: '3 Portes', icon: Car, description: 'Citadines' },
-    { id: '5portes', name: '5 Portes', icon: Car, description: 'Berlines et compactes' },
-    { id: 'suv', name: 'SUV', icon: Car, description: 'SUV et 4x4' },
-    { id: 'break', name: 'Break / Monospace', icon: Truck, description: 'Break et monospace' },
-    { id: 'minibus', name: 'Minibus', icon: Bus, description: 'Minibus' },
-    { id: 'utilitaire', name: 'Utilitaire', icon: Truck, description: 'Sur devis personnalisé' }
+    { id: '3portes', name: '3 Portes', description: 'Citadines', example: 'Ex. Fiat 500, Mini' },
+    { id: '5portes', name: '5 Portes', description: 'Berlines et compactes', example: 'Ex. Golf 7, Peugeot 308' },
+    { id: 'suv', name: 'SUV', description: 'SUV et 4x4', example: 'Ex. Peugeot 3008, Audi Q5' },
+    { id: 'break', name: 'Break / Monospace', description: 'Break et monospace', example: 'Ex. Passat SW, Scenic' },
+    { id: 'minibus', name: 'Minibus', description: 'Grand volume passagers', example: 'Ex. Trafic Minibus, Transporter' },
+    { id: 'utilitaire', name: 'Utilitaire', description: 'Sur devis personnalisé', example: 'Ex. Kangoo, Boxer, Sprinter' }
   ]
 
   const windowTypes = [
@@ -101,7 +102,6 @@ const Simulator = () => {
                 </h2>
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                   {vehicleTypes.map((vehicle) => {
-                    const Icon = vehicle.icon
                     return (
                       <button
                         key={vehicle.id}
@@ -112,9 +112,9 @@ const Simulator = () => {
                             : 'border-gray-700 hover:border-silver-accent/50'
                         }`}
                       >
-                        <Icon className="w-12 h-12 text-silver-accent mx-auto mb-3" />
                         <h3 className="font-racing font-bold text-white mb-2">{vehicle.name}</h3>
-                        <p className="text-gray-400 text-sm">{vehicle.description}</p>
+                        <p className="text-gray-400 text-sm mb-2">{vehicle.description}</p>
+                        <p className="text-silver-accent text-xs font-semibold">{vehicle.example}</p>
                       </button>
                     )
                   })}
@@ -238,7 +238,7 @@ const Simulator = () => {
                     }}
                     className="flex-1 bg-silver-accent hover:bg-white text-black px-6 py-3 rounded-lg font-bold text-base transition-all duration-300 transform hover:scale-105 shadow-lg text-center"
                   >
-                    Demander un devis personnalisé{(formData.vehicleType === 'break' || formData.vehicleType === 'minibus') && ' *'}
+                    Demander un devis personnalisé{vehiclesRequiringConfirmation.includes(formData.vehicleType) && ' *'}
                   </button>
                   <button
                     onClick={() => {
@@ -250,9 +250,9 @@ const Simulator = () => {
                     Recommencer
                   </button>
                 </div>
-                {(formData.vehicleType === 'break' || formData.vehicleType === 'minibus') && (
+                {vehiclesRequiringConfirmation.includes(formData.vehicleType) && (
                   <p className="text-yellow-500 text-xs mt-3 text-center">
-                    * Pour les monospaces et minibus, merci de nous contacter pour confirmer le tarif exact en fonction de votre modèle.
+                    * Pour les SUV, breaks et minibus, merci de nous contacter pour confirmer le tarif exact en fonction de votre modèle.
                   </p>
                 )}
                 {step > 1 && (
