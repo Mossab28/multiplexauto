@@ -1,5 +1,5 @@
 import React from 'react'
-import { ChevronDown, Shield, Sun, Eye, ThermometerSun, BadgeCheck, Sparkles, Award, Instagram, Facebook } from 'lucide-react'
+import { ChevronDown, Shield, Sun, Eye, ThermometerSun, BadgeCheck, Sparkles, Award, Instagram, Facebook, MapPin } from 'lucide-react'
 
 const Hero = () => {
 
@@ -30,7 +30,7 @@ const Hero = () => {
             {/* Réseaux sociaux */}
             <div className="glass-effect p-3 sm:p-4 rounded-xl mb-6 lg:mb-8 animate-slide-up lg:max-w-xl" style={{ animationDelay: '0.6s' }}>
               <h3 className="text-xs sm:text-sm font-racing font-bold mb-2 sm:mb-3 text-white">Suivez-nous</h3>
-              <div className="flex flex-col sm:flex-row gap-2">
+              <div className="flex flex-col gap-2">
                 <a
                   href="https://www.instagram.com/perfect_car_troyes/"
                   target="_blank"
@@ -53,6 +53,18 @@ const Hero = () => {
                   <div className="min-w-0">
                     <p className="font-bold text-xs sm:text-xs truncate">PERFECT'Car TROYES</p>
                     <p className="text-[10px] sm:text-xs opacity-90">Suivez notre actualité</p>
+                  </div>
+                </a>
+                <a
+                  href="https://www.google.com/maps/place/PERFECT'+Car/@48.2953333,4.0747222,17z/data=!3m1!4b1!4m6!3m5!1s0x47ee9750e227e70f:0x7c8c8c8c8c8c8c8c!8m2!3d48.2953333!4d4.0747222!16s%2Fg%2F11c5y5y5y5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 flex items-center space-x-2 bg-gradient-to-r from-red-600 to-yellow-600 hover:from-red-700 hover:to-yellow-700 text-white px-2 sm:px-3 py-2 sm:py-3 rounded-lg font-semibold transition-all duration-300 hover-lift"
+                >
+                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                  <div className="min-w-0">
+                    <p className="font-bold text-xs sm:text-xs truncate">PERFECT' car sur Google</p>
+                    <p className="text-[10px] sm:text-xs opacity-90">4.9★ • 300+ avis clients</p>
                   </div>
                 </a>
               </div>
