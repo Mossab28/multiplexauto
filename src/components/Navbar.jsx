@@ -5,6 +5,8 @@ import croppedLogo from '../../Images/cropped_logo.png'
 
 const Navbar = ({ scrolled }) => {
   const [isOpen, setIsOpen] = useState(false)
+  const rightActionClasses = 'flex items-center justify-end gap-2 sm:gap-3 lg:gap-4'
+  const buttonBaseClasses = 'rounded-lg font-bold transition-all duration-300 hover-lift flex flex-shrink-0 items-center shadow-lg'
 
   const navLinks = [
     { name: 'Accueil', href: '/', scrollToTop: true },
@@ -38,34 +40,61 @@ const Navbar = ({ scrolled }) => {
     }
   }
 
-  return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'glass-effect py-3 sm:py-4 red-glow' : 'bg-transparent py-4 sm:py-5'
-    }`}>
-      <div className="container mx-auto px-3 sm:px-6 lg:px-8 relative">
-        <Link
-          to="/"
-          onClick={() => {
+  const renderActions = (isInvisible = false) => (
+    <div
+      aria-hidden={isInvisible}
+      className={`${rightActionClasses} ${isInvisible ? 'invisible pointer-events-none' : 'relative z-10'}`}
+    >
+      <Link
+        to="/simulateur"
+        onClick={() => {
+          if (!isInvisible) {
             setIsOpen(false)
             handleNavClick(null, true)
-          }}
-          className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 lg:flex lg:items-center lg:justify-center"
-        >
-          <img
-            src={croppedLogo}
-            alt="Perfect'Car Logo"
-            className="w-[360px] xl:w-[420px] 2xl:w-[480px] h-auto object-contain"
-          />
-        </Link>
+          }
+        }}
+        className={`bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm ${buttonBaseClasses} border-2 border-red-400/50`}
+      >
+        <Calculator size={16} />
+        <span className="ml-1.5 font-racing tracking-wide hidden whitespace-nowrap sm:inline">COMBIEN ÇA COÛTE ?</span>
+        <span className="ml-1.5 font-racing tracking-wide whitespace-nowrap sm:hidden">DEVIS</span>
+      </Link>
+      <a
+        href={isInvisible ? undefined : 'tel:0663207808'}
+        className={`bg-call-green hover:bg-green-600 text-white px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm ${buttonBaseClasses} border-2 border-green-400/50`}
+      >
+        <Phone size={16} />
+        <span className="ml-1.5 font-racing tracking-wide hidden whitespace-nowrap sm:inline">06 63 20 78 08</span>
+        <span className="ml-1.5 font-racing tracking-wide whitespace-nowrap sm:hidden">APPEL</span>
+      </a>
+      <button
+        type="button"
+        onClick={() => {
+          if (!isInvisible) {
+            setIsOpen(!isOpen)
+          }
+        }}
+        className="text-white p-2.5 sm:p-3 hover:bg-silver-accent/20 rounded-lg transition-colors border border-white/10 bg-white/5"
+        aria-label={isInvisible ? undefined : isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+      >
+        {isOpen && !isInvisible ? <X size={22} /> : <Menu size={22} />}
+      </button>
+    </div>
+  )
 
-        <div className="flex min-h-[88px] sm:min-h-[102px] lg:min-h-[124px] items-center justify-between gap-3 sm:gap-4">
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled ? 'glass-effect py-2 sm:py-4 red-glow' : 'bg-transparent py-2.5 sm:py-5'
+    }`}>
+      <div className="container mx-auto px-2 sm:px-6 lg:px-8 relative">
+        <div className="flex min-h-[76px] items-center justify-between gap-2 sm:min-h-[102px] lg:hidden">
           <Link
             to="/"
             onClick={() => {
               setIsOpen(false)
               handleNavClick(null, true)
             }}
-            className="flex items-center justify-start lg:invisible"
+            className="flex items-center justify-start"
           >
             <img
               src={croppedLogo}
@@ -74,35 +103,28 @@ const Navbar = ({ scrolled }) => {
             />
           </Link>
 
-          <div className="relative z-10 ml-auto flex items-center justify-end gap-2 sm:gap-3 lg:gap-4">
-            <Link
-              to="/simulateur"
-              onClick={() => {
-                setIsOpen(false)
-                handleNavClick(null, true)
-              }}
-              className="bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg font-bold text-xs sm:text-sm transition-all duration-300 hover-lift flex flex-shrink-0 items-center space-x-1.5 shadow-lg border-2 border-red-400/50"
-            >
-              <Calculator size={16} />
-              <span className="font-racing tracking-wide hidden whitespace-nowrap sm:inline">COMBIEN ÇA COÛTE ?</span>
-              <span className="font-racing tracking-wide whitespace-nowrap sm:hidden">DEVIS</span>
-            </Link>
-            <a
-              href="tel:0663207808"
-              className="bg-call-green hover:bg-green-600 text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg font-bold text-xs sm:text-sm transition-all duration-300 hover-lift flex flex-shrink-0 items-center space-x-1.5 shadow-lg border-2 border-green-400/50"
-            >
-              <Phone size={16} />
-              <span className="font-racing tracking-wide hidden whitespace-nowrap sm:inline">06 63 20 78 08</span>
-              <span className="font-racing tracking-wide whitespace-nowrap sm:hidden">APPEL</span>
-            </a>
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-white p-2.5 sm:p-3 hover:bg-silver-accent/20 rounded-lg transition-colors border border-white/10 bg-white/5"
-              aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
-            >
-              {isOpen ? <X size={22} /> : <Menu size={22} />}
-            </button>
-          </div>
+          {renderActions(false)}
+        </div>
+
+        <div className="hidden min-h-[124px] lg:grid lg:grid-cols-[auto_minmax(0,1fr)_auto] lg:items-center lg:gap-6">
+          {renderActions(true)}
+
+          <Link
+            to="/"
+            onClick={() => {
+              setIsOpen(false)
+              handleNavClick(null, true)
+            }}
+            className="flex min-w-0 items-center justify-center"
+          >
+            <img
+              src={croppedLogo}
+              alt="Perfect'Car Logo"
+              className="h-auto w-[420px] max-w-full object-contain xl:w-[470px] 2xl:w-[520px]"
+            />
+          </Link>
+
+          {renderActions(false)}
         </div>
 
         {isOpen && (
