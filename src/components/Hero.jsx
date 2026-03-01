@@ -56,7 +56,7 @@ const Hero = () => {
                   </div>
                 </a>
                 <a
-                  href="https://www.google.com/maps/place/PERFECT'+Car/@48.2953333,4.0747222,17z/data=!3m1!4b1!4m6!3m5!1s0x47ee9750e227e70f:0x7c8c8c8c8c8c8c8c!8m2!3d48.2953333!4d4.0747222!16s%2Fg%2F11c5y5y5y5"
+                  href="https://www.google.com/maps/place/PERFECT%E2%80%99+Car/@48.3169346,4.0388392,17z/data=!3m1!4b1!4m6!3m5!1s0x47ee998c47e893ad:0xf21636705f5ec241!8m2!3d48.3169346!4d4.0414141!16s%2Fg%2F11gzm0c61f?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 flex items-center space-x-2 bg-white hover:bg-gray-50 text-gray-900 px-2 sm:px-3 py-2 sm:py-3 rounded-lg font-semibold transition-all duration-300 hover-lift border border-gray-200"
