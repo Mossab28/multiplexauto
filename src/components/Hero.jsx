@@ -4,14 +4,14 @@ import { ChevronDown, Shield, Sun, Eye, ThermometerSun, BadgeCheck, Sparkles, Aw
 const Hero = () => {
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-24 sm:pt-20 pb-12">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-32 sm:pt-24 pb-12">
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center">
           {/* Contenu à gauche */}
           <div className="text-center lg:text-left animate-fade-in lg:pt-8">
-            <h1 className="text-xl sm:text-2xl lg:text-4xl font-racing font-bold mb-4 lg:mb-6 lg:max-w-xl animate-slide-up leading-tight" style={{ animationDelay: '0.2s' }}>
-              <span className="gradient-text">Chez PERFECT' car, nous sommes spécialisés dans la pose de vitres teintées haut de gamme</span>
+            <h1 className="text-xl sm:text-2xl lg:text-4xl font-racing mb-4 lg:mb-6 lg:max-w-xl animate-slide-up leading-tight" style={{ animationDelay: '0.2s' }}>
+              <span className="gradient-text font-bold">Chez PERFECT'car</span><span className="text-white">, nous sommes spécialisés dans la pose de vitres teintées haut de gamme</span>
             </h1>
             
             <p className="text-sm sm:text-base lg:text-lg text-gray-300 mb-4 lg:mb-6 lg:max-w-xl animate-slide-up leading-relaxed" style={{ animationDelay: '0.3s' }}>
@@ -24,7 +24,7 @@ const Hero = () => {
             </p>
 
             <p className="text-sm sm:text-base lg:text-lg text-gray-300 mb-4 lg:mb-6 animate-slide-up leading-relaxed" style={{ animationDelay: '0.5s' }}>
-              <span className="font-bold text-white">PERFECT' car</span> incarne l'exigence du détail et la finition haut de gamme au service de votre confort.
+              <span className="font-bold text-white">PERFECT'car</span> incarne l'exigence du détail et la finition haut de gamme au service de votre confort.
             </p>
 
             {/* Réseaux sociaux */}
