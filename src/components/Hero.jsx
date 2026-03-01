@@ -1,5 +1,5 @@
 import React from 'react'
-import { Instagram, Facebook, MessageCircle } from 'lucide-react'
+import { Instagram, Facebook, MessageCircle, ShieldCheck } from 'lucide-react'
 
 const Hero = () => {
   const whatsappUrl = 'https://wa.me/33663207808'
@@ -100,12 +100,9 @@ const Hero = () => {
             <div className="glass-effect border border-blue-500/30 rounded-xl p-4 sm:p-6 mb-4 sm:mb-6 animate-slide-up hover-lift">
               <div className="flex items-center space-x-3 sm:space-x-4">
                 <div className="relative flex-shrink-0">
-                  <div className="absolute inset-0 bg-blue-500/20 rounded-full animate-ping" />
-                  <div className="relative">
-                    <svg className="w-10 h-10 sm:w-12 sm:h-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="12" cy="12" r="10" fill="#3B82F6"/>
-                      <path d="M8 12L11 15L16 9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                  <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-sm" />
+                  <div className="relative flex h-12 w-12 items-center justify-center rounded-full bg-blue-500 sm:h-14 sm:w-14 shadow-lg shadow-blue-500/30">
+                    <ShieldCheck className="h-7 w-7 text-white sm:h-8 sm:w-8" strokeWidth={2.2} />
                   </div>
                 </div>
                 <div className="flex-1 min-w-0">
