@@ -11,7 +11,7 @@ const Footer = () => {
     setTimeout(() => {
       const element = document.getElementById(sectionId)
       if (element) {
-        const navbarHeight = 100
+        const navbarHeight = 80
         const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
         window.scrollTo({
           top: elementPosition - navbarHeight,

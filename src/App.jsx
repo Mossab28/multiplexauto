@@ -27,7 +27,7 @@ function App() {
       setTimeout(() => {
         const element = document.querySelector(hash)
         if (element) {
-          const navbarHeight = 100
+          const navbarHeight = 80
           const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
           window.scrollTo({
             top: elementPosition - navbarHeight,

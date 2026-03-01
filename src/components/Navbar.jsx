@@ -24,7 +24,7 @@ const Navbar = ({ scrolled }) => {
       setTimeout(() => {
         const element = document.getElementById(scrollTo)
         if (element) {
-          const navbarHeight = 100
+          const navbarHeight = 80
           const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
           const offsetPosition = elementPosition - navbarHeight
           
