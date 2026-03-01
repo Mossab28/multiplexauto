@@ -3,6 +3,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null)
+  const [showAll, setShowAll] = useState(false)
 
   const faqs = [
     {
@@ -67,7 +68,7 @@ const FAQ = () => {
         </div>
 
         <div className="max-w-4xl mx-auto space-y-4">
-          {faqs.map((faq, index) => (
+          {faqs.slice(0, showAll ? faqs.length : 5).map((faq, index) => (
             <div
               key={index}
               className="glass-effect rounded-xl overflow-hidden animate-slide-up hover-lift"
@@ -102,13 +103,24 @@ const FAQ = () => {
           ))}
         </div>
 
+        {!showAll && faqs.length > 5 && (
+          <div className="text-center mt-8">
+            <button
+              onClick={() => setShowAll(true)}
+              className="inline-block bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover-lift"
+            >
+              Voir plus de questions ({faqs.length - 5} restantes)
+            </button>
+          </div>
+        )}
+
         <div className="text-center mt-12">
           <p className="text-gray-400 mb-4">
             Vous avez d'autres questions ?
           </p>
           <a
             href="#contact"
-            className="inline-block bg-gradient-to-r from-silver-accent to-red-600 text-white px-8 py-3 rounded-lg font-racing font-bold hover:shadow-lg hover:shadow-red-600/50 transition-all duration-300 hover-lift"
+            className="inline-block bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-3 rounded-lg font-racing font-bold hover:shadow-lg hover:shadow-green-600/50 transition-all duration-300 hover-lift"
           >
             Contactez-nous
           </a>
