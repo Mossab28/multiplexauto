@@ -71,8 +71,10 @@ const FAQ = () => {
           {faqs.slice(0, showAll ? faqs.length : 5).map((faq, index) => (
             <div
               key={index}
-              className="glass-effect rounded-xl overflow-hidden animate-slide-up hover-lift"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`glass-effect rounded-xl overflow-hidden hover-lift ${
+                index < 5 ? 'animate-slide-up' : 'animate-fade-in'
+              }`}
+              style={{ animationDelay: index < 5 ? `${index * 0.1}s` : `${(index - 5) * 0.1}s` }}
             >
               <button
                 onClick={() => toggleFAQ(index)}
@@ -104,12 +106,16 @@ const FAQ = () => {
         </div>
 
         {!showAll && faqs.length > 5 && (
-          <div className="text-center mt-8">
+          <div className="text-center mt-8 animate-fade-in">
             <button
               onClick={() => setShowAll(true)}
-              className="inline-block bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover-lift"
+              className="group relative inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-silver-accent to-red-600 hover:from-silver-accent/80 hover:to-red-700 transition-all duration-500 hover:scale-110 hover:shadow-lg hover:shadow-red-600/50"
+              aria-label="Voir plus de questions"
             >
-              Voir plus de questions ({faqs.length - 5} restantes)
+              <ChevronDown className="w-8 h-8 text-white animate-bounce" />
+              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-xs text-gray-400">{faqs.length - 5} questions restantes</span>
+              </div>
             </button>
           </div>
         )}
