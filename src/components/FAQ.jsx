@@ -109,10 +109,10 @@ const FAQ = () => {
           <div className="text-center mt-8 animate-fade-in">
             <button
               onClick={() => setShowAll(true)}
-              className="group relative inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-silver-accent to-red-600 hover:from-silver-accent/80 hover:to-red-700 transition-all duration-500 hover:scale-110 hover:shadow-lg hover:shadow-red-600/50"
+              className="group relative inline-flex items-center justify-center transition-all duration-500 hover:scale-110"
               aria-label="Voir plus de questions"
             >
-              <ChevronDown className="w-8 h-8 text-white animate-bounce" />
+              <ChevronDown className="w-12 h-12 text-silver-accent animate-bounce hover:text-white transition-colors" />
               <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span className="text-xs text-gray-400">{faqs.length - 5} questions restantes</span>
               </div>
