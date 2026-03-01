@@ -124,12 +124,22 @@ const FAQ = () => {
           <p className="text-gray-400 mb-4">
             Vous avez d'autres questions ?
           </p>
-          <a
-            href="#contact"
+          <button
+            onClick={() => {
+              const element = document.getElementById('contact')
+              if (element) {
+                const navbarHeight = 80
+                const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+                window.scrollTo({
+                  top: elementPosition - navbarHeight,
+                  behavior: 'smooth'
+                })
+              }
+            }}
             className="inline-block bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-3 rounded-lg font-racing font-bold hover:shadow-lg hover:shadow-green-600/50 transition-all duration-300 hover-lift"
           >
             Contactez-nous
-          </a>
+          </button>
         </div>
       </div>
     </section>
