@@ -53,21 +53,21 @@ const FAQ = () => {
   }
 
   return (
-    <section id="faq" className="py-20 relative">
+    <section id="faq" className="py-12 sm:py-20 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-slide-up">
-          <span className="text-silver-accent font-racing font-bold text-sm tracking-wider">FAQ</span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-racing font-bold mt-4 mb-6">
+        <div className="text-center mb-8 sm:mb-16 animate-slide-up">
+          <span className="text-silver-accent font-racing font-bold text-xs sm:text-sm tracking-wider">FAQ</span>
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-racing font-bold mt-3 sm:mt-4 mb-4 sm:mb-6">
             <span className="gradient-text">QUESTIONS</span>
             <br />
             <span className="text-white">Fréquemment Posées</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-sm sm:text-lg max-w-2xl mx-auto px-2">
             Tout ce que vous devez savoir sur nos vitres teintées
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-4">
+        <div className="max-w-4xl mx-auto space-y-2 sm:space-y-4">
           {faqs.slice(0, showAll ? faqs.length : 5).map((faq, index) => (
             <div
               key={index}
@@ -78,9 +78,9 @@ const FAQ = () => {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-5 flex items-center justify-between text-left transition-colors hover:bg-white/5"
+                className="w-full px-4 sm:px-6 py-3 sm:py-5 flex items-center justify-between text-left transition-colors hover:bg-white/5"
               >
-                <h3 className="font-racing font-bold text-lg text-white pr-4">
+                <h3 className="font-racing font-bold text-sm sm:text-lg text-white pr-4">
                   {faq.question}
                 </h3>
                 {openIndex === index ? (
@@ -95,8 +95,8 @@ const FAQ = () => {
                   openIndex === index ? 'max-h-96' : 'max-h-0'
                 }`}
               >
-                <div className="px-6 pb-5">
-                  <p className="text-gray-300 leading-relaxed">
+                <div className="px-4 sm:px-6 pb-4 sm:pb-5">
+                  <p className="text-gray-300 text-xs sm:text-base leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>

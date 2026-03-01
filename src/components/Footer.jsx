@@ -22,29 +22,29 @@ const Footer = () => {
   }
 
   return (
-    <footer className="relative py-12 border-t border-gray-800">
+    <footer className="relative py-8 sm:py-12 border-t border-gray-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8">
           <div>
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-3 sm:mb-4">
               <img 
                 src="/multiplexauto/logo-new.png" 
                 alt="Perfect'Car Logo" 
-                className="h-16 sm:h-20 lg:h-24 w-auto object-contain pt-6"
+                className="h-10 sm:h-20 lg:h-24 w-auto object-contain sm:pt-6"
               />
             </div>
-            <p className="text-gray-400 mb-4">
-              Votre spécialiste en vitres teintées à Troyes. Qualité professionnelle et service personnalisé.
+            <p className="text-gray-400 text-xs sm:text-base mb-3 sm:mb-4">
+              Votre spécialiste en vitres teintées à Troyes.
             </p>
-            <div className="flex flex-col space-y-3">
+            <div className="flex flex-col space-y-2 sm:space-y-3">
               <a
                 href="https://www.instagram.com/perfect_car_troyes/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 text-silver-accent hover:text-red-600 transition-colors"
               >
-                <Instagram className="w-5 h-5" />
-                <span className="font-semibold">@perfect_car_troyes</span>
+                <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="font-semibold text-xs sm:text-base">@perfect_car_troyes</span>
               </a>
               <a
                 href="https://www.facebook.com/PERFECTCarTROYES/"
@@ -52,32 +52,32 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 text-silver-accent hover:text-blue-600 transition-colors"
               >
-                <Facebook className="w-5 h-5" />
-                <span className="font-semibold">PERFECT'Car TROYES</span>
+                <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="font-semibold text-xs sm:text-base">PERFECT'Car TROYES</span>
               </a>
             </div>
           </div>
 
           <div>
-            <h4 className="font-racing font-bold text-lg mb-4">Navigation</h4>
-            <ul className="space-y-2">
+            <h4 className="font-racing font-bold text-sm sm:text-lg mb-3 sm:mb-4">Navigation</h4>
+            <ul className="space-y-1 sm:space-y-2">
               <li>
-                <button onClick={() => handleNavClick('home')} className="text-gray-400 hover:text-silver-accent transition-colors">
+                <button onClick={() => handleNavClick('home')} className="text-gray-400 hover:text-silver-accent transition-colors text-xs sm:text-base">
                   Accueil
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavClick('testimonials')} className="text-gray-400 hover:text-silver-accent transition-colors">
+                <button onClick={() => handleNavClick('testimonials')} className="text-gray-400 hover:text-silver-accent transition-colors text-xs sm:text-base">
                   Avis
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavClick('gallery')} className="text-gray-400 hover:text-silver-accent transition-colors">
+                <button onClick={() => handleNavClick('gallery')} className="text-gray-400 hover:text-silver-accent transition-colors text-xs sm:text-base">
                   Galerie
                 </button>
               </li>
               <li>
-                <button onClick={() => handleNavClick('contact')} className="text-gray-400 hover:text-silver-accent transition-colors">
+                <button onClick={() => handleNavClick('contact')} className="text-gray-400 hover:text-silver-accent transition-colors text-xs sm:text-base">
                   Contact
                 </button>
               </li>
@@ -85,36 +85,36 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="font-racing font-bold text-lg mb-4">Services</h4>
-            <ul className="space-y-2">
-              <li className="text-gray-400">Vitres Teintées Citadines</li>
-              <li className="text-gray-400">Vitres Teintées Berlines</li>
-              <li className="text-gray-400">Vitres Teintées Sportives</li>
-              <li className="text-gray-400">Film Anti-Effraction</li>
-              <li className="text-gray-400">Protection UV</li>
-              <li className="text-gray-400">Personnalisation</li>
+            <h4 className="font-racing font-bold text-sm sm:text-lg mb-3 sm:mb-4">Services</h4>
+            <ul className="space-y-1 sm:space-y-2">
+              <li className="text-gray-400 text-xs sm:text-base">Vitres Teintées Citadines</li>
+              <li className="text-gray-400 text-xs sm:text-base">Vitres Teintées Berlines</li>
+              <li className="text-gray-400 text-xs sm:text-base">Vitres Teintées Sportives</li>
+              <li className="text-gray-400 text-xs sm:text-base">Film Anti-Effraction</li>
+              <li className="text-gray-400 text-xs sm:text-base">Protection UV</li>
+              <li className="text-gray-400 text-xs sm:text-base">Personnalisation</li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-racing font-bold text-lg mb-4">Contact</h4>
-            <ul className="space-y-3">
-              <li className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-silver-accent flex-shrink-0 mt-1" />
-                <a href="tel:0663207808" className="text-gray-400 hover:text-silver-accent transition-colors">
+            <h4 className="font-racing font-bold text-sm sm:text-lg mb-3 sm:mb-4">Contact</h4>
+            <ul className="space-y-2 sm:space-y-3">
+              <li className="flex items-start space-x-2 sm:space-x-3">
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-silver-accent flex-shrink-0 mt-0.5" />
+                <a href="tel:0663207808" className="text-gray-400 hover:text-silver-accent transition-colors text-xs sm:text-base">
                   06 63 20 78 08
                 </a>
               </li>
-              <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-silver-accent flex-shrink-0 mt-1" />
-                <span className="text-gray-400">
+              <li className="flex items-start space-x-2 sm:space-x-3">
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-silver-accent flex-shrink-0 mt-0.5" />
+                <span className="text-gray-400 text-xs sm:text-base">
                   2 rue Archimède<br />
                   10600 La Chapelle Saint-Luc
                 </span>
               </li>
-              <li className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-silver-accent flex-shrink-0 mt-1" />
-                <a href="https://multiplexeauto.fr" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-silver-accent transition-colors">
+              <li className="flex items-start space-x-2 sm:space-x-3">
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-silver-accent flex-shrink-0 mt-0.5" />
+                <a href="https://multiplexeauto.fr" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-silver-accent transition-colors text-xs sm:text-base">
                   multiplexeauto.fr
                 </a>
               </li>

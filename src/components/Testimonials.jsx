@@ -184,16 +184,16 @@ const Testimonials = () => {
   }
 
   return (
-    <section id="testimonials" className="py-20 relative">
+    <section id="testimonials" className="py-12 sm:py-20 relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 animate-slide-up">
-          <span className="text-silver-accent font-racing font-bold text-sm tracking-wider">TÉMOIGNAGES</span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-racing font-bold mt-4 mb-6">
+        <div className="text-center mb-8 sm:mb-16 animate-slide-up">
+          <span className="text-silver-accent font-racing font-bold text-xs sm:text-sm tracking-wider">TÉMOIGNAGES</span>
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-racing font-bold mt-3 sm:mt-4 mb-4 sm:mb-6">
             <span className="gradient-text">NOS CLIENTS</span>
             <br />
             <span className="text-white">Nous Font Confiance</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-3">
+          <p className="text-gray-400 text-sm sm:text-lg max-w-2xl mx-auto mb-3 px-2">
             Plus de 300 clients satisfaits et des dizaines d'avis 5 étoiles sur Google
           </p>
           <div className="flex items-center justify-center gap-2 text-sm text-gray-500">
@@ -203,8 +203,8 @@ const Testimonials = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="relative glass-effect p-8 sm:p-12 rounded-2xl animate-fade-in">
-            <Quote className="absolute top-8 left-8 w-12 h-12 text-silver-accent/20" />
+          <div className="relative glass-effect p-5 sm:p-8 md:p-12 rounded-2xl animate-fade-in">
+            <Quote className="absolute top-4 left-4 sm:top-8 sm:left-8 w-8 h-8 sm:w-12 sm:h-12 text-silver-accent/20" />
             
             <div className="relative z-10">
               <div className="flex items-center justify-center mb-6">
@@ -213,7 +213,7 @@ const Testimonials = () => {
                 ))}
               </div>
 
-              <p className="text-gray-300 text-lg sm:text-xl leading-relaxed mb-8 text-center italic">
+              <p className="text-gray-300 text-sm sm:text-lg md:text-xl leading-relaxed mb-6 sm:mb-8 text-center italic">
                 "{testimonials[currentIndex].text}"
               </p>
 
@@ -232,47 +232,39 @@ const Testimonials = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-center space-x-4 mt-8">
+            <div className="flex items-center justify-center space-x-4 mt-6 sm:mt-8">
               <button
                 onClick={prevTestimonial}
-                className="bg-silver-accent/20 hover:bg-silver-accent text-white w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover-lift"
+                className="bg-silver-accent/20 hover:bg-silver-accent text-white w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition-all duration-300 hover-lift flex-shrink-0"
               >
-                <ChevronLeft className="w-6 h-6" />
+                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
               
-              <div className="flex space-x-2">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentIndex(index)}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      index === currentIndex ? 'bg-silver-accent w-8' : 'bg-gray-600'
-                    }`}
-                  />
-                ))}
-              </div>
+              <span className="text-gray-400 font-racing text-sm whitespace-nowrap">
+                {currentIndex + 1} / {testimonials.length}
+              </span>
 
               <button
                 onClick={nextTestimonial}
-                className="bg-silver-accent/20 hover:bg-silver-accent text-white w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover-lift"
+                className="bg-silver-accent/20 hover:bg-silver-accent text-white w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center transition-all duration-300 hover-lift flex-shrink-0"
               >
-                <ChevronRight className="w-6 h-6" />
+                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-3 gap-6 mt-12">
-            <div className="glass-effect p-6 rounded-xl text-center hover-lift">
-              <div className="text-4xl font-racing font-bold gradient-text mb-2">4.8/5</div>
-              <p className="text-gray-400">Note Google</p>
+          <div className="grid grid-cols-3 gap-3 sm:gap-6 mt-8 sm:mt-12">
+            <div className="glass-effect p-3 sm:p-6 rounded-xl text-center hover-lift">
+              <div className="text-2xl sm:text-4xl font-racing font-bold gradient-text mb-1 sm:mb-2">4.8/5</div>
+              <p className="text-gray-400 text-xs sm:text-base">Note Google</p>
             </div>
-            <div className="glass-effect p-6 rounded-xl text-center hover-lift">
-              <div className="text-4xl font-racing font-bold gradient-text mb-2">39</div>
-              <p className="text-gray-400">Avis Clients</p>
+            <div className="glass-effect p-3 sm:p-6 rounded-xl text-center hover-lift">
+              <div className="text-2xl sm:text-4xl font-racing font-bold gradient-text mb-1 sm:mb-2">39</div>
+              <p className="text-gray-400 text-xs sm:text-base">Avis Clients</p>
             </div>
-            <div className="glass-effect p-6 rounded-xl text-center hover-lift">
-              <div className="text-4xl font-racing font-bold gradient-text mb-2">100%</div>
-              <p className="text-gray-400">Satisfaction</p>
+            <div className="glass-effect p-3 sm:p-6 rounded-xl text-center hover-lift">
+              <div className="text-2xl sm:text-4xl font-racing font-bold gradient-text mb-1 sm:mb-2">100%</div>
+              <p className="text-gray-400 text-xs sm:text-base">Satisfaction</p>
             </div>
           </div>
 

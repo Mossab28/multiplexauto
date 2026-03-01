@@ -4,7 +4,7 @@ import { ChevronDown, Shield, Sun, Eye, ThermometerSun, BadgeCheck, Sparkles, Aw
 const Hero = () => {
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-20 pb-12">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-24 sm:pt-20 pb-12">
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center">

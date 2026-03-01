@@ -39,15 +39,15 @@ const Navbar = ({ scrolled }) => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'glass-effect py-4 red-glow' : 'bg-transparent py-6'
+      scrolled ? 'glass-effect py-2 sm:py-4 red-glow' : 'bg-transparent py-3 sm:py-6'
     }`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <div className="flex items-center ml-2">
+          <div className="flex items-center flex-shrink-0">
             <img 
               src="/multiplexauto/logo-new.png" 
               alt="Perfect'Car Logo" 
-              className="h-16 sm:h-20 lg:h-24 w-auto object-contain pt-6"
+              className="h-10 sm:h-20 lg:h-24 w-auto object-contain sm:pt-6"
             />
           </div>
 
@@ -86,18 +86,18 @@ const Navbar = ({ scrolled }) => {
             </a>
           </div>
 
-          <div className="lg:hidden flex items-center space-x-3">
+          <div className="lg:hidden flex items-center space-x-2 flex-shrink-0">
             <a
               href="tel:0663207808"
-              className="bg-call-green hover:bg-green-600 text-white p-3 rounded-full transition-all duration-300 hover-lift"
+              className="bg-call-green hover:bg-green-600 text-white p-2 rounded-full transition-all duration-300"
             >
-              <Phone size={20} />
+              <Phone size={18} />
             </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-white p-2 hover:bg-silver-accent/20 rounded-lg transition-colors"
             >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
