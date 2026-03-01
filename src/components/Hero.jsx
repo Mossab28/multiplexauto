@@ -1,7 +1,8 @@
 import React from 'react'
-import { ChevronDown, Shield, Sun, Eye, ThermometerSun, BadgeCheck, Sparkles, Award, Instagram, Facebook, MapPin } from 'lucide-react'
+import { Instagram, Facebook, MessageCircle } from 'lucide-react'
 
 const Hero = () => {
+  const whatsappUrl = 'https://wa.me/33663207808'
 
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-32 sm:pt-24 pb-12">
@@ -53,6 +54,18 @@ const Hero = () => {
                   <div className="min-w-0">
                     <p className="font-bold text-xs sm:text-xs truncate">PERFECT'Car TROYES</p>
                     <p className="text-[10px] sm:text-xs opacity-90">Suivez notre actualité</p>
+                  </div>
+                </a>
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 flex items-center space-x-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-2 sm:px-3 py-2 sm:py-3 rounded-lg font-semibold transition-all duration-300 hover-lift"
+                >
+                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                  <div className="min-w-0">
+                    <p className="font-bold text-xs sm:text-xs truncate">WhatsApp</p>
+                    <p className="text-[10px] sm:text-xs opacity-90">06 63 20 78 08</p>
                   </div>
                 </a>
                 <a

@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { Phone, Mail, MapPin, Clock, Send, Instagram, Globe, Facebook } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, Send, Instagram, Globe, Facebook, MessageCircle } from 'lucide-react'
 
 const Contact = () => {
+  const whatsappUrl = 'https://wa.me/33663207808'
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -118,6 +119,18 @@ const Contact = () => {
                   <div>
                     <p className="font-bold">PERFECT'Car TROYES</p>
                     <p className="text-sm opacity-90">Suivez notre actualité</p>
+                  </div>
+                </a>
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-3 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-6 py-4 rounded-lg font-semibold transition-all duration-300 hover-lift"
+                >
+                  <MessageCircle className="w-6 h-6" />
+                  <div>
+                    <p className="font-bold">WhatsApp</p>
+                    <p className="text-sm opacity-90">06 63 20 78 08</p>
                   </div>
                 </a>
                 <a

@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, Phone, MapPin, Calculator } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { Menu, X, Phone, Calculator } from 'lucide-react'
 
 const Navbar = ({ scrolled }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const location = useLocation()
 
   const navLinks = [
-    { name: 'Accueil', href: '/', type: 'route' },
-    { name: 'Nos avis', href: '/', type: 'route', scrollTo: 'testimonials' },
-    { name: 'Galerie', href: '/', type: 'route', scrollTo: 'gallery' },
+    { name: 'Accueil', href: '/', scrollToTop: true },
+    { name: 'Nos avis', href: '/', scrollTo: 'testimonials' },
+    { name: 'Galerie', href: '/', scrollTo: 'gallery' },
+    { name: 'FAQ', href: '/', scrollTo: 'faq' },
   ]
 
   const handleNavClick = (scrollTo, scrollToTop) => {
@@ -39,74 +39,61 @@ const Navbar = ({ scrolled }) => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      scrolled ? 'glass-effect py-2 sm:py-4 red-glow' : 'bg-transparent py-3 sm:py-6'
+      scrolled ? 'glass-effect py-3 sm:py-4 red-glow' : 'bg-transparent py-4 sm:py-5'
     }`}>
-      <div className="container mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center flex-shrink-0">
-            <img 
-              src="/multiplexauto/logo-new.png" 
-              alt="Perfect'Car Logo" 
-              className="h-10 sm:h-20 lg:h-24 w-auto object-contain sm:pt-6"
+      <div className="container mx-auto px-3 sm:px-6 lg:px-8 relative">
+        <div className="flex min-h-[88px] sm:min-h-[102px] lg:min-h-[118px] items-center justify-between gap-3 sm:gap-4">
+          <Link
+            to="/"
+            onClick={() => {
+              setIsOpen(false)
+              handleNavClick(null, true)
+            }}
+            className="flex flex-shrink-0 items-center"
+          >
+            <img
+              src="/multiplexauto/logo-new.png"
+              alt="Perfect'Car Logo"
+              className="h-16 sm:h-20 lg:h-28 xl:h-32 w-auto object-contain"
             />
-          </div>
+          </Link>
 
-          <div className="hidden lg:flex items-center space-x-8">
-            {navLinks.map((link) => {
-              const LinkIcon = link.icon
-              return (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  onClick={() => handleNavClick(link.scrollTo, link.scrollToTop)}
-                  className="text-gray-300 hover:text-silver-accent transition-colors duration-300 font-medium group flex items-center space-x-1"
-                >
-                  {LinkIcon && <LinkIcon className="w-4 h-4" />}
-                  <span className="relative">
-                    {link.name}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-silver-accent group-hover:w-full transition-all duration-300" />
-                  </span>
-                </Link>
-              )
-            })}
+          <div className="ml-auto flex items-center gap-2 sm:gap-3 lg:gap-4">
             <Link
               to="/simulateur"
-              onClick={() => handleNavClick(null, true)}
-              className="bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all duration-300 hover-lift flex items-center space-x-1.5 shadow-lg border-2 border-red-400/50"
+              onClick={() => {
+                setIsOpen(false)
+                handleNavClick(null, true)
+              }}
+              className="bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg font-bold text-xs sm:text-sm transition-all duration-300 hover-lift flex items-center space-x-1.5 shadow-lg border-2 border-red-400/50"
             >
               <Calculator size={16} />
-              <span className="font-racing tracking-wide">COMBIEN ÇA COÛTE ?</span>
+              <span className="font-racing tracking-wide hidden sm:inline">COMBIEN ÇA COÛTE ?</span>
+              <span className="font-racing tracking-wide sm:hidden">DEVIS</span>
             </Link>
             <a
               href="tel:0663207808"
-              className="bg-call-green hover:bg-green-600 text-white px-4 py-2 rounded-lg font-bold text-sm transition-all duration-300 hover-lift flex items-center space-x-1.5 shadow-lg border-2 border-green-400/50"
+              className="bg-call-green hover:bg-green-600 text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg font-bold text-xs sm:text-sm transition-all duration-300 hover-lift flex items-center space-x-1.5 shadow-lg border-2 border-green-400/50"
             >
               <Phone size={16} />
-              <span className="font-racing tracking-wide">06 63 20 78 08</span>
-            </a>
-          </div>
-
-          <div className="lg:hidden flex items-center space-x-2 flex-shrink-0">
-            <a
-              href="tel:0663207808"
-              className="bg-call-green hover:bg-green-600 text-white p-2 rounded-full transition-all duration-300"
-            >
-              <Phone size={18} />
+              <span className="font-racing tracking-wide hidden sm:inline">06 63 20 78 08</span>
+              <span className="font-racing tracking-wide sm:hidden">APPEL</span>
             </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white p-2 hover:bg-silver-accent/20 rounded-lg transition-colors"
+              className="text-white p-2.5 sm:p-3 hover:bg-silver-accent/20 rounded-lg transition-colors border border-white/10 bg-white/5"
+              aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
         </div>
 
         {isOpen && (
-          <div className="lg:hidden mt-4 pb-4 animate-slide-up bg-matte-black/95 backdrop-blur-md rounded-lg px-4">
-            <div className="flex flex-col space-y-4">
+          <div className="absolute right-3 sm:right-6 lg:right-8 top-full mt-3 w-[260px] animate-slide-up">
+            <div className="bg-matte-black/95 backdrop-blur-md rounded-xl px-4 py-4 border border-white/10 shadow-2xl">
+              <div className="flex flex-col space-y-3">
               {navLinks.map((link) => {
-                const LinkIcon = link.icon
                 return (
                   <Link
                     key={link.name}
@@ -115,24 +102,13 @@ const Navbar = ({ scrolled }) => {
                       setIsOpen(false)
                       handleNavClick(link.scrollTo, link.scrollToTop)
                     }}
-                    className="text-gray-300 hover:text-silver-accent transition-colors duration-300 font-medium py-2 border-b border-gray-800 flex items-center space-x-2"
+                    className="text-gray-300 hover:text-silver-accent hover:bg-white/5 transition-colors duration-300 font-medium py-3 px-3 rounded-lg border-b border-gray-800 last:border-b-0"
                   >
-                    {LinkIcon && <LinkIcon className="w-4 h-4" />}
                     <span>{link.name}</span>
                   </Link>
                 )
               })}
-              <Link
-                to="/simulateur"
-                onClick={() => {
-                  setIsOpen(false)
-                  handleNavClick(null, true)
-                }}
-                className="bg-gradient-to-r from-red-600 to-red-500 text-white px-4 py-3 rounded-lg font-black transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg border-2 border-red-400/50"
-              >
-                <Calculator size={18} />
-                <span className="font-racing tracking-wide">COMBIEN ÇA COÛTE ?</span>
-              </Link>
+              </div>
             </div>
           </div>
         )}

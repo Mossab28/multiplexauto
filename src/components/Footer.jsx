@@ -1,10 +1,11 @@
 import React from 'react'
-import { Instagram, Phone, Mail, MapPin, Heart, Facebook } from 'lucide-react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Instagram, Phone, Mail, MapPin, Heart, Facebook, MessageCircle } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
   const navigate = useNavigate()
+  const whatsappUrl = 'https://wa.me/33663207808'
 
   const handleNavClick = (sectionId) => {
     navigate('/')
@@ -54,6 +55,15 @@ const Footer = () => {
               >
                 <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span className="font-semibold text-xs sm:text-base">PERFECT'Car TROYES</span>
+              </a>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 text-silver-accent hover:text-green-500 transition-colors"
+              >
+                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="font-semibold text-xs sm:text-base">WhatsApp</span>
               </a>
               <a
                 href="https://www.google.com/maps/place/PERFECT%E2%80%99+Car/@48.3169346,4.0388392,17z/data=!3m1!4b1!4m6!3m5!1s0x47ee998c47e893ad:0xf21636705f5ec241!8m2!3d48.3169346!4d4.0414141!16s%2Fg%2F11gzm0c61f?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
