@@ -11,7 +11,7 @@ const Hero = () => {
           {/* Contenu à gauche */}
           <div className="text-center lg:text-left animate-fade-in lg:pt-8">
             <h1 className="text-xl sm:text-2xl lg:text-4xl font-racing font-bold mb-4 lg:mb-6 lg:max-w-xl animate-slide-up leading-tight" style={{ animationDelay: '0.2s' }}>
-              <span className="gradient-text">Chez PERFECT'car</span>
+              <span className="gradient-text">Chez PERFECT'car,</span>
             </h1>
             
             <p className="text-sm sm:text-base lg:text-lg text-gray-300 mb-4 lg:mb-6 lg:max-w-xl animate-slide-up leading-relaxed" style={{ animationDelay: '0.3s' }}>
