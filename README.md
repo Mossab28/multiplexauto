@@ -79,7 +79,7 @@ VITE_BASE_PATH=/multiplexauto/ npm run build
 **Perfect' Car - Multiplex Auto**
 - 📱 Téléphone: 06 63 20 78 08
 - 📍 Adresse: 2 rue Archimède, 10600 La Chapelle Saint-Luc
-- 🌐 Site: multiplexeauto.fr
+- 🌐 Site: vitreteintees.fr
 - 📸 Instagram: @perfect_car_troyes (5006 followers)
 
 ## 🎨 Personnalisation

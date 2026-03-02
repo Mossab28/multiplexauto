@@ -143,8 +143,8 @@ const Footer = () => {
               </li>
               <li className="flex items-start space-x-2 sm:space-x-3">
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-silver-accent flex-shrink-0 mt-0.5" />
-                <a href="https://multiplexeauto.fr" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-silver-accent transition-colors text-xs sm:text-base">
-                  multiplexeauto.fr
+                <a href="https://vitreteintees.fr" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-silver-accent transition-colors text-xs sm:text-base">
+                  vitreteintees.fr
                 </a>
               </li>
             </ul>

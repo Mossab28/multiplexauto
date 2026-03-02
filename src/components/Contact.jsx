@@ -79,7 +79,7 @@ const Contact = () => {
                 </div>
 
                 <a 
-                  href="https://multiplexeauto.fr" 
+                  href="https://vitreteintees.fr" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-start space-x-4 group hover-lift p-4 rounded-lg hover:bg-white/5 transition-all"
@@ -89,7 +89,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-white mb-1">Site Web</p>
-                    <p className="text-gray-400">multiplexeauto.fr</p>
+                    <p className="text-gray-400">vitreteintees.fr</p>
                   </div>
                 </a>
               </div>
