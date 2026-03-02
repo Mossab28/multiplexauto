@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
+import { withBase } from '../utils/withBase'
 
 const BrandGallery = () => {
   const [selectedBrand, setSelectedBrand] = useState(null)
@@ -8,41 +9,41 @@ const BrandGallery = () => {
   const brands = [
     {
       name: 'BMW',
-      logo: '/multiplexauto/images/logo-bmw.png',
+      logo: withBase('images/logo-bmw.png'),
       images: [
-        '/multiplexauto/images/gallery/gallery-16.jpg',
-        '/multiplexauto/images/gallery/gallery-17.jpg',
+        withBase('images/gallery/gallery-16.jpg'),
+        withBase('images/gallery/gallery-17.jpg'),
       ],
       color: '#1C69D4'
     },
     {
       name: 'Audi',
-      logo: '/multiplexauto/images/logo-audi.png',
+      logo: withBase('images/logo-audi.png'),
       images: [
-        '/multiplexauto/images/gallery/gallery-4.jpg',
-        '/multiplexauto/images/gallery/gallery-5.jpg',
-        '/multiplexauto/images/gallery/gallery-6.jpg',
-        '/multiplexauto/images/gallery/gallery-13.jpg',
-        '/multiplexauto/images/gallery/gallery-14.jpg',
-        '/multiplexauto/images/gallery/gallery-15.jpg',
+        withBase('images/gallery/gallery-4.jpg'),
+        withBase('images/gallery/gallery-5.jpg'),
+        withBase('images/gallery/gallery-6.jpg'),
+        withBase('images/gallery/gallery-13.jpg'),
+        withBase('images/gallery/gallery-14.jpg'),
+        withBase('images/gallery/gallery-15.jpg'),
       ],
       color: '#BB0A30'
     },
     {
       name: 'Volkswagen',
-      logo: '/multiplexauto/images/logo-vw.png',
+      logo: withBase('images/logo-vw.png'),
       images: [
-        '/multiplexauto/images/gallery/gallery-7.jpg',
-        '/multiplexauto/images/gallery/gallery-8.jpg',
-        '/multiplexauto/images/gallery/gallery-9.jpg',
+        withBase('images/gallery/gallery-7.jpg'),
+        withBase('images/gallery/gallery-8.jpg'),
+        withBase('images/gallery/gallery-9.jpg'),
       ],
       color: '#00ADEF'
     },
     {
       name: 'Maserati',
-      logo: '/multiplexauto/images/logo-maserati.png',
+      logo: withBase('images/logo-maserati.png'),
       images: [
-        '/multiplexauto/images/gallery/gallery-20.jpg',
+        withBase('images/gallery/gallery-20.jpg'),
       ],
       color: '#0C2340'
     }

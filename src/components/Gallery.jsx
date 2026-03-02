@@ -1,52 +1,53 @@
 import React, { useState } from 'react'
 import { ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react'
+import { withBase } from '../utils/withBase'
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null)
 
   const images = [
     {
-      url: '/multiplexauto/images/gallery/gallery-1.jpg',
+      url: withBase('images/gallery/gallery-1.jpg'),
       category: 'Sportive',
       title: 'Audi S5 Sportback',
     },
     {
-      url: '/multiplexauto/images/gallery/gallery-4.jpg',
+      url: withBase('images/gallery/gallery-4.jpg'),
       category: 'Berline',
       title: 'Audi S7',
     },
     {
-      url: '/multiplexauto/images/gallery/gallery-7.jpg',
+      url: withBase('images/gallery/gallery-7.jpg'),
       category: 'Berline',
       title: 'Golf 7',
     },
     {
-      url: '/multiplexauto/images/gallery/gallery-10.jpg',
+      url: withBase('images/gallery/gallery-10.jpg'),
       category: 'Citadine',
       title: 'Peugeot 208',
     },
     {
-      url: '/multiplexauto/images/gallery/gallery-13.jpg',
+      url: withBase('images/gallery/gallery-13.jpg'),
       category: 'Sportive',
       title: 'Audi R8 Spyder',
     },
     {
-      url: '/multiplexauto/images/gallery/gallery-2.jpg',
+      url: withBase('images/gallery/gallery-2.jpg'),
       category: 'Sportive',
       title: 'Audi S5 Sportback',
     },
     {
-      url: '/multiplexauto/images/gallery/gallery-5.jpg',
+      url: withBase('images/gallery/gallery-5.jpg'),
       category: 'Berline',
       title: 'Audi S7',
     },
     {
-      url: '/multiplexauto/images/gallery/gallery-8.jpg',
+      url: withBase('images/gallery/gallery-8.jpg'),
       category: 'Berline',
       title: 'Golf 7',
     },
     {
-      url: '/multiplexauto/images/gallery/gallery-11.jpg',
+      url: withBase('images/gallery/gallery-11.jpg'),
       category: 'Citadine',
       title: 'Peugeot 208',
     },

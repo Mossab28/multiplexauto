@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Car, Wind, Palette, Shield, Truck } from 'lucide-react'
+import { withBase } from '../utils/withBase'
 
 const Services = () => {
   const [activeCategory, setActiveCategory] = useState('3portes')
@@ -17,7 +18,7 @@ const Services = () => {
         'Protection UV 99%',
       ],
       price: 'À partir de 150€',
-      image: '/multiplexauto/images/gallery/gallery-22.jpg',
+      image: withBase('images/gallery/gallery-22.jpg'),
     },
     {
       id: '5portes',
@@ -31,7 +32,7 @@ const Services = () => {
         'Protection UV 99%',
       ],
       price: 'À partir de 200€',
-      image: '/multiplexauto/images/gallery/gallery-7.jpg',
+      image: withBase('images/gallery/gallery-7.jpg'),
     },
     {
       id: 'suv',
@@ -45,7 +46,7 @@ const Services = () => {
         'Protection UV 99%',
       ],
       price: 'À partir de 250€',
-      image: '/multiplexauto/images/services/sportive.jpg',
+      image: withBase('images/services/sportive.jpg'),
     },
     {
       id: 'break',
@@ -59,7 +60,7 @@ const Services = () => {
         'Protection UV 99%',
       ],
       price: 'À partir de 280€',
-      image: '/multiplexauto/images/services/berline.jpg',
+      image: withBase('images/services/berline.jpg'),
     },
     {
       id: 'minibus',
@@ -73,7 +74,7 @@ const Services = () => {
         'Protection UV 99%',
       ],
       price: 'Sur devis',
-      image: '/multiplexauto/images/services/berline.jpg',
+      image: withBase('images/services/berline.jpg'),
     },
     {
       id: 'utilitaire',
@@ -87,7 +88,7 @@ const Services = () => {
         'Protection UV 99%',
       ],
       price: 'Sur devis',
-      image: '/multiplexauto/images/services/berline.jpg',
+      image: withBase('images/services/berline.jpg'),
     },
   ]
 
@@ -170,7 +171,7 @@ const Services = () => {
                 {activeService.price}
               </p>
               <a
-                href="/multiplexauto/#/simulateur"
+                href={withBase('#/simulateur')}
                 className="block w-full bg-silver-accent hover:bg-white text-black text-center px-6 py-4 rounded-lg font-bold transition-all duration-300 hover-lift"
               >
                 Devis Gratuit

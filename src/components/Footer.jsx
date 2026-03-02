@@ -1,6 +1,7 @@
 import React from 'react'
 import { Instagram, Phone, Mail, MapPin, Heart, Facebook, MessageCircle } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
+import { withBase } from '../utils/withBase'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -29,7 +30,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center mb-3 sm:mb-4">
               <img 
-                src="/multiplexauto/logo-new.png" 
+                src={withBase('logo-new.png')}
                 alt="Perfect'Car Logo" 
                 className="h-10 sm:h-20 lg:h-24 w-auto object-contain sm:pt-6"
               />
@@ -37,7 +38,7 @@ const Footer = () => {
             <p className="text-gray-400 text-xs sm:text-base mb-3 sm:mb-4">
               Votre spécialiste en vitres teintées à Troyes.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="grid grid-cols-2 justify-items-start gap-3 sm:flex sm:flex-wrap">
               <a
                 href="https://www.instagram.com/perfect_car_troyes/"
                 target="_blank"

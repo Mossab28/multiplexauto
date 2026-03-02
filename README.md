@@ -37,6 +37,43 @@ npm run build
 npm run preview
 ```
 
+## 🚀 Déploiement Git + Hostinger
+
+Ce projet est un site **React/Vite statique**. Le plus simple est :
+
+1. versionner le code sur GitHub
+2. générer le build avec `npm run build`
+3. envoyer le contenu du dossier `dist/` sur Hostinger
+
+### Workflow conseillé
+
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin <URL_DU_REPO>
+git push -u origin main
+```
+
+Puis pour publier :
+
+```bash
+npm install
+npm run build
+```
+
+Ensuite, uploadez le contenu de `dist/` dans `public_html/` sur Hostinger.
+
+### Important pour Hostinger
+
+- Le `base` Vite est configuré par défaut sur `/`, ce qui convient à un domaine direct.
+- Si vous publiez un jour dans un sous-dossier, utilisez par exemple :
+
+```bash
+VITE_BASE_PATH=/multiplexauto/ npm run build
+```
+
 ## 📍 Informations
 
 **Perfect' Car - Multiplex Auto**
