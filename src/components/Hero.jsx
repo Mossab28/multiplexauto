@@ -44,7 +44,7 @@ const Hero = () => {
               style={{ animationDelay: '0.6s' }}
             >
               <h3 className="text-xs sm:text-sm font-racing font-bold mb-2 sm:mb-3 text-white">Suivez-nous</h3>
-              <div className="flex flex-wrap items-center gap-3">
+              <div className="grid grid-cols-2 justify-items-center gap-3 sm:flex sm:flex-wrap sm:items-center">
                 <a
                   href="https://www.instagram.com/perfect_car_troyes/"
                   target="_blank"
@@ -144,7 +144,7 @@ const Hero = () => {
               </div>
               <div className="glass-effect p-3 sm:p-4 rounded-xl border border-silver-accent/20 hover-lift">
                 <div className="flex items-start space-x-2 sm:space-x-3">
-                  <span className="text-xl sm:text-2xl flex-shrink-0">🌞</span>
+                  <span className="text-xl sm:text-2xl flex-shrink-0">😎</span>
                   <p className="text-gray-300 text-xs sm:text-sm"><span className="font-bold text-white">Réduction de l'éblouissement</span> et de la fatigue visuelle</p>
                 </div>
               </div>

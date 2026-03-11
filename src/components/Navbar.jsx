@@ -40,7 +40,38 @@ const Navbar = ({ scrolled }) => {
     }
   }
 
-  const renderActions = (isInvisible = false) => (
+  const renderMobileActions = () => (
+    <div className="relative z-10 flex items-center justify-end gap-2">
+      <Link
+        to="/simulateur"
+        onClick={() => {
+          setIsOpen(false)
+          handleNavClick(null, true)
+        }}
+        className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg border-2 border-red-400/50 bg-gradient-to-r from-red-600 to-red-500 text-white shadow-lg transition-all duration-300 hover:from-red-500 hover:to-red-400"
+        aria-label="Simulateur de devis"
+      >
+        <Calculator size={18} />
+      </Link>
+      <a
+        href="tel:0663207808"
+        className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg border-2 border-green-400/50 bg-call-green text-white shadow-lg transition-all duration-300 hover:bg-green-600"
+        aria-label="Appeler Perfect Car"
+      >
+        <Phone size={18} />
+      </a>
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex h-12 w-12 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white transition-colors hover:bg-silver-accent/20"
+        aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+      >
+        {isOpen ? <X size={22} /> : <Menu size={22} />}
+      </button>
+    </div>
+  )
+
+  const renderDesktopActions = (isInvisible = false) => (
     <div
       aria-hidden={isInvisible}
       className={`${rightActionClasses} ${isInvisible ? 'invisible pointer-events-none' : 'relative z-10'}`}
@@ -56,16 +87,14 @@ const Navbar = ({ scrolled }) => {
         className={`bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm ${buttonBaseClasses} border-2 border-red-400/50`}
       >
         <Calculator size={16} />
-        <span className="ml-1.5 font-racing tracking-wide hidden whitespace-nowrap sm:inline">COMBIEN ÇA COÛTE ?</span>
-        <span className="ml-1.5 font-racing tracking-wide whitespace-nowrap sm:hidden">DEVIS</span>
+        <span className="ml-1.5 font-racing tracking-wide whitespace-nowrap">COMBIEN ÇA COÛTE ?</span>
       </Link>
       <a
         href={isInvisible ? undefined : 'tel:0663207808'}
         className={`bg-call-green hover:bg-green-600 text-white px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm ${buttonBaseClasses} border-2 border-green-400/50`}
       >
         <Phone size={16} />
-        <span className="ml-1.5 font-racing tracking-wide hidden whitespace-nowrap sm:inline">06 63 20 78 08</span>
-        <span className="ml-1.5 font-racing tracking-wide whitespace-nowrap sm:hidden">APPEL</span>
+        <span className="ml-1.5 font-racing tracking-wide whitespace-nowrap">06 63 20 78 08</span>
       </a>
       <button
         type="button"
@@ -103,11 +132,11 @@ const Navbar = ({ scrolled }) => {
             />
           </Link>
 
-          {renderActions(false)}
+          {renderMobileActions()}
         </div>
 
         <div className="hidden min-h-[124px] lg:grid lg:grid-cols-[auto_minmax(0,1fr)_auto] lg:items-center lg:gap-6">
-          {renderActions(true)}
+          {renderDesktopActions(true)}
 
           <Link
             to="/"
@@ -124,7 +153,7 @@ const Navbar = ({ scrolled }) => {
             />
           </Link>
 
-          {renderActions(false)}
+          {renderDesktopActions(false)}
         </div>
 
         {isOpen && (
