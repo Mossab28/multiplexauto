@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, Phone, Calculator } from 'lucide-react'
+import { Menu, X, Phone, Calculator, Euro } from 'lucide-react'
 import croppedLogo from '../../Images/cropped_logo.png'
 
 const Navbar = ({ scrolled }) => {
@@ -51,7 +51,7 @@ const Navbar = ({ scrolled }) => {
         className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg border-2 border-red-400/50 bg-gradient-to-r from-red-600 to-red-500 text-white shadow-lg transition-all duration-300 hover:from-red-500 hover:to-red-400"
         aria-label="Simulateur de devis"
       >
-        <Calculator size={18} />
+        <Euro size={18} />
       </Link>
       <a
         href="tel:0663207808"
