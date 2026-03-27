@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="white" rx="10"/>
+  <g transform="translate(100,100)">
+    <polygon points="0,-70 60,70 -60,70" fill="none" stroke="#DFCF00" stroke-width="8"/>
+    <polygon points="0,-50 43,50 -43,50" fill="none" stroke="#DFCF00" stroke-width="6"/>
+  </g>
+  <text x="100" y="185" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="18" font-weight="bold" fill="#1a1a1a">RENAULT</text>
+</svg>

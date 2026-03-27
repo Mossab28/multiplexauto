@@ -13,6 +13,8 @@ const BrandGallery = () => {
       images: [
         withBase('images/gallery/gallery-16.jpg'),
         withBase('images/gallery/gallery-17.jpg'),
+        withBase('images/gallery/gallery-bmw-1.jpg'),
+        withBase('images/gallery/gallery-bmw-2.jpg'),
       ],
       color: '#1C69D4'
     },
@@ -26,6 +28,10 @@ const BrandGallery = () => {
         withBase('images/gallery/gallery-13.jpg'),
         withBase('images/gallery/gallery-14.jpg'),
         withBase('images/gallery/gallery-15.jpg'),
+        withBase('images/gallery/gallery-audi-tt-1.jpg'),
+        withBase('images/gallery/gallery-audi-tt-2.jpg'),
+        withBase('images/gallery/gallery-audi-rsq3-1.jpg'),
+        withBase('images/gallery/gallery-audi-rsq3-2.jpg'),
       ],
       color: '#BB0A30'
     },
@@ -36,6 +42,8 @@ const BrandGallery = () => {
         withBase('images/gallery/gallery-7.jpg'),
         withBase('images/gallery/gallery-8.jpg'),
         withBase('images/gallery/gallery-9.jpg'),
+        withBase('images/gallery/gallery-vw-troc-1.jpg'),
+        withBase('images/gallery/gallery-vw-troc-2.jpg'),
       ],
       color: '#00ADEF'
     },
@@ -44,8 +52,37 @@ const BrandGallery = () => {
       logo: withBase('images/logo-maserati.png'),
       images: [
         withBase('images/gallery/gallery-20.jpg'),
+        withBase('images/gallery/gallery-maserati-2.jpg'),
+        withBase('images/gallery/gallery-maserati-3.jpg'),
       ],
       color: '#0C2340'
+    },
+    {
+      name: 'Porsche',
+      logo: withBase('images/logo-porsche.svg'),
+      images: [
+        withBase('images/gallery/gallery-porsche-cayenne-1.jpg'),
+      ],
+      color: '#B12B28'
+    },
+    {
+      name: 'Renault',
+      logo: withBase('images/logo-renault.svg'),
+      images: [
+        withBase('images/gallery/gallery-renault-megane-1.jpg'),
+        withBase('images/gallery/gallery-renault-megane-2.jpg'),
+      ],
+      color: '#DFCF00'
+    },
+    {
+      name: 'Land Rover',
+      logo: withBase('images/logo-landrover.svg'),
+      images: [
+        withBase('images/gallery/gallery-landrover-1.jpg'),
+        withBase('images/gallery/gallery-landrover-2.jpg'),
+        withBase('images/gallery/gallery-landrover-3.jpg'),
+      ],
+      color: '#005A2B'
     }
   ]
 
@@ -90,7 +127,7 @@ const BrandGallery = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-5xl mx-auto">
           {brands.map((brand, index) => (
             <button
               key={index}
